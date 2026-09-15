@@ -373,33 +373,50 @@ a.link-card:hover{
     display:inline-flex;align-items:center;justify-content:center;
     width:1.25em;height:1.25em;border-radius:50%;
     font-style:normal;font-weight:700;line-height:1;
-    vertical-align:-0.2em;flex-shrink:0;
+    vertical-align:middle;flex-shrink:0;
     border:1.5px solid rgba(0,0,0,0.45);
     box-shadow:0 1px 4px rgba(0,0,0,0.55),inset 0 1px 0 rgba(255,255,255,0.18);
   }
   /* Generic mana: dark circle with bright white number */
   .sym-generic{
     background:radial-gradient(circle at 38% 32%,#7a6e63 0%,#3a3028 100%);
-    color:#fff;
+    position:relative;
+    overflow:visible;
+  }
+  .sym-generic-inner{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     font-family:var(--font-head);
-    font-size:0.65em;
     font-weight:900;
-    letter-spacing:0;
+    font-size:0.72em;
+    color:#fff;
     text-shadow:0 1px 2px rgba(0,0,0,0.8);
+    line-height:1;
+    padding:0;margin:0;
   }
   /* Tap: golden circle with rotated-T (MTG tap symbol) */
   .sym-tap{
     background:radial-gradient(circle at 38% 32%,#e9ca7a 0%,#b08c38 100%);
     color:#1e1000;
-    font-size:0.72em;
+    position:relative;
+    overflow:visible;
   }
   .sym-tap-icon{
-    display:inline-block;
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     transform:rotate(90deg);
     font-family:var(--font-head);
     font-weight:900;
-    font-size:1em;
+    font-size:0.72em;
+    color:#1a0c00;
     line-height:1;
+    padding:0;margin:0;
   }
   /* Colorless: silver */
   .sym-colorless{
@@ -426,7 +443,8 @@ a.link-card:hover{
 <button class="filter-btn" data-filter="original">Advanced Kingdoms</button>
 <button class="filter-btn" data-filter="ek">Expanded Kingdoms</button>
 <button class="filter-btn" data-filter="variant">Variants</button>
-<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><span class="nav-version">v0.5.56</span></nav>
+<button class="filter-btn" data-filter="special" style="border-color:rgba(255,107,157,0.25);color:rgba(255,107,157,0.5);">Specials</button>
+<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><span class="nav-version">v0.5.63</span></nav>
 <!-- ══ KING ══ -->
 <section class="role-section s-king">
 <div class="section-header">
@@ -1295,7 +1313,7 @@ a.link-card:hover{
 <p class="card-flavor-text">"I serve the crown, not the company."</p>
 </div>
 </div>
-</div><div class="card cn card-variant">
+</div><div class="card cn card-variant card-special">
 <div class="card-bg"></div>
 <style>
         .jacks-guard .card-bg { background: linear-gradient(160deg, #0d1520 0%, #081018 65%); }
@@ -1322,7 +1340,12 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Reveal</span>
-<span class="card-sec-text">When Jack is targeted by a spell or ability an opponent controls, or would receive combat damage, you may reveal this card. If you do, you become the target or receive that damage instead. If this eliminates you, Jack gains 10 life. You may also reveal voluntarily at any time; Jack gains 5 life. If no player named Jack is present, you are a standard Knight.</span>
+<span class="card-sec-text">When Jack is targeted by a spell or ability an opponent controls, or would receive combat damage, you may reveal this card. If you do, you become the target or receive that damage instead. If this eliminates you, Jack gains 10 life. You may also reveal voluntarily at any time; Jack gains 5 life.</span>
+</div>
+<div class="card-div"></div>
+<div class="card-section">
+<span class="card-sec-label" style="color:#ff6b9d;">No Jack Present</span>
+<span class="card-sec-text">If no player at this table goes by <b>"Jack"</b>, you are a standard Knight — win when the King wins, lose when the King is eliminated.</span>
 </div>
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
@@ -2653,7 +2676,7 @@ a.link-card:hover{
 </div>
 </div>
 <!-- ─── KILL JACK ─── -->
-<div class="card cr card-variant kill-jack">
+<div class="card cr card-variant card-special kill-jack">
 <div class="card-bg"></div>
 <div class="card-content">
 <div class="card-stripe" style="background:linear-gradient(90deg,transparent,#ff6b9d,var(--renegade-acc),transparent);opacity:0.7;"></div>
@@ -2778,6 +2801,14 @@ a.link-card:hover{
 <div class="link-card-desc">Fronts paired with matching backs — print duplex (flip on long edge), cut, and sleeve. Backs are identical so roles stay hidden until revealed.</div>
 </div>
 </a>
+<a class="link-card" href="javascript:void(0)" onclick="event.preventDefault();document.querySelector('[data-filter=special]').click();" style="border-color:rgba(255,107,157,0.2);">
+<div class="link-card-icon" style="color:#ff6b9d;filter:drop-shadow(0 0 6px rgba(255,107,157,0.4));">★</div>
+<div class="link-card-body">
+<div class="link-card-title" style="color:#ff6b9d;">Special Cards</div>
+<div class="link-card-site">This viewer</div>
+<div class="link-card-desc">Cards with unique table rules that override normal role behavior — Jack's Guard and Kill Jack. Click to filter to Specials only.</div>
+</div>
+</a>
 <a class="link-card" href="https://github.com/wernercd/kingdoms" rel="noopener" target="_blank">
 <div class="link-card-icon">&#128279;</div>
 <div class="link-card-body">
@@ -2813,6 +2844,38 @@ a.link-card:hover{
     });
   }
 
+  // --- Specials side-by-side display ---
+  // Snapshot original positions so we can restore after leaving Specials filter
+  var specialOrigins = [];
+  document.querySelectorAll('.card-special').forEach(function(c){
+    specialOrigins.push({el:c, parent:c.parentNode, next:c.nextSibling});
+  });
+
+  // Build a dedicated 2-up display container inserted right after the nav
+  var specialsDisplay = document.createElement('div');
+  specialsDisplay.id = 'specials-display';
+  specialsDisplay.style.cssText = [
+    'display:none',
+    'grid-template-columns:repeat(2,minmax(0,360px))',
+    'gap:20px',
+    'justify-content:center',
+    'align-items:start',
+    'margin:32px auto',
+    'padding:0 16px',
+    'max-width:780px'
+  ].join(';');
+  var nav = document.querySelector('.sticky-nav');
+  nav.parentNode.insertBefore(specialsDisplay, nav.nextSibling);
+
+  function restoreSpecials(){
+    specialOrigins.forEach(function(o){
+      if(o.el.parentNode === specialsDisplay){
+        o.parent.insertBefore(o.el, o.next);
+      }
+    });
+    specialsDisplay.style.display = 'none';
+  }
+
   // Filter button logic — skips the Quick Ref button
   var btns = document.querySelectorAll('.filter-btn');
   btns.forEach(function(btn){
@@ -2823,6 +2886,18 @@ a.link-card:hover{
       btns.forEach(function(b){ b.classList.remove('active'); });
       this.classList.add('active');
       var f = this.dataset.filter;
+
+      // Always restore special cards to their home sections before applying any filter
+      restoreSpecials();
+
+      if(f === 'special'){
+        // Hide all role sections, show special cards side by side
+        document.querySelectorAll('.role-section').forEach(function(s){ s.style.display='none'; });
+        document.querySelectorAll('.subsection-divider').forEach(function(d){ d.style.display='none'; });
+        specialOrigins.forEach(function(o){ specialsDisplay.appendChild(o.el); o.el.style.display=''; });
+        specialsDisplay.style.display = 'grid';
+        return;
+      }
 
       document.querySelectorAll('.card').forEach(function(card){
         if(f === 'all'){
@@ -2974,14 +3049,14 @@ a.link-card:hover{
     // Tap
     if (code === 'T') return '<span class="sym sym-tap" title="Tap"><span class="sym-tap-icon">T</span></span>';
     // Pure digits → generic mana
-    if (/^\d+$/.test(code)) return '<span class="sym sym-generic" title="' + code + ' generic mana">' + code + '</span>';
+    if (/^\d+$/.test(code)) return '<span class="sym sym-generic" title="' + code + ' generic mana"><span class="sym-generic-inner">' + code + '</span></span>';
     // Colorless {C}
     if (code === 'C') return '<span class="sym sym-colorless" title="Colorless mana">◆</span>';
     // Life costs like {3 life} or {2 life}
     var lifeMatch = code.match(/^(\d+)\s*life$/i);
     if (lifeMatch) return '<span class="sym sym-life" title="' + code + '">' + lifeMatch[1] + '♥</span>';
     // Unknown — leave as-is but styled minimally
-    return '<span class="sym sym-generic" title="{' + code + '}">' + code + '</span>';
+    return '<span class="sym sym-generic" title="{' + code + '}"><span class="sym-generic-inner">' + code + '</span></span>';
   }
 
   function processEl(el) {
