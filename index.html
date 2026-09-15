@@ -367,6 +367,48 @@ a.link-card:hover{
     .s-king .card-name{font-size:1.0rem;}
     .card-sec-text{font-size:0.73rem;}
   }
+
+  /* ── MTG inline cost symbols ── */
+  .sym{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:1.25em;height:1.25em;border-radius:50%;
+    font-style:normal;font-weight:700;line-height:1;
+    vertical-align:-0.2em;flex-shrink:0;
+    border:1.5px solid rgba(0,0,0,0.45);
+    box-shadow:0 1px 4px rgba(0,0,0,0.55),inset 0 1px 0 rgba(255,255,255,0.18);
+  }
+  /* Generic mana: dark slate circle with white number */
+  .sym-generic{
+    background:radial-gradient(circle at 38% 32%,#9a8d7e 0%,#5e5248 100%);
+    color:#fff;
+    font-family:var(--font-head);
+    font-size:0.6em;
+    letter-spacing:0;
+  }
+  /* Tap: golden swirl on cream */
+  .sym-tap{
+    background:radial-gradient(circle at 38% 32%,#e9ca7a 0%,#b08c38 100%);
+    color:#1e1000;
+    font-size:0.75em;
+  }
+  /* Colorless: silver */
+  .sym-colorless{
+    background:radial-gradient(circle at 38% 32%,#cec6ba 0%,#8e867c 100%);
+    color:#111;
+    font-size:0.66em;
+  }
+  /* Life cost: red teardrop feel */
+  .sym-life{
+    background:radial-gradient(circle at 38% 32%,#e07070 0%,#8b2020 100%);
+    color:#fff;
+    font-size:0.58em;
+    font-family:var(--font-head);
+    letter-spacing:0;
+    padding:0 0.08em;
+    border-radius:0.55em;
+    width:auto;min-width:1.25em;
+    white-space:nowrap;
+  }
 </style>
 <!-- ══════════════════════════════════════════ -->
 <nav class="sticky-nav"><span class="nav-wordmark">Kingdoms</span><div class="filter-bar">
@@ -2913,6 +2955,44 @@ a.link-card:hover{
   function update(){ nav.classList.toggle('scrolled', window.scrollY > 8); }
   window.addEventListener('scroll', update, {passive:true});
   update();
+})();
+</script>
+<script>
+/* Replace MTG cost notation {T} {2} {C} etc. with styled symbol chips */
+(function(){
+  function symHtml(code) {
+    // Tap
+    if (code === 'T') return '<span class="sym sym-tap" title="Tap">↻</span>';
+    // Pure digits → generic mana
+    if (/^\d+$/.test(code)) return '<span class="sym sym-generic" title="' + code + ' generic mana">' + code + '</span>';
+    // Colorless {C}
+    if (code === 'C') return '<span class="sym sym-colorless" title="Colorless mana">◆</span>';
+    // Life costs like {3 life} or {2 life}
+    var lifeMatch = code.match(/^(\d+)\s*life$/i);
+    if (lifeMatch) return '<span class="sym sym-life" title="' + code + '">' + lifeMatch[1] + '♥</span>';
+    // Unknown — leave as-is but styled minimally
+    return '<span class="sym sym-generic" title="{' + code + '}">' + code + '</span>';
+  }
+
+  function processEl(el) {
+    // Replace {X} patterns but skip already-processed spans
+    el.innerHTML = el.innerHTML.replace(/\{([^}]{1,20})\}/g, function(_, code) {
+      return symHtml(code.trim());
+    });
+  }
+
+  // Run once DOM is ready
+  function run() {
+    document.querySelectorAll('.card-sec-text').forEach(processEl);
+    // Also hit the Quick Ref rule-tile text that has notation
+    document.querySelectorAll('.rule-tile-text').forEach(processEl);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', run);
+  } else {
+    run();
+  }
 })();
 </script>
 </body></html>
