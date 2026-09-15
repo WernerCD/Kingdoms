@@ -81,6 +81,7 @@
   position:sticky;
   top:0;
   z-index:200;
+  isolation:isolate;
   background:rgba(8,6,4,0.93);
   backdrop-filter:blur(10px);
   -webkit-backdrop-filter:blur(10px);
@@ -173,6 +174,19 @@ a.link-card:hover{
 }
 
 .sticky-nav.scrolled{border-bottom-color:rgba(212,160,23,0.12);}
+.nav-version{
+  position:absolute;
+  right:18px;
+  top:50%;
+  transform:translateY(-50%);
+  font-family:var(--font-head);
+  font-size:0.55rem;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:rgba(212,160,23,0.45);
+  pointer-events:none;
+  white-space:nowrap;
+}
 </style></head><body>
 <title>Kingdoms — Advanced, Extended &amp; Variants</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&amp;family=Cinzel+Decorative:wght@400;700&amp;family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet"/>
@@ -315,7 +329,7 @@ a.link-card:hover{
 <button class="filter-btn" data-filter="original">Advanced Kingdoms</button>
 <button class="filter-btn" data-filter="ek">Expanded Kingdoms</button>
 <button class="filter-btn" data-filter="variant">Variants</button>
-<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div></nav>
+<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><span class="nav-version">v1.56</span></nav>
 <!-- ══ KING ══ -->
 <section class="role-section s-king">
 <div class="section-header">
@@ -2627,14 +2641,6 @@ a.link-card:hover{
 </div><div class="links-wrap" id="links-wrap" style="display:none;">
 <p class="rules-head">Resources &amp; References</p>
 <div class="links-grid">
-<a class="link-card" href="./kingdoms-cards-fronts.pdf" rel="noopener" target="_blank">
-<div class="link-card-icon">&#128196;</div>
-<div class="link-card-body">
-<div class="link-card-title">Printable Card PDF</div>
-<div class="link-card-site">kingdoms-cards-fronts.pdf</div>
-<div class="link-card-desc">All role cards laid out 9-per-page for print — AK, EK, and Variant cards for every role. Print double-sided and cut to use with sleeves alongside your Commander decks.</div>
-</div>
-</a>
 <a class="link-card" href="https://mtgcommander.net/index.php/rules/" rel="noopener" target="_blank">
 <div class="link-card-icon">⚔</div>
 <div class="link-card-body">
@@ -2657,6 +2663,14 @@ a.link-card:hover{
 <div class="link-card-title">Expanded Kingdoms</div>
 <div class="link-card-site">MTG Salvation Forums</div>
 <div class="link-card-desc">The Expanded Kingdoms thread — an extension of the base variant that introduced additional role cards (Executioner, Imposter, Jester, and more) for deeper gameplay and larger player counts.</div>
+</div>
+</a>
+<a class="link-card" href="./kingdoms-cards-fronts.pdf" rel="noopener" target="_blank">
+<div class="link-card-icon">&#128196;</div>
+<div class="link-card-body">
+<div class="link-card-title">Printable Card PDF</div>
+<div class="link-card-site">kingdoms-cards-fronts.pdf</div>
+<div class="link-card-desc">All role cards laid out 9-per-page for print — AK, EK, and Variant cards for every role. Print double-sided and cut to use with sleeves alongside your Commander decks.</div>
 </div>
 </a>
 </div>
