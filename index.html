@@ -377,19 +377,29 @@ a.link-card:hover{
     border:1.5px solid rgba(0,0,0,0.45);
     box-shadow:0 1px 4px rgba(0,0,0,0.55),inset 0 1px 0 rgba(255,255,255,0.18);
   }
-  /* Generic mana: dark slate circle with white number */
+  /* Generic mana: dark circle with bright white number */
   .sym-generic{
-    background:radial-gradient(circle at 38% 32%,#9a8d7e 0%,#5e5248 100%);
+    background:radial-gradient(circle at 38% 32%,#7a6e63 0%,#3a3028 100%);
     color:#fff;
     font-family:var(--font-head);
-    font-size:0.6em;
+    font-size:0.65em;
+    font-weight:900;
     letter-spacing:0;
+    text-shadow:0 1px 2px rgba(0,0,0,0.8);
   }
-  /* Tap: golden swirl on cream */
+  /* Tap: golden circle with rotated-T (MTG tap symbol) */
   .sym-tap{
     background:radial-gradient(circle at 38% 32%,#e9ca7a 0%,#b08c38 100%);
     color:#1e1000;
-    font-size:0.75em;
+    font-size:0.72em;
+  }
+  .sym-tap-icon{
+    display:inline-block;
+    transform:rotate(90deg);
+    font-family:var(--font-head);
+    font-weight:900;
+    font-size:1em;
+    line-height:1;
   }
   /* Colorless: silver */
   .sym-colorless{
@@ -416,7 +426,7 @@ a.link-card:hover{
 <button class="filter-btn" data-filter="original">Advanced Kingdoms</button>
 <button class="filter-btn" data-filter="ek">Expanded Kingdoms</button>
 <button class="filter-btn" data-filter="variant">Variants</button>
-<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><span class="nav-version">v0.5.55</span></nav>
+<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><span class="nav-version">v0.5.56</span></nav>
 <!-- ══ KING ══ -->
 <section class="role-section s-king">
 <div class="section-header">
@@ -2962,7 +2972,7 @@ a.link-card:hover{
 (function(){
   function symHtml(code) {
     // Tap
-    if (code === 'T') return '<span class="sym sym-tap" title="Tap">↻</span>';
+    if (code === 'T') return '<span class="sym sym-tap" title="Tap"><span class="sym-tap-icon">T</span></span>';
     // Pure digits → generic mana
     if (/^\d+$/.test(code)) return '<span class="sym sym-generic" title="' + code + ' generic mana">' + code + '</span>';
     // Colorless {C}
