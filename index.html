@@ -48,24 +48,25 @@
 
     .s-king .card { width: 100% !important; }
 
-    .card-meta   { padding: 4px 7px 2px !important; }
+    .card-meta   { padding: 3px 8px !important; margin: 1px 6px 4px !important; border: 1px solid var(--c-bdr) !important; background: transparent !important; border-radius: 2px !important; }
     .card-badge  { font-size: 0.42rem !important; padding: 1px 4px !important; }
     .card-role-tag { font-size: 0.5rem !important; }
     .card-visibility-tag {display:none; font-size: 0.45rem !important; }
-    .card-sigil  { padding: 4px 0 3px !important; }
+    .card-sigil  { padding: 6px 0 5px !important; margin: 4px 6px 0 !important; border: 1px solid var(--c-bdr) !important; box-shadow: none !important; border-radius: 3px !important; }
+    .card-sigil::before { display: none !important; }
     .sigil-wrap  { width: 36px !important; height: 36px !important; }
     .s-king .sigil-wrap { width: 44px !important; height: 44px !important; }
     .sigil-sym   { font-size: 1.15rem !important; }
     .s-king .sigil-sym { font-size: 1.45rem !important; }
-    .card-name   { font-size: 0.72rem !important; padding: 1px 7px 5px !important; line-height: 1.15 !important; }
-    .s-king .card-name { font-size: 0.85rem !important; }
+    .card-name   { font-size: 0.74rem !important; padding: 6px 8px 5px !important; line-height: 1.15 !important; background: rgba(0,0,0,0.22) !important; }
+    .s-king .card-name { font-size: 0.88rem !important; }
     .card-div    { margin: 0 8px !important; }
     .card-section { padding: 4px 7px 2px !important; gap: 2px !important; }
     .card-sec-label { font-size: 0.48rem !important; }
-    .card-sec-text  { font-size: 0.6rem !important; line-height: 1.33 !important; }
-    .card-flavor { padding: 4px 9px 6px !important; margin-top: auto !important; }
-    .card-flavor-div { margin-bottom: 4px !important; }
-    .card-flavor-text { font-size: 0.55rem !important; }
+    .card-sec-text  { font-size: 0.62rem !important; line-height: 1.33 !important; }
+    .card-flavor { padding: 4px 9px 6px !important; margin-top: auto !important; border-top: 1px solid var(--c-bdr) !important; }
+    .card-flavor-div { display: none !important; }
+    .card-flavor-text { font-size: 0.56rem !important; }
 
     .section-header {
       grid-column: 1 / -1 !important;
@@ -224,12 +225,19 @@ a.link-card:hover{
   .s-renegade .section-label,.s-renegade .section-bar{color:var(--renegade-acc);background:var(--renegade-acc);}
 
   /* CARD GRID */
-  .card-grid{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;}
+  .card-grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
 
-  /* CARD */
-  .card{width:210px;border-radius:8px;display:flex;flex-direction:column;position:relative;box-shadow:0 6px 32px rgba(0,0,0,0.65),inset 0 1px 0 rgba(255,255,255,0.06);overflow:hidden;}
-  .card::after{content:'';position:absolute;inset:0;border-radius:8px;border:1px solid var(--c-bdr);pointer-events:none;z-index:10;}
-  .s-king .card{width:250px;}
+  /* ═══ CARD — MTG-style frame ═══
+     Visual order via flex: Name bar → Art box → Type line → Rules → Flavor
+     DOM order is unchanged; CSS order property does the reordering. */
+  .card{
+    width:228px;border-radius:9px;display:flex;flex-direction:column;
+    position:relative;overflow:hidden;
+    border:2px solid var(--c-acc);
+    box-shadow:0 0 0 3px rgba(0,0,0,0.55),0 10px 40px rgba(0,0,0,0.75),inset 0 0 0 1px rgba(255,255,255,0.04);
+  }
+  .card::after{display:none;}
+  .s-king .card{width:272px;}
 
   /* Role-color tokens */
   .ck{--c-bg:var(--king-bg);--c-bg2:var(--king-bg2);--c-acc:var(--king-acc);--c-acc2:var(--king-acc2);--c-txt:var(--king-txt);--c-bdr:var(--king-bdr);}
@@ -239,53 +247,90 @@ a.link-card:hover{
   .cr{--c-bg:var(--renegade-bg);--c-bg2:var(--renegade-bg2);--c-acc:var(--renegade-acc);--c-acc2:var(--renegade-acc2);--c-txt:var(--renegade-txt);--c-bdr:var(--renegade-bdr);}
   .cj{--c-bg:#0f0410;--c-bg2:#1a0814;--c-acc:#ff6b9d;--c-acc2:#ffaac8;--c-txt:#ffe8f2;--c-bdr:rgba(255,107,157,0.35);}
 
-  .card-bg{position:absolute;inset:0;background:linear-gradient(160deg,var(--c-bg2) 0%,var(--c-bg) 65%);}
-  .card-bg::before{content:'';position:absolute;top:-40px;left:-40px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,var(--c-acc) 0%,transparent 70%);opacity:0.05;}
+  .card-bg{position:absolute;inset:0;background:linear-gradient(170deg,var(--c-bg2) 0%,var(--c-bg) 70%);}
+  .card-bg::before{content:'';position:absolute;top:-40px;left:-40px;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle,var(--c-acc) 0%,transparent 70%);opacity:0.06;}
   .card-bg::after{display:none;}
   .card-content{position:relative;z-index:2;display:flex;flex-direction:column;flex:1;}
-  .card-content{position:relative;z-index:2;display:flex;flex-direction:column;flex:1;}
-  .card-stripe{height:2px;background:linear-gradient(90deg,transparent 0%,var(--c-acc) 50%,transparent 100%);opacity:0.6;flex-shrink:0;}
 
-  /* Original cards get a thicker stripe */
-  .card-original .card-stripe{height:3px;opacity:0.85;}
+  /* ── Flex order: MTG visual hierarchy ── */
+  .card-stripe{order:1;height:3px;background:linear-gradient(90deg,transparent 0%,var(--c-acc) 50%,transparent 100%);opacity:0.55;flex-shrink:0;}
+  .card-original .card-stripe{opacity:0.9;}
+  .card-name{order:2;}
+  .card-sigil{order:3;}
+  .card-meta{order:4;}
+  .card-div{order:5;}
+  .card-section{order:5;}
+  .card-flavor{order:6;}
 
-  /* META ROW */
-  .card-meta{display:flex;justify-content:space-between;align-items:center;padding:8px 12px 4px;gap:4px;}
-  .card-role-tag{font-family:var(--font-head);font-size:0.56rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--c-acc);font-weight:600;}
-  .card-visibility-tag{display:none;font-family:var(--font-head);font-size:0.5rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.22);}
+  /* ── TITLE BAR (card-name moves to top) ── */
+  .card-name{
+    font-family:var(--font-head);font-size:1.02rem;font-weight:700;
+    color:var(--c-txt);text-align:left;
+    padding:8px 13px 7px;letter-spacing:0.02em;line-height:1.15;
+    background:rgba(0,0,0,0.28);
+    border-bottom:1px solid var(--c-bdr);
+    flex-shrink:0;
+  }
+  .s-king .card-name{font-size:1.15rem;padding:9px 15px 8px;}
+
+  /* ── ART BOX (card-sigil) ── */
+  .card-sigil{
+    display:flex;align-items:center;justify-content:center;
+    padding:18px 0 16px;
+    margin:8px 10px 0;
+    border:1.5px solid var(--c-bdr);
+    border-radius:4px;
+    background:linear-gradient(160deg,rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.18) 100%);
+    box-shadow:inset 0 2px 16px rgba(0,0,0,0.45);
+    position:relative;flex-shrink:0;
+  }
+  /* Inner beveled border — classic MTG art frame detail */
+  .card-sigil::before{
+    content:'';position:absolute;inset:3px;
+    border:1px solid rgba(255,255,255,0.07);
+    border-radius:2px;pointer-events:none;
+  }
+  .sigil-wrap{position:relative;width:58px;height:58px;display:flex;align-items:center;justify-content:center;}
+  .s-king .sigil-wrap{width:72px;height:72px;}
+  .sigil-ring{position:absolute;inset:0;border-radius:50%;border:1px solid var(--c-acc);opacity:0.25;}
+  .sigil-ring2{position:absolute;inset:8px;border-radius:50%;border:1px solid var(--c-acc);opacity:0.1;}
+  .sigil-sym{font-size:1.9rem;line-height:1;position:relative;z-index:1;filter:drop-shadow(0 0 12px var(--c-acc));}
+  .s-king .sigil-sym{font-size:2.3rem;}
+
+  /* ── TYPE LINE (card-meta sits below art) ── */
+  .card-meta{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:5px 11px;
+    margin:2px 10px 6px;
+    background:rgba(0,0,0,0.2);
+    border:1px solid var(--c-bdr);
+    border-radius:3px;gap:6px;
+  }
+  .card-role-tag{
+    font-family:var(--font-head);font-size:0.6rem;letter-spacing:0.16em;
+    text-transform:uppercase;color:var(--c-acc);font-weight:600;font-style:italic;
+  }
+  .card-visibility-tag{display:none;}
 
   /* BADGES */
   .card-badge{font-family:var(--font-head);font-size:0.46rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;padding:2px 5px;border-radius:2px;white-space:nowrap;}
-  .badge-original{color:var(--c-acc);border:1px solid var(--c-acc);background:rgba(0,0,0,0.3);opacity:0.8;}
+  .badge-original{color:var(--c-acc);border:1px solid var(--c-acc);background:rgba(0,0,0,0.3);opacity:0.85;}
   .badge-variant{color:rgba(210,185,130,0.85);border:1px solid rgba(210,185,130,0.35);background:rgba(210,185,130,0.06);}
   .badge-joke{color:#ff6b9d;border:1px solid rgba(255,107,157,0.35);background:rgba(255,107,157,0.05);}
   .badge-ek{color:rgba(210,185,130,0.85);border:1px solid rgba(210,185,130,0.35);background:rgba(210,185,130,0.06);}
 
-  /* SIGIL */
-  .card-sigil{display:flex;align-items:center;justify-content:center;padding:10px 0 6px;}
-  .sigil-wrap{position:relative;width:54px;height:54px;display:flex;align-items:center;justify-content:center;}
-  .s-king .sigil-wrap{width:66px;height:66px;}
-  .sigil-ring{position:absolute;inset:0;border-radius:50%;border:1px solid var(--c-acc);opacity:0.3;}
-  .sigil-ring2{position:absolute;inset:7px;border-radius:50%;border:1px solid var(--c-acc);opacity:0.12;}
-  .sigil-sym{font-size:1.7rem;line-height:1;position:relative;z-index:1;filter:drop-shadow(0 0 10px var(--c-acc));}
-  .s-king .sigil-sym{font-size:2.1rem;}
-
-  /* NAME */
-  .card-name{font-family:var(--font-head);font-size:0.92rem;font-weight:700;color:var(--c-txt);text-align:center;padding:2px 12px 10px;letter-spacing:0.03em;line-height:1.2;text-wrap:balance;}
-  .s-king .card-name{font-size:1.1rem;padding-bottom:12px;}
-
-  /* BODY */
-  .card-div{height:1px;background:linear-gradient(90deg,transparent,var(--c-acc),transparent);opacity:0.15;margin:0 12px;flex-shrink:0;}
-  .card-section{padding:8px 12px 4px;display:flex;flex-direction:column;gap:3px;}
-  .card-sec-label{font-family:var(--font-head);font-size:0.52rem;letter-spacing:0.28em;text-transform:uppercase;color:var(--c-acc);font-weight:600;opacity:0.8;}
-  .card-sec-text{font-family:var(--font-body);font-size:0.71rem;line-height:1.48;color:rgba(255,255,255,0.72);}
+  /* ── RULES TEXT ── */
+  .card-div{height:1px;background:linear-gradient(90deg,transparent,var(--c-acc),transparent);opacity:0.12;margin:1px 12px;flex-shrink:0;}
+  .card-section{padding:8px 13px 5px;display:flex;flex-direction:column;gap:3px;}
+  .card-sec-label{font-family:var(--font-head);font-size:0.56rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--c-acc);font-weight:600;opacity:0.85;}
+  .card-sec-text{font-family:var(--font-body);font-size:0.79rem;line-height:1.52;color:rgba(255,255,255,0.76);}
   .card-sec-text b{color:var(--c-acc2);font-weight:600;font-style:normal;}
-  .card-sec-text i{color:rgba(255,255,255,0.5);font-size:0.67rem;}
+  .card-sec-text i{color:rgba(255,255,255,0.52);font-size:0.75rem;}
 
-  /* FLAVOR */
-  .card-flavor{padding:8px 14px 12px;margin-top:auto;}
-  .card-flavor-div{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.08),transparent);margin-bottom:7px;}
-  .card-flavor-text{font-family:var(--font-body);font-size:0.63rem;line-height:1.4;color:rgba(255,255,255,0.28);font-style:italic;text-align:center;}
+  /* ── FLAVOR TEXT ── */
+  .card-flavor{padding:8px 14px 12px;margin-top:auto;border-top:1px solid var(--c-bdr);}
+  .card-flavor-div{display:none;}
+  .card-flavor-text{font-family:var(--font-body);font-size:0.69rem;line-height:1.42;color:rgba(255,255,255,0.3);font-style:italic;text-align:center;}
 
   /* SECTION DIVIDER between Original and Variant groups */
   .subsection-divider{width:100%;display:flex;align-items:center;gap:12px;padding:8px 0 16px;justify-content:center;}
@@ -316,11 +361,11 @@ a.link-card:hover{
   .filter-btn.active{border-color:var(--king-acc);color:var(--king-acc);background:rgba(212,160,23,0.08);}
 
   @media (max-width:520px){
-    .card{width:165px;}
-    .s-king .card{width:200px;}
-    .card-name{font-size:0.82rem;}
-    .s-king .card-name{font-size:0.95rem;}
-    .card-sec-text{font-size:0.67rem;}
+    .card{width:178px;}
+    .s-king .card{width:215px;}
+    .card-name{font-size:0.88rem;}
+    .s-king .card-name{font-size:1.0rem;}
+    .card-sec-text{font-size:0.73rem;}
   }
 </style>
 <!-- ══════════════════════════════════════════ -->
@@ -437,12 +482,12 @@ a.link-card:hover{
 </div>
 <div class="card-div"></div>
 <div class="card-section">
-<span class="card-sec-label">High Decree</span>
-<span class="card-sec-text"><b>{T}</b>: Choose one — target Knight draws a card and gains 2 life; or another player of your choice adds <b>{C}{C}{C}</b> to their mana pool this turn; or name a player — they cannot attack you until your next main phase. <i>Activate only during your main phase.</i></span>
+<span class="card-sec-label">Royal Decree</span>
+<span class="card-sec-text"><b>{T}</b>, pay <b>{2}</b>: Choose one — target Knight draws a card and gains 3 life; or choose a player — they cannot attack you until your next main phase; or secretly look at any one player's hidden role card. <i>Activate only during your main phase.</i></span>
 </div>
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
-<p class="card-flavor-text">"His favor lifts fortunes. His decree ends them."</p>
+<p class="card-flavor-text">"His favor opens doors. His decree closes them forever."</p>
 </div>
 </div>
 </div>
@@ -469,12 +514,12 @@ a.link-card:hover{
 </div>
 <div class="card-div"></div>
 <div class="card-section">
-<span class="card-sec-label">Judgment</span>
-<span class="card-sec-text"><b>{T}</b>, pay <b>2 life</b>: Choose one — exile target card from any player's graveyard; or target player cannot use activated abilities until your next upkeep; or look at the top three cards of target opponent's library and put them back in any order. <i>Activate only during your main phase.</i></span>
+<span class="card-sec-label">Warden's Judgment</span>
+<span class="card-sec-text"><b>{T}</b>, pay <b>3 life</b>: Choose one — tap all creatures target opponent controls; they don't untap during their next untap step; or exile a card from any player's graveyard; or until your next upkeep, all damage that would be dealt to you is instead dealt to its source's controller. <i>Activate only during your main phase.</i></span>
 </div>
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
-<p class="card-flavor-text">"Justice moves at my pace. Everything else waits."</p>
+<p class="card-flavor-text">"The law does not chase. It waits."</p>
 </div>
 </div>
 </div>
