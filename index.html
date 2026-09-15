@@ -64,9 +64,26 @@
     .card-section { padding: 4px 7px 2px !important; gap: 2px !important; }
     .card-sec-label { font-size: 0.48rem !important; }
     .card-sec-text  { font-size: 0.62rem !important; line-height: 1.33 !important; }
+  .choose-options { margin: 2px 0 0 0 !important; padding: 0 0 0 1.1em !important; list-style: none !important; }
+  .choose-options li { position: relative !important; padding-left: 0 !important; margin-bottom: 1px !important; }
+  .choose-options li::before { content: "\2022" !important; position: absolute !important; left: -0.9em !important; color: var(--c-acc) !important; opacity: 0.8 !important; }
     .card-flavor { padding: 4px 9px 6px !important; margin-top: auto !important; border-top: 1px solid var(--c-bdr) !important; }
     .card-flavor-div { display: none !important; }
     .card-flavor-text { font-size: 0.56rem !important; }
+
+    .card { position: relative !important; }
+    .card::after {
+      content: "v0.5.65";
+      position: absolute;
+      bottom: 2px;
+      left: 5px;
+      font-size: 0.28rem;
+      color: rgba(255,255,255,0.22);
+      font-family: monospace;
+      letter-spacing: 0.04em;
+      line-height: 1;
+      pointer-events: none;
+    }
 
     .section-header {
       grid-column: 1 / -1 !important;
@@ -214,7 +231,7 @@ a.link-card:hover{
   .page-rule{width:200px;height:1px;background:linear-gradient(90deg,transparent,var(--king-acc),transparent);opacity:0.3;margin:20px auto 0;}
 
   /* SECTION */
-  .role-section{max-width:1340px;margin:0 auto 72px;}
+  .role-section{max-width:1340px;margin:0 auto 72px;scroll-margin-top:140px;}
   .section-header{display:flex;align-items:center;gap:16px;margin-bottom:24px;}
   .section-bar{flex:1;height:1px;opacity:0.18;}
   .section-label{font-family:var(--font-head);font-size:0.68rem;letter-spacing:0.38em;text-transform:uppercase;font-weight:600;white-space:nowrap;}
@@ -324,6 +341,9 @@ a.link-card:hover{
   .card-section{padding:8px 13px 5px;display:flex;flex-direction:column;gap:3px;}
   .card-sec-label{font-family:var(--font-head);font-size:0.56rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--c-acc);font-weight:600;opacity:0.85;}
   .card-sec-text{font-family:var(--font-body);font-size:0.79rem;line-height:1.52;color:rgba(255,255,255,0.76);}
+  .choose-options{list-style:none;margin:3px 0 2px 0;padding:0 0 0 1.1em;}
+  .choose-options li{position:relative;margin-bottom:2px;}
+  .choose-options li::before{content:"\2022";position:absolute;left:-0.9em;color:var(--c-acc);opacity:0.75;}
   .card-sec-text b{color:var(--c-acc2);font-weight:600;font-style:normal;}
   .card-sec-text i{color:rgba(255,255,255,0.52);font-size:0.75rem;}
 
@@ -359,6 +379,15 @@ a.link-card:hover{
   .filter-btn{font-family:var(--font-head);font-size:0.56rem;letter-spacing:0.28em;text-transform:uppercase;padding:6px 18px;border-radius:3px;border:1px solid rgba(212,160,23,0.2);background:transparent;color:rgba(212,160,23,0.4);cursor:pointer;transition:all 0.2s;}
   .filter-btn:hover{border-color:rgba(212,160,23,0.5);color:rgba(212,160,23,0.75);}
   .filter-btn.active{border-color:var(--king-acc);color:var(--king-acc);background:rgba(212,160,23,0.08);}
+  .jump-links{display:flex;gap:0;align-items:center;}
+  .jump-link{font-family:var(--font-head);font-size:0.5rem;letter-spacing:0.22em;text-transform:uppercase;text-decoration:none;padding:3px 10px;opacity:0.45;transition:opacity 0.2s;border-left:1px solid rgba(255,255,255,0.1);}
+  .jump-link:first-child{border-left:none;}
+  .jump-link:hover{opacity:1;}
+  .jl-king{color:var(--king-acc);}
+  .jl-knight{color:var(--knight-acc);}
+  .jl-assassin{color:var(--assassin-acc);}
+  .jl-bandit{color:var(--bandit-acc);}
+  .jl-renegade{color:var(--renegade-acc);}
 
   @media (max-width:520px){
     .card{width:178px;}
@@ -444,9 +473,9 @@ a.link-card:hover{
 <button class="filter-btn" data-filter="ek">Expanded Kingdoms</button>
 <button class="filter-btn" data-filter="variant">Variants</button>
 <button class="filter-btn" data-filter="special" style="border-color:rgba(255,107,157,0.25);color:rgba(255,107,157,0.5);">Specials</button>
-<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><span class="nav-version">v0.5.63</span></nav>
+<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.65</span></nav>
 <!-- ══ KING ══ -->
-<section class="role-section s-king">
+<section class="role-section s-king" id="s-king">
 <div class="section-header">
 <div class="section-bar"></div>
 <span class="section-label">The King · Public Role</span>
@@ -506,7 +535,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Special</span>
-<span class="card-sec-text"><b>{T}, exile a card from your hand</b> (or pay <b>{4}</b>): Choose one — another player of your choice adds <b>{C}{C}</b> to their mana pool; target player draws two cards; or you gain 5 life. Activate only during your main phase.</span>
+<span class="card-sec-text"><b>{T}, exile a card from your hand</b> (or pay <b>{4}</b>): Choose one —<ul class="choose-options"><li>Another player of your choice adds <b>{C}{C}</b> to their mana pool</li><li>Target player draws two cards</li><li>You gain 5 life</li></ul>Activate only during your main phase.</span>
 </div>
 <div class="card-div"></div>
 <div class="card-section">
@@ -553,7 +582,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Royal Decree</span>
-<span class="card-sec-text"><b>{T}</b>, pay <b>{2}</b>: Choose one — target Knight draws a card and gains 3 life; or choose a player — they cannot attack you until your next main phase; or secretly look at any one player's hidden role card. <i>Activate only during your main phase.</i></span>
+<span class="card-sec-text"><b>{T}</b>, pay <b>{2}</b>: Choose one —<ul class="choose-options"><li>Target Knight draws a card and gains 3 life</li><li>Choose a player — they cannot attack you until your next main phase</li><li>Secretly look at any one player's hidden role card</li></ul><i>Activate only during your main phase.</i></span>
 </div>
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
@@ -585,7 +614,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Warden's Judgment</span>
-<span class="card-sec-text"><b>{T}</b>, pay <b>3 life</b>: Choose one — tap all creatures target opponent controls; they don't untap during their next untap step; or exile a card from any player's graveyard; or until your next upkeep, all damage that would be dealt to you is instead dealt to its source's controller. <i>Activate only during your main phase.</i></span>
+<span class="card-sec-text"><b>{T}</b>, pay <b>3 life</b>: Choose one —<ul class="choose-options"><li>Tap all creatures target opponent controls; they don't untap during their next untap step</li><li>Exile a card from any player's graveyard</li><li>Until your next upkeep, all damage that would be dealt to you is instead dealt to its source's controller</li></ul><i>Activate only during your main phase.</i></span>
 </div>
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
@@ -782,7 +811,7 @@ a.link-card:hover{
 </div>
 </section>
 <!-- ══ KNIGHTS ══ -->
-<section class="role-section s-knight">
+<section class="role-section s-knight" id="s-knight">
 <div class="section-header">
 <div class="section-bar"></div>
 <span class="section-label">Knights · Secret Protectors</span>
@@ -1357,7 +1386,7 @@ a.link-card:hover{
 </div>
 </section>
 <!-- ══ ASSASSINS ══ -->
-<section class="role-section s-assassin">
+<section class="role-section s-assassin" id="s-assassin">
 <div class="section-header">
 <div class="section-bar"></div>
 <span class="section-label">Assassins · Kill the King</span>
@@ -1461,7 +1490,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Announce</span>
-<span class="card-sec-text">Choose one — During the King's next turn, you control that player during all <b>combat phases</b>. OR During the King's next turn, you control that player during all <b>main phases</b>. <i>(You may look at and cast spells from that player's hand while controlling their phase.) Activate only during your turn.</i></span>
+<span class="card-sec-text">Choose one —<ul class="choose-options"><li>During the King's next turn, you control that player during all <b>combat phases</b></li><li>During the King's next turn, you control that player during all <b>main phases</b></li></ul><i>(You may look at and cast spells from that player's hand while controlling their phase.) Activate only during your turn.</i></span>
 </div>
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
@@ -1827,7 +1856,7 @@ a.link-card:hover{
 </div>
 </section>
 <!-- ══ BANDITS ══ -->
-<section class="role-section s-bandit">
+<section class="role-section s-bandit" id="s-bandit">
 <div class="section-header">
 <div class="section-bar"></div>
 <span class="section-label">Bandits · Scheming Saboteurs</span>
@@ -1951,7 +1980,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Announce</span>
-<span class="card-sec-text">Choose one: <b>Exile target spell</b> on the stack. <b>OR:</b> <b>Change the target</b> of target spell or ability to a new legal target. Role abilities cannot be targeted by either mode. <i>Activate only when a spell or ability is on the stack.</i></span>
+<span class="card-sec-text">Choose one —<ul class="choose-options"><li><b>Exile target spell</b> on the stack</li><li><b>Change the target</b> of target spell or ability to a new legal target</li></ul>Role abilities cannot be targeted by either mode. <i>Activate only when a spell or ability is on the stack.</i></span>
 </div>
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
@@ -2326,7 +2355,7 @@ a.link-card:hover{
 </div>
 </section>
 <!-- ══ RENEGADES ══ -->
-<section class="role-section s-renegade">
+<section class="role-section s-renegade" id="s-renegade">
 <div class="section-header">
 <div class="section-bar"></div>
 <span class="section-label">Renegades · Wild Cards</span>
@@ -2876,11 +2905,33 @@ a.link-card:hover{
     specialsDisplay.style.display = 'none';
   }
 
-  // Filter button logic — skips the Quick Ref button
+  // Jump-link click: switch to All filter first if needed, then scroll to section
+  document.querySelectorAll('.jump-link').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      var targetId = this.getAttribute('data-section');
+      var allBtn = document.querySelector('[data-filter="all"]');
+      var active = document.querySelector('.filter-btn.active');
+      var isAll = active && active.getAttribute('data-filter') === 'all';
+      function doScroll(){
+        var el = document.getElementById(targetId);
+        if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+      if(!isAll && allBtn){
+        allBtn.click();
+        setTimeout(doScroll, 80);
+      } else {
+        doScroll();
+      }
+    });
+  });
+
+  // Filter button logic -- skips the Quick Ref button
   var btns = document.querySelectorAll('.filter-btn');
   btns.forEach(function(btn){
     btn.addEventListener('click', function(){
       if(this.id === 'ref-toggle') return; // handled above
+      if(this.id === 'links-toggle') return; // handled by links script
       // Close Quick Ref if open
       setQuickRef(false);
       btns.forEach(function(b){ b.classList.remove('active'); });
