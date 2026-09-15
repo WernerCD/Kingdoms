@@ -10,15 +10,9 @@ param(
 )
 
 # --- Config ------------------------------------------------------------------
-$repoUrl = "https://github.com/wernercd/Kingdoms.git"
+$repoUrl = "https://github.com/WernerCD/Kingdoms.git"
 $repoDir = "Y:\Code\Kingdoms"
 $logFile = "$repoDir\logs\deploy-kingdoms.log"
-
-$stageFiles = @(
-    "wwwroot\index.html",
-    "wwwroot\kingdoms-cards-fronts.pdf",
-    "wwwroot\kingdoms-cards-doublesided.pdf"
-)
 
 # --- Logging (buffered -- written once at end) --------------------------------
 $logBuffer = [System.Collections.Generic.List[string]]::new()
@@ -75,7 +69,7 @@ if (Test-Path "$repoDir\.git") {
 }
 
 # --- Stage -------------------------------------------------------------------
-LogLines (git add $stageFiles 2>&1) "git add: "
+LogLines (git add -A 2>&1) "git add: "
 
 # --- Commit ------------------------------------------------------------------
 $status = git status --porcelain | Where-Object { $_ -notmatch '^\?\?' }
