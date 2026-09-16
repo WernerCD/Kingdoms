@@ -91,3 +91,43 @@ Similar to normal Kingdoms: there is a King, a Knight, and two Bandit roles. The
 - **Nov 9, 2016** — The Kingslayer (new king now chosen at random); The Gunslinger (two targets instead of one); The Sellsword (players can bid the same amount); The Ice Lord added; snow zombie tokens added; various minor updates.
 - **Nov 13, 2016** — Minor edits to The Sellsword and The Ice Lord; The Impostor simplified.
 - **July 22, 2018** — The Paladin added (new Knight). The Necromancer → The Lich. The Gambler revamped. The Queen modified. The Witch revamped. The Gunslinger changed to "highest CMC on the battlefield." The Dragonkeeper updated to 2/2 tokens. **The Executioner removed** (no counterplay). **The Ice Lord removed** (too swingy). Rules updated: players choose decks after role cards; Bandit reveal added.
+
+---
+
+## Thread Notes
+
+*Gathered from the MTG Salvation thread, 2026-09-16. Two pages, ~27 posts.*
+
+### Balance history not in the changelog above
+
+- **The Priestess** originally triggered at *"more than 10 life"*. Playtesting
+  showed the King could respond to a Magister Sphinx or Sorin Markov play, so
+  it was retightened to **"10 or more"**.
+- **The Ice Lord** was removed as *"too swingy and powerful"*; **The
+  Executioner** because there was *"no real way to play around"* it.
+- **4-player rules** were added on **2016-11-13** — the changelog entry above
+  omits this.
+
+### Player counts in more detail than the table above
+
+- **7 players** — the Queen is added and may join *either* the King's team or
+  the Nobles.
+- **9 players** — resolves to a 3v3v3 structure: King + 2 Knights, 3 Bandits,
+  3 Nobles.
+
+### Game length
+
+The author reports 5–6 player games *"typically don't last much more than an
+hour"*, rising to *"1.5–2 hours even when playing with up to 9 players"*.
+
+### Community critique
+
+Anachronity (2018) on the post-July-2018 Paladin: *"The Paladin's mana sharing
+is busted in half, since you both end up with double mana,"* suggesting a
+shared mana pool would be fairer.
+
+> **Note on names.** EK's **The Paladin** (Knight, added 2018-07-22) and EK's
+> **The Lich** (renamed from The Necromancer, same date) are distinct from the
+> cards of similar name in this viewer: our *The Paladin* is a house variant
+> with a different ability, and our *The Necromancer* is an Advanced Kingdoms
+> Bandit. See [Card Set Audit](Card%20Set%20Audit.md).

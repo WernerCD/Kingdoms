@@ -102,3 +102,45 @@ Available in A4 and Letter sizes, Full version (with role tips on back) and Card
 - **Card Fronts Only** — 3 pages; recommended for veterans. Refer to the forum post for rules.
 
 > Note: Cards must be in **identical matching sleeves** so roles remain hidden. To read the back of a Full version card during the game, remove it from the sleeve out of sight.
+
+---
+
+## Errata & Thread Notes
+
+*Gathered from the MTG Salvation thread, 2026-09-16. The thread was opened by
+WaRgUnNeR on 2020-09-12 and runs to six posts; **v1.56 is still the latest
+version** and the author has posted no revision since.*
+
+### ⚠ Official errata — Bandit Victory condition (WaRgUnNeR, 2021-01-26)
+
+A reader (Spyntbg, 2021-01-23) raised this corner case:
+
+> "What happens if a Bandit becomes teammates with the Sellsword? The Bandit
+> would only be able to win by eliminating the Sellsword as they are not a
+> bandit, but in doing so would be eliminating a teammate (their defeat
+> condition)."
+
+The author confirmed the conflict and issued an errata:
+
+> "The intention of the Sellsword is that he becomes teammates with whomever
+> buys him out, so he will join their forces and will not need to be
+> eliminated." — change the Bandit's Victory condition to:
+> **"All non-teammates are eliminated."**
+
+**This is not yet reflected in the card viewer.** Every Bandit card still reads
+*"All non-Bandits are eliminated"* — 5 Advanced Kingdoms Bandits and 7 house
+variants, 12 cards in total. Under the printed wording a Bandit who hires the
+Sellsword is locked into a position where their only route to Victory also
+triggers their Defeat.
+
+### Community proposal — 4-player Advanced Kingdoms (Javy Dreamer, 2024-08-28)
+
+Suggested for league play, **not author-endorsed**: 1 King, 1 Knight,
+2 Assassins. The official table still starts at 5 players.
+
+### Thread activity
+
+Play reports are sparse but positive — a 7-player game (Minty Chip, 2024-04-06)
+ended in a Champion victory after a complex endgame. Most recent post is
+2025-01-19. No card ability text is quoted anywhere in the thread; the card
+text lives only in the linked A4/Letter PDFs.
