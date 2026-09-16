@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="620" viewBox="0 0 420 620" role="img" aria-label="The Usurper">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#041510"/><stop offset="1" stop-color="#082318"/></linearGradient></defs>
+<rect x="1.5" y="1.5" width="417.0" height="617.0" rx="16" fill="url(#g)" stroke="rgba(16,185,129,0.30)" stroke-width="1.5"/>
+<rect x="1.5" y="1.5" width="417.0" height="5" rx="2.5" fill="#10B981"/>
+<text x="26" y="40" font-family="'Cinzel','Times New Roman',serif" font-size="11" letter-spacing="2.2" fill="#6EE7B7">RENEGADE</text>
+<rect x="328" y="28" width="66" height="17" rx="8.5" fill="none" stroke="rgba(16,185,129,0.30)"/>
+<text x="361" y="40" text-anchor="middle" font-family="'Cinzel','Times New Roman',serif" font-size="9" letter-spacing="1.6" fill="#6EE7B7">VARIANT</text>
+<circle cx="210" cy="96" r="27" fill="none" stroke="rgba(16,185,129,0.30)" stroke-width="1.2"/>
+<circle cx="210" cy="96" r="21" fill="none" stroke="#10B981" stroke-width="0.7" opacity="0.55"/>
+<text x="210" y="105" text-anchor="middle" font-size="24" fill="#6EE7B7">♛</text>
+<text x="210" y="158" text-anchor="middle" font-family="'Cinzel','Times New Roman',serif" font-size="23" fill="#D1FAE5">The Usurper</text>
+<line x1="86" y1="176" x2="334" y2="176" stroke="rgba(16,185,129,0.30)"/>
+<text x="26" y="202.0" font-family="'Cinzel','Times New Roman',serif" font-size="13.0" letter-spacing="1.6" fill="#6EE7B7">VICTORY</text>
+<text x="26" y="219.9" font-family="'Crimson Text',Georgia,serif" font-size="13.0" fill="#D1FAE5"><tspan  xml:space="preserve">When</tspan><tspan  xml:space="preserve"> you</tspan><tspan  xml:space="preserve"> personally</tspan><tspan  xml:space="preserve"> deal</tspan><tspan  xml:space="preserve"> the</tspan><tspan  xml:space="preserve"> final</tspan><tspan  xml:space="preserve"> damage</tspan><tspan  xml:space="preserve"> to</tspan><tspan  xml:space="preserve"> eliminate</tspan><tspan  xml:space="preserve"> the</tspan></text>
+<text x="26" y="237.6" font-family="'Crimson Text',Georgia,serif" font-size="13.0" fill="#D1FAE5"><tspan  xml:space="preserve">King,</tspan><tspan  xml:space="preserve"> reveal</tspan><tspan  xml:space="preserve"> this</tspan><tspan  xml:space="preserve"> card.</tspan><tspan  xml:space="preserve"> You</tspan><tspan font-weight="600" xml:space="preserve"> gain</tspan><tspan font-weight="600" xml:space="preserve"> the</tspan><tspan font-weight="600" xml:space="preserve"> King</tspan><tspan font-weight="600" xml:space="preserve"> role</tspan><tspan font-weight="600" xml:space="preserve"> card</tspan><tspan  xml:space="preserve"> and</tspan></text>
+<text x="26" y="255.3" font-family="'Crimson Text',Georgia,serif" font-size="13.0" fill="#D1FAE5"><tspan  xml:space="preserve">gain</tspan><tspan  xml:space="preserve"> 10</tspan><tspan  xml:space="preserve"> life.</tspan><tspan  xml:space="preserve"> The</tspan><tspan  xml:space="preserve"> game</tspan><tspan  xml:space="preserve"> continues</tspan><tspan  xml:space="preserve"> under</tspan><tspan  xml:space="preserve"> your</tspan><tspan  xml:space="preserve"> reign,</tspan><tspan  xml:space="preserve"> and</tspan><tspan  xml:space="preserve"> you</tspan></text>
+<text x="26" y="273.0" font-family="'Crimson Text',Georgia,serif" font-size="13.0" fill="#D1FAE5"><tspan  xml:space="preserve">now</tspan><tspan  xml:space="preserve"> win</tspan><tspan  xml:space="preserve"> under</tspan><tspan  xml:space="preserve"> the</tspan><tspan  xml:space="preserve"> King's</tspan><tspan  xml:space="preserve"> Victory</tspan><tspan  xml:space="preserve"> condition.</tspan></text>
+<line x1="26" y1="293.7" x2="394" y2="293.7" stroke="rgba(16,185,129,0.30)"/>
+<text x="26" y="307.7" font-family="'Crimson Text',Georgia,serif" font-size="12.0" font-style="italic" fill="#D1FAE5" opacity="0.72"><tspan  xml:space="preserve">I</tspan><tspan  xml:space="preserve"> don't</tspan><tspan  xml:space="preserve"> want</tspan><tspan  xml:space="preserve"> the</tspan><tspan  xml:space="preserve"> King</tspan><tspan  xml:space="preserve"> dead.</tspan><tspan  xml:space="preserve"> I</tspan><tspan  xml:space="preserve"> want</tspan><tspan  xml:space="preserve"> his</tspan><tspan  xml:space="preserve"> seat.</tspan></text>
+</svg>

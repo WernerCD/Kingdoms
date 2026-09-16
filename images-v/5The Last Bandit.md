@@ -4,6 +4,9 @@
 **Badge:** Variant  
 **Sigil:** ◑  
 
+## Setup
+At most **one solo-win card per faction** may be dealt in a game. If a second would be dealt, shuffle it back and redraw.
+
 ## Victory
 All non-Bandits are eliminated AND **you are the only surviving Bandit.** Other living Bandits at game end deny your victory.
 

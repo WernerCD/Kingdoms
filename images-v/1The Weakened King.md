@@ -5,7 +5,7 @@
 **Sigil:** ◐  
 
 ## Setup
-Keep face up. Starting player. Begin with **30 life** instead of the King's standard 50.
+Keep face up. Starting player. Begin with **40 life** instead of the King's standard 50.
 
 ## Victory
 All Assassins, Bandits and/or Renegades are eliminated.

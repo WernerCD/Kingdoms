@@ -73,7 +73,7 @@
 
     .card { position: relative !important; }
     .card::after {
-      content: "v0.5.72";
+      content: "v0.5.73";
       position: absolute;
       bottom: 2px;
       left: 5px;
@@ -486,7 +486,7 @@ a.link-card:hover{
 <button class="filter-btn" data-filter="ek">Expanded Kingdoms</button>
 <button class="filter-btn" data-filter="variant">Variants</button>
 <button class="filter-btn" data-filter="special" style="border-color:rgba(255,107,157,0.25);color:rgba(255,107,157,0.5);">Specials</button>
-<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.72</span></nav>
+<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.73</span></nav>
 <!-- ══ KING ══ -->
 <section class="role-section s-king" id="s-king">
 <div class="section-header">
@@ -658,7 +658,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Curse</span>
-<span class="card-sec-text">At the beginning of each of your upkeeps, <b>lose 3 life.</b> This loss cannot be prevented or replaced.</span>
+<span class="card-sec-text">At the beginning of each of your upkeeps, <b>lose 1 life for each surviving enemy</b> (Assassin, Bandit or Renegade). This loss cannot be prevented or replaced.</span>
 </div>
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
@@ -710,7 +710,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Setup</span>
-<span class="card-sec-text">Keep face up. Starting player. Begin with <b>30 life</b> instead of the King's standard 50.</span>
+<span class="card-sec-text">Keep face up. Starting player. Begin with <b>40 life</b> instead of the King's standard 50.</span>
 </div>
 <div class="card-div"></div>
 <div class="card-section">
@@ -782,7 +782,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Warning</span>
-<span class="card-sec-text">Standard Knight-elimination penalty applies. Surviving without a personal kill does not satisfy the Victory condition — even if enemies are gone.</span>
+<span class="card-sec-text">Standard Knight-elimination penalty applies. If all enemies are gone but you have no personal kill, you do not win immediately — instead you win at the <b>beginning of your next end step</b>, giving the table one turn to stop you.</span>
 </div>
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
@@ -813,7 +813,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Restriction</span>
-<span class="card-sec-text">You <b>cannot gain life</b> from any source except this role card's own effects. Life gain from spells, abilities, and triggered effects is prevented.</span>
+<span class="card-sec-text">You <b>cannot gain life</b> from any source except <b>Knight role cards</b>. Life gain from spells, abilities, and triggered effects is prevented.</span>
 </div>
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
@@ -1753,6 +1753,10 @@ a.link-card:hover{
 <div class="card-name">The Blade</div>
 <div class="card-div"></div>
 <div class="card-section">
+<span class="card-sec-label">Setup</span>
+<span class="card-sec-text">At most <b>one solo-win card per faction</b> may be dealt in a game. If a second would be dealt, shuffle it back and redraw.</span>
+</div>
+<div class="card-section">
 <span class="card-sec-label">Victory</span>
 <span class="card-sec-text">The King is eliminated. If <b>you</b> personally dealt the killing blow, you win alone — other Assassins do not share your victory.</span>
 </div>
@@ -1831,6 +1835,10 @@ a.link-card:hover{
 <div class="card-name">The Lone Wolf</div>
 <div class="card-div"></div>
 <div class="card-section">
+<span class="card-sec-label">Setup</span>
+<span class="card-sec-text">At most <b>one solo-win card per faction</b> may be dealt in a game. If a second would be dealt, shuffle it back and redraw.</span>
+</div>
+<div class="card-section">
 <span class="card-sec-label">Victory</span>
 <span class="card-sec-text">The King is eliminated AND <b>you are the only surviving Assassin.</b> Other living Assassins at game end deny your victory.</span>
 </div>
@@ -1858,12 +1866,12 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
-<span class="card-sec-text">The King is eliminated and at least one Assassin survives. <b>However,</b> you must never have personally dealt damage to the King — not combat, not spells, not abilities.</span>
+<span class="card-sec-text">The King is eliminated and at least one Assassin survives. <b>However,</b> you must never have dealt damage to the King with a spell or ability you control that <b>targets</b> them, or with your <b>attacking creatures</b>.</span>
 </div>
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Special</span>
-<span class="card-sec-text">You must manipulate other players into killing the King on your behalf. If you ever damage the King directly, your Victory condition is permanently voided this game.</span>
+<span class="card-sec-text">You must manipulate other players into killing the King on your behalf. If you ever damage the King that way, your Victory condition is permanently voided this game. <b>Incidental, redirected or symmetrical damage does not void it.</b></span>
 </div>
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
@@ -2351,6 +2359,10 @@ a.link-card:hover{
 <div class="card-name">The Last Bandit</div>
 <div class="card-div"></div>
 <div class="card-section">
+<span class="card-sec-label">Setup</span>
+<span class="card-sec-text">At most <b>one solo-win card per faction</b> may be dealt in a game. If a second would be dealt, shuffle it back and redraw.</span>
+</div>
+<div class="card-section">
 <span class="card-sec-label">Victory</span>
 <span class="card-sec-text">All non-Bandits are eliminated AND <b>you are the only surviving Bandit.</b> Other living Bandits at game end deny your victory.</span>
 </div>
@@ -2377,6 +2389,10 @@ a.link-card:hover{
 <div class="card-name">The Arsonist</div>
 <div class="card-div"></div>
 <div class="card-section">
+<span class="card-sec-label">Setup</span>
+<span class="card-sec-text">At most <b>one solo-win card per faction</b> may be dealt in a game. If a second would be dealt, shuffle it back and redraw.</span>
+</div>
+<div class="card-section">
 <span class="card-sec-label">Victory</span>
 <span class="card-sec-text">All non-Bandits are eliminated.</span>
 </div>
@@ -2388,7 +2404,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Bonus Victory</span>
-<span class="card-sec-text"><b>Alternate win:</b> If you control more non-land permanents than any other surviving player when any victory condition is met, you win — even if your team does not.</span>
+<span class="card-sec-text"><b>Alternate win:</b> If you control <b>15 or more non-land permanents</b> when <b>another player's</b> Victory condition is met, you win instead — even if your team does not.</span>
 </div>
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
@@ -2716,7 +2732,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Announce</span>
-<span class="card-sec-text">You may turn <b>The Fool</b> face up at any time. If you do, the King must <b>attack you</b> on each of their attack steps until you are eliminated. Other players may not block or redirect the King's attacks that target you.</span>
+<span class="card-sec-text">You may turn <b>The Fool</b> face up at any time. If you do, the King must <b>attack you</b> on each of their attack steps until you are eliminated, unless the King <b>loses 3 life</b> to decline that attack. Other players may not block or redirect the King's attacks that target you.</span>
 </div>
 <div class="card-div"></div>
 <div class="card-section">
