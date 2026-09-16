@@ -1,47 +1,59 @@
-# Card Set Audit — v0.5.70
+# Card Set Audit — v0.5.71
 
-Cross-check of `docs/index.html` (74 cards) against the Advanced Kingdoms
+Cross-check of `docs/index.html` (76 cards) against the Advanced Kingdoms
 v1.56 rules, the Expanded Kingdoms rules, and `Expanded Kingdoms Card
 Reference.md`. Rule numbers below refer to the AK official rules doc.
 
-## Scope — what could NOT be verified
+## Method
 
-**Card text fidelity against official AK v1.56 is unverified.** No
-card-text source for Advanced Kingdoms exists in this repo or in Dropbox.
-`Advanced Kingdoms - Official Rules (MTG Salvation).md` documents the *rules*
-(roles, setup, Rules 1–9) but contains no individual card text. The only
-card-level source on disk is `Expanded Kingdoms Card Reference.md`, which maps
-art files to names but gives no ability text either.
+Every card in `docs/index.html` was diffed field-by-field against the `.md`
+sidecars in `images-ak/` and `images-ek/`, matching on card name **and**
+`**Badge:**`, comparing role tag, every section label and body, and flavour
+text under whitespace/punctuation normalisation.
 
-To close this gap, one of the following is needed:
-- the official v1.56 "Full version" / "Card Fronts Only" PDFs from the forum thread, or
-- a scrape of the MTG Salvation thread.
+## Result: the viewer is a faithful translation
 
-Everything below is verified against what *is* on disk.
-
----
-
-## 1. Classification mismatches
-
-`Expanded Kingdoms Card Reference.md` marks these as **"Unchanged"** — meaning
-they are current Advanced Kingdoms cards — but the viewer classifies them
-otherwise:
-
-| Card | Reference says | Viewer has it as | Should be |
+| Set | `.md` sources | Cards in viewer | Text mismatches |
 |---|---|---|---|
-| The Gambler | Renegade, Unchanged | `card-variant` | `card-original` |
-| The Witch | Renegade, Unchanged | `card-variant` | `card-original` |
-| The Jester | Renegade, Unchanged | `card-ek` only | `card-original` |
+| Advanced Kingdoms | 21 | 21 | **0** |
+| Expanded Kingdoms | 18 | 18 (after this fix) | **0** |
 
-Consequence: three canonical AK cards are hidden behind the "Variants" and
-"Expanded Kingdoms" filters. A player filtering to **Advanced Kingdoms** sees
-an incomplete official set.
+No card text, role tag, victory condition or flavour line differs from its
+source. Earlier apparent diffs were artefacts of tag-stripping — the markup
+uses `<br/>` and `</ul>` where text appeared to run together, and it renders
+correctly.
 
-Note this also breaks the clean "5 per non-King role" symmetry — the AK
-Renegade slot currently shows 5 (Champion, Cultist, Mimic, Sellsword, Straw
-Man), so if Gambler/Witch/Jester are genuinely canonical, the Renegade pool is
-8 and either the reference doc or the viewer is wrong about which five ship.
-**This one needs your call, not a code fix.**
+**The 37 house variants have no `.md` sources.** They exist only in the HTML,
+so they cannot be verified against anything and have no canonical text to fall
+back on. If they matter, give them sidecars like the others.
+
+## 1. Fixed — two EK cards were missing from the viewer
+
+`images-ek/` documents 18 EK role cards; the viewer had 16.
+
+| Card | Role | Now placed in |
+|---|---|---|
+| **The Gunslinger** | Bandit (EK) | Assassins section, `card ca card-ek` |
+| **The Gladiator** | Renegade (EK) | Renegades section, `card cr card-ek` |
+
+Both added in v0.5.71 with text taken verbatim from their sidecars. Note these
+are genuinely distinct cards from the AK ones that reuse their art —
+`The Gunslinger` is not `The Marksman`, and `The Gladiator` is not `The Giant`.
+
+## 1b. Correction — `Expanded Kingdoms Card Reference.md` is wrong
+
+That doc marks **The Gambler**, **The Witch** and **The Jester** as
+"Unchanged", implying they are current Advanced Kingdoms cards. The `.md`
+sidecars — which are authoritative — say otherwise:
+
+| Card | Reference doc claims | Sidecar badge | Viewer | Verdict |
+|---|---|---|---|---|
+| The Gambler | AK, unchanged | `Variant` | `card-variant` | **viewer correct** |
+| The Witch | AK, unchanged | `Variant` | `card-variant` | **viewer correct** |
+| The Jester | AK, unchanged | `EK` | `card-ek` | **viewer correct** |
+
+The viewer was right and the reference doc is stale. `Expanded Kingdoms Card
+Reference.md` should be corrected or retired; the sidecars supersede it.
 
 ## 2. Duplicate card names
 
@@ -58,8 +70,9 @@ factions. Rename the variant Knight (suggestion: **The Vanguard**).
 - `Expanded Kingdoms Card Reference.md` claims the viewer has "art watermarks
   embedded". It does not — `docs/index.html` contains **zero** `<img>` tags and
   no `url()` backgrounds. Cards are drawn with CSS sigils and gradients.
-- The same doc points at `C:\Users\Kriis\...` paths and a `claude.ai/artifact/...`
-  viewer URL. Both are stale; the live viewer is
+- The same doc points at `C:\Users\Kriis\...` paths, an `images/` folder that
+  no longer exists (now `images-ak/` and `images-ek/`), and a
+  `claude.ai/artifact/...` viewer URL. All stale; the live viewer is
   https://wernercd.github.io/Kingdoms/
 - `workflow.md` lists the live site as `.../kingdoms/` (lowercase), which
   **404s**. The correct URL is `.../Kingdoms/`.
@@ -233,9 +246,9 @@ teammate; this is intentional"* or allow a one-time re-name on reveal.
 
 ## Priority order
 
+0. ~~Two EK cards missing from the viewer~~ — **fixed in v0.5.71**
 1. **A1** — High King / Warden King missing Assassins (game-breaking, trivial fix)
 2. **A2, A3** — Martyr King and Avenger are non-functional as written
 3. **A6 + §2** — duplicate ability and the two "The Champion" cards
 4. **A4, A5** — Usurper self-contradiction, Jack designation
-5. **§1** — Gambler / Witch / Jester classification (needs your ruling)
-6. **B** and **C** — balance and wording passes
+5. **B** and **C** — balance and wording passes

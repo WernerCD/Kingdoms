@@ -55,12 +55,12 @@ Assassin red.
 
 ## Card sets in the viewer
 
-74 cards total, filterable by the buttons in the nav:
+76 cards total, filterable by the buttons in the nav:
 
 | Filter | CSS class | Count | What it is |
 |---|---|---|---|
 | Advanced Kingdoms | `card-original` | 21 | Canonical v1.56 cards |
-| Expanded Kingdoms | `card-ek` | 16 | Legacy EK-only roles |
+| Expanded Kingdoms | `card-ek` | 18 | Legacy EK-only roles |
 | Variants | `card-variant` | 37 | House-rule cards (not official) |
 | Specials | `card-special` | 2 | Cross-table cards (Jack's Guard, Kill Jack) |
 
@@ -78,23 +78,30 @@ the v1.56 rules text.
 | `docs/index.html` | The card viewer — GitHub Pages serves this |
 | `docs/*.pdf` | Print-ready card PDFs (fronts, double-sided) |
 | `Documents/` | This documentation and the rules references |
-| `images/` | Expanded Kingdoms Cockatrice art (45 files) |
+| `images-ak/` | Advanced Kingdoms card art + `.md` card text (25 files) |
+| `images-ek/` | Expanded Kingdoms Cockatrice art + `.md` card text (45 files) |
 | `deploy-kingdoms.ps1` | Windows deploy script |
 
 **Live site:** https://wernercd.github.io/Kingdoms/
 Note the capital **K** — GitHub Pages paths are case-sensitive and the
 lowercase form 404s.
 
-### About `images/`
+### About the art folders
 
-The folder is flat and contains **only Expanded Kingdoms** Cockatrice art.
-There is no Advanced Kingdoms art set in this repo. Breakdown of the 45 files:
+Each `.jpg` has a matching `.md` sidecar holding that card's text, role, badge
+and sigil. **The `.md` files are the source of truth for card text** — the
+viewer is generated to match them, so fix the `.md` first.
 
-- 28 EK role cards (`1The King.jpg` … `6The Queen.jpg`; the leading digit is
-  the faction group in the original Cockatrice deck)
-- 4 token images (`7Dragon*.jpg`, `7The Slave.jpg`)
-- 4 EK rules/intro cards (`8*.jpg`)
-- 9 duplicate 960px renders (`960*.jpg`)
+The `**Badge:**` field in each sidecar says which set the card belongs to
+*today*, which matters because EK art is reused for cards that were promoted
+into Advanced Kingdoms. Ten cards in `images-ek/` carry `Badge: AK` (Priestess,
+Schemer, Necromancer, Wizard, Kingslayer, Queen, Cultist, Sellsword) and two
+carry `Badge: Variant` (The Gambler, The Witch). Trust the badge, not the
+folder.
+
+- `images-ak/` — 21 AK role cards + 3 War Bear tokens + 1 Game Setup card
+- `images-ek/` — EK role cards, 4 tokens, 4 EK rules/intro cards, and 9
+  duplicate 960px renders (`960*`)
 
 `docs/index.html` does **not** embed any of this art — it draws cards with CSS
 sigils and gradients instead. The art is reference material only.
