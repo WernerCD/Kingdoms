@@ -1,4 +1,4 @@
-# The Paladin
+# The Confessor
 
 **Role:** Knight  
 **Badge:** Variant  

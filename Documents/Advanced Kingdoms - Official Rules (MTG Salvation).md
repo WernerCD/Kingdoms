@@ -127,11 +127,24 @@ The author confirmed the conflict and issued an errata:
 > eliminated." — change the Bandit's Victory condition to:
 > **"All non-teammates are eliminated."**
 
-**This is not yet reflected in the card viewer.** Every Bandit card still reads
-*"All non-Bandits are eliminated"* — 5 Advanced Kingdoms Bandits and 7 house
-variants, 12 cards in total. Under the printed wording a Bandit who hires the
-Sellsword is locked into a position where their only route to Victory also
-triggers their Defeat.
+**✓ Applied in viewer v0.5.76.** All 12 Bandit cards — 5 Advanced Kingdoms
+Bandits (Necromancer, Zealot, Giant, Wizard, Stalker) and 7 house variants
+(Cutthroat, Raider, Outlaw, Plunderer, Mercenary, Last Bandit, Arsonist) — now
+read **"All non-teammates are eliminated"**, in the viewer and in their `.md`
+sidecars.
+
+Two follow-on edits were needed:
+
+- **The Last Bandit** stacks *"you are the only surviving Bandit"* on top of the
+  Victory line. Fellow Bandits are teammates, so the first clause no longer
+  requires their deaths — the card now says so explicitly and keeps the
+  outlast requirement as its own condition.
+- **The Mercenary** referred to *"when all non-Bandits fall"* in its ability
+  text; reworded to match.
+
+> **Note:** the viewer now follows the author’s forum errata rather than the
+> printed v1.56 PDFs. Cards printed from the official A4/Letter files will still
+> read "All non-Bandits".
 
 ### Community proposal — 4-player Advanced Kingdoms (Javy Dreamer, 2024-08-28)
 

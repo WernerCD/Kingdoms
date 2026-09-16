@@ -73,7 +73,7 @@
 
     .card { position: relative !important; }
     .card::after {
-      content: "v0.5.75";
+      content: "v0.5.76";
       position: absolute;
       bottom: 2px;
       left: 5px;
@@ -381,6 +381,8 @@ a.link-card:hover{
 .rel-list{margin:7px 0 0;padding-left:16px;list-style:none;}
 .rel-list li{position:relative;font-family:var(--font-body);font-size:0.8rem;line-height:1.55;color:rgba(255,255,255,0.5);margin-bottom:3px;}
 .rel-list li::before{content:"\2013";position:absolute;left:-16px;color:rgba(255,255,255,0.2);}
+.rel-list a{color:var(--king-acc2);text-decoration:none;border-bottom:1px solid rgba(242,201,76,0.3);}
+.rel-list a:hover{border-bottom-color:var(--king-acc2);}
 .rel-list li b{color:rgba(255,255,255,0.72);font-weight:600;}
 @media(max-width:600px){.rel-log{padding:0 14px;}}
 .rules-head{font-family:var(--font-head);font-size:0.65rem;letter-spacing:0.38em;text-transform:uppercase;color:rgba(255,255,255,0.2);text-align:center;margin-bottom:24px;}
@@ -504,7 +506,7 @@ a.link-card:hover{
 <button class="filter-btn" data-filter="ek">Expanded Kingdoms</button>
 <button class="filter-btn" data-filter="variant">Variants</button>
 <button class="filter-btn" data-filter="special" style="border-color:rgba(255,107,157,0.25);color:rgba(255,107,157,0.5);">Specials</button>
-<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.75</span></nav>
+<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.76</span></nav>
 <!-- ══ KING ══ -->
 <section class="role-section s-king" id="s-king">
 <div class="section-header">
@@ -1202,7 +1204,7 @@ a.link-card:hover{
 <span class="card-badge badge-variant">Variant</span>
 </div>
 <div class="card-sigil"><div class="sigil-wrap"><div class="sigil-ring"></div><div class="sigil-ring2"></div><span class="sigil-sym">✦</span></div></div>
-<div class="card-name">The Paladin</div>
+<div class="card-name">The Confessor</div>
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
@@ -1947,7 +1949,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
-<span class="card-sec-text">All non-Bandits are eliminated.</span>
+<span class="card-sec-text">All non-teammates are eliminated.</span>
 </div>
 <div class="card-div"></div>
 <div class="card-section">
@@ -1978,7 +1980,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
-<span class="card-sec-text">All non-Bandits are eliminated.</span>
+<span class="card-sec-text">All non-teammates are eliminated.</span>
 </div>
 <div class="card-div"></div>
 <div class="card-section">
@@ -2009,7 +2011,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
-<span class="card-sec-text">All non-Bandits are eliminated.</span>
+<span class="card-sec-text">All non-teammates are eliminated.</span>
 </div>
 <div class="card-div"></div>
 <div class="card-section">
@@ -2040,7 +2042,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
-<span class="card-sec-text">All non-Bandits are eliminated.</span>
+<span class="card-sec-text">All non-teammates are eliminated.</span>
 </div>
 <div class="card-div"></div>
 <div class="card-section">
@@ -2071,7 +2073,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
-<span class="card-sec-text">All non-Bandits are eliminated.</span>
+<span class="card-sec-text">All non-teammates are eliminated.</span>
 </div>
 <div class="card-div"></div>
 <div class="card-section">
@@ -2223,7 +2225,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
-<span class="card-sec-text">All non-Bandits are eliminated.</span>
+<span class="card-sec-text">All non-teammates are eliminated.</span>
 </div>
 <div class="card-div"></div>
 <div class="card-section">
@@ -2254,7 +2256,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
-<span class="card-sec-text">All non-Bandits are eliminated.</span>
+<span class="card-sec-text">All non-teammates are eliminated.</span>
 </div>
 <div class="card-div"></div>
 <div class="card-section">
@@ -2285,7 +2287,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
-<span class="card-sec-text">All non-Bandits are eliminated.</span>
+<span class="card-sec-text">All non-teammates are eliminated.</span>
 </div>
 <div class="card-div"></div>
 <div class="card-section">
@@ -2316,7 +2318,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
-<span class="card-sec-text">All non-Bandits are eliminated.</span>
+<span class="card-sec-text">All non-teammates are eliminated.</span>
 </div>
 <div class="card-div"></div>
 <div class="card-section">
@@ -2347,7 +2349,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
-<span class="card-sec-text">All non-Bandits are eliminated.</span>
+<span class="card-sec-text">All non-teammates are eliminated.</span>
 </div>
 <div class="card-div"></div>
 <div class="card-section">
@@ -2357,7 +2359,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Special</span>
-<span class="card-sec-text"><b>Once per game:</b> Secretly name another player. If they are also a Bandit and both of you survive when all non-Bandits fall, you each draw 3 cards as a bonus.</span>
+<span class="card-sec-text"><b>Once per game:</b> Secretly name another player. If they are also a Bandit and both of you survive when all non-teammates fall, you each draw 3 cards as a bonus.</span>
 </div>
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
@@ -2382,7 +2384,7 @@ a.link-card:hover{
 </div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
-<span class="card-sec-text">All non-Bandits are eliminated AND <b>you are the only surviving Bandit.</b> Other living Bandits at game end deny your victory.</span>
+<span class="card-sec-text">All non-teammates are eliminated AND <b>you are the only surviving Bandit.</b> Fellow Bandits count as teammates for the first clause — you must still outlast them. Other living Bandits at game end deny your victory.</span>
 </div>
 <div class="card-div"></div>
 <div class="card-section">
@@ -2412,7 +2414,7 @@ a.link-card:hover{
 </div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
-<span class="card-sec-text">All non-Bandits are eliminated.</span>
+<span class="card-sec-text">All non-teammates are eliminated.</span>
 </div>
 <div class="card-div"></div>
 <div class="card-section">
@@ -2772,7 +2774,7 @@ a.link-card:hover{
 <span class="card-badge badge-variant">Variant</span>
 </div>
 <div class="card-sigil"><div class="sigil-wrap"><div class="sigil-ring"></div><div class="sigil-ring2"></div><span class="sigil-sym">☽</span></div></div>
-<div class="card-name">The Witch</div>
+<div class="card-name">The Hexweaver</div>
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
@@ -2780,7 +2782,7 @@ a.link-card:hover{
 </div>
 <div class="card-section">
 <span class="card-sec-label">Announce</span>
-<span class="card-sec-text"><i>(Trigger)</i> At the beginning of any player's upkeep, you may turn The Witch face up. If you do, place a curse on target player — at the beginning of each of that player's upkeeps, they lose 2 life. This curse persists until that player is eliminated.</span>
+<span class="card-sec-text"><i>(Trigger)</i> At the beginning of any player's upkeep, you may turn The Hexweaver face up. If you do, place a curse on target player — at the beginning of each of that player's upkeeps, they lose 2 life. This curse persists until that player is eliminated.</span>
 </div>
 <div class="card-div"></div><div class="card-div"></div>
 <div class="card-section">
@@ -2802,8 +2804,8 @@ a.link-card:hover{
 <span class="card-badge badge-variant">Variant</span>
 </div>
 <div class="card-sigil"><div class="sigil-wrap"><div class="sigil-ring"></div><div class="sigil-ring2"></div><span class="sigil-sym">⊕</span></div></div>
-<div class="card-name">The Gambler</div>
-<div class="card-section"><span class="card-sec-label">Victory</span><span class="card-sec-text">Before roles are distributed, secretly write down <b>Throne</b> (the King is alive at game end) or <b>Shadow</b> (the King is eliminated). You win if your written prediction matches the game's outcome.</span></div><div class="card-div"></div><div class="card-section"><span class="card-sec-label">Announce</span><span class="card-sec-text"><i>(Trigger)</i> At the beginning of any opponent's combat phase, you may turn The Gambler face up. If you do, flip a coin — <b>Heads:</b> all creatures attacking you get -2/-0 until end of turn. <b>Tails:</b> they get +2/+0 until end of turn.</span></div><div class="card-div"></div><div class="card-section"><span class="card-sec-label">Reveal</span><span class="card-sec-text">Show your written prediction when you are eliminated or when the game ends. If you cannot produce the original note, you lose.</span></div><div class="card-div"></div><div class="card-flavor">
+<div class="card-name">The Oddsmaker</div>
+<div class="card-section"><span class="card-sec-label">Victory</span><span class="card-sec-text">Before roles are distributed, secretly write down <b>Throne</b> (the King is alive at game end) or <b>Shadow</b> (the King is eliminated). You win if your written prediction matches the game's outcome.</span></div><div class="card-div"></div><div class="card-section"><span class="card-sec-label">Announce</span><span class="card-sec-text"><i>(Trigger)</i> At the beginning of any opponent's combat phase, you may turn The Oddsmaker face up. If you do, flip a coin — <b>Heads:</b> all creatures attacking you get -2/-0 until end of turn. <b>Tails:</b> they get +2/+0 until end of turn.</span></div><div class="card-div"></div><div class="card-section"><span class="card-sec-label">Reveal</span><span class="card-sec-text">Show your written prediction when you are eliminated or when the game ends. If you cannot produce the original note, you lose.</span></div><div class="card-div"></div><div class="card-flavor">
 <div class="card-flavor-div"></div>
 <p class="card-flavor-text">"Fate is the only honest dealer I've ever met."</p>
 </div>
@@ -2977,6 +2979,14 @@ a.link-card:hover{
 <div class="rel-log">
 <p class="rules-head">Release Log</p>
 <div class="rel-item rel-now">
+<span class="rel-ver">v0.5.76</span><span class="rel-date">2026-09-16</span>
+<ul class="rel-list">
+<li><b>Official errata applied.</b> All 12 Bandit cards now read <b>"All non-teammates are eliminated"</b> instead of "All non-Bandits". A Bandit who hired the Sellsword previously had to eliminate their own teammate to win — which is their Defeat condition. <a href="https://www.mtgsalvation.com/forums/the-game/commander-edh/818991-advanced-kingdoms-edh-variant-feedback-welcome?comment=3" target="_blank" rel="noopener">Errata by WaRgUnNeR, 26 Jan 2021 ↗</a></li>
+<li><b>The Last Bandit</b> reworded so its "only surviving Bandit" clause still works under the new wording.</li>
+<li><b>House cards renamed</b> off names used by the real decks: The Paladin → <b>The Confessor</b>, The Witch → <b>The Hexweaver</b>, The Gambler → <b>The Oddsmaker</b>.</li>
+</ul>
+</div>
+<div class="rel-item">
 <span class="rel-ver">v0.5.75</span><span class="rel-date">2026-09-16</span>
 <ul class="rel-list">
 <li>Quick Ref: the <b>Printable PDFs</b> now have their own tile instead of sitting at the bottom of <b>Full Rules</b>, and both tiles gained a short blurb.</li>

@@ -80,7 +80,7 @@ the v1.56 rules text.
 | `Documents/` | This documentation and the rules references |
 | `images-ak/` | Advanced Kingdoms card art + `.md` card text (25 files) |
 | `images-ek/` | Expanded Kingdoms Cockatrice art + `.md` card text (45 files) |
-| `images-v/` | House variant `.md` card text (35 files, no art yet) |
+| `images-v/` | House variant `.md` card text + generated `.svg` card faces (37 each) |
 | `deploy-kingdoms.ps1` | Windows deploy script |
 
 **Live site:** https://wernercd.github.io/kingdoms/
@@ -104,10 +104,15 @@ folder.
 - `images-ak/` — 21 AK role cards + 3 War Bear tokens + 1 Game Setup card
 - `images-ek/` — EK role cards, 4 tokens, 4 EK rules/intro cards, and 9
   duplicate 960px renders (`960*`)
-- `images-v/` — sidecars for the 35 house variants that have no art of their
-  own. **The Gambler** and **The Witch** are deliberately absent: they are
-  `Badge: Variant` but reuse EK art, so their sidecars stay in `images-ek/`
-  next to their `.jpg`. One card, one sidecar.
+- `images-v/` — sidecars for all 37 house variants, each with a generated
+  `.svg` card face. The SVGs are drawn from this repo’s own palette and font
+  stacks; they exist because no machine here can rasterise text, and SVG needs
+  no rasteriser.
+
+Two files in `images-ek/` — `3The Gambler.jpg` and `4The Witch.jpg` — have no
+sidecar. Their house reworks were renamed to The Oddsmaker and The Hexweaver
+and moved to `images-v/`; the art depicts the *Expanded Kingdoms* originals,
+which this set does not carry.
 
 `docs/index.html` does **not** embed any of this art — it draws cards with CSS
 sigils and gradients instead. The art is reference material only.

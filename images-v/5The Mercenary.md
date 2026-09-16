@@ -5,13 +5,13 @@
 **Sigil:** ⚖  
 
 ## Victory
-All non-Bandits are eliminated.
+All non-teammates are eliminated.
 
 ## Defeat
 You or a teammate are eliminated.
 
 ## Special
-**Once per game:** Secretly name another player. If they are also a Bandit and both of you survive when all non-Bandits fall, you each draw 3 cards as a bonus.
+**Once per game:** Secretly name another player. If they are also a Bandit and both of you survive when all non-teammates fall, you each draw 3 cards as a bonus.
 
 ---
 *"Loyalty is priced. Not given."*

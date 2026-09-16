@@ -12,7 +12,7 @@
 <text x="210" y="158" text-anchor="middle" font-family="'Cinzel','Times New Roman',serif" font-size="23" fill="#FEF3C7">The Raider</text>
 <line x1="86" y1="176" x2="334" y2="176" stroke="rgba(217,119,6,0.32)"/>
 <text x="26" y="202.0" font-family="'Cinzel','Times New Roman',serif" font-size="13.0" letter-spacing="1.6" fill="#FBB040">VICTORY</text>
-<text x="26" y="219.9" font-family="'Crimson Text',Georgia,serif" font-size="13.0" fill="#FEF3C7"><tspan  xml:space="preserve">All</tspan><tspan  xml:space="preserve"> non-Bandits</tspan><tspan  xml:space="preserve"> are</tspan><tspan  xml:space="preserve"> eliminated.</tspan></text>
+<text x="26" y="219.9" font-family="'Crimson Text',Georgia,serif" font-size="13.0" fill="#FEF3C7"><tspan  xml:space="preserve">All</tspan><tspan  xml:space="preserve"> non-teammates</tspan><tspan  xml:space="preserve"> are</tspan><tspan  xml:space="preserve"> eliminated.</tspan></text>
 <text x="26" y="250.6" font-family="'Cinzel','Times New Roman',serif" font-size="13.0" letter-spacing="1.6" fill="#FBB040">DEFEAT</text>
 <text x="26" y="268.6" font-family="'Crimson Text',Georgia,serif" font-size="13.0" fill="#FEF3C7"><tspan  xml:space="preserve">You</tspan><tspan  xml:space="preserve"> or</tspan><tspan  xml:space="preserve"> a</tspan><tspan  xml:space="preserve"> teammate</tspan><tspan  xml:space="preserve"> are</tspan><tspan  xml:space="preserve"> eliminated.</tspan></text>
 <text x="26" y="299.3" font-family="'Cinzel','Times New Roman',serif" font-size="13.0" letter-spacing="1.6" fill="#FBB040">SPECIAL</text>

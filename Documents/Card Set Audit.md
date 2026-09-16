@@ -1,4 +1,4 @@
-# Card Set Audit — v0.5.74
+# Card Set Audit — v0.5.76
 
 Cross-check of `docs/index.html` (76 cards) against the Advanced Kingdoms
 v1.56 rules, the Expanded Kingdoms rules, and `Expanded Kingdoms Card
@@ -48,12 +48,28 @@ sidecars — which are authoritative — say otherwise:
 
 | Card | Reference doc claims | Sidecar badge | Viewer | Verdict |
 |---|---|---|---|---|
-| The Gambler | AK, unchanged | `Variant` | `card-variant` | **viewer correct** |
-| The Witch | AK, unchanged | `Variant` | `card-variant` | **viewer correct** |
+| The Gambler | AK, unchanged | `Variant` | `card-variant` | **viewer correct** (since renamed **The Oddsmaker**) |
+| The Witch | AK, unchanged | `Variant` | `card-variant` | **viewer correct** (since renamed **The Hexweaver**) |
 | The Jester | AK, unchanged | `EK` | `card-ek` | **viewer correct** |
 
 The viewer was right and the reference doc is stale. `Expanded Kingdoms Card
 Reference.md` should be corrected or retired; the sidecars supersede it.
+
+## 1c. House cards renamed off real deck names (v0.5.76)
+
+Three house variants carried names belonging to cards in the real decks, which
+made the badge the only thing telling them apart:
+
+| Was | Now | Collided with |
+|---|---|---|
+| The Paladin | **The Confessor** | EK Knight, added 2018-07-22 |
+| The Witch | **The Hexweaver** | EK Renegade |
+| The Gambler | **The Oddsmaker** | EK Renegade |
+
+Their sidecars moved to `images-v/`. The EK art they had been reusing
+(`images-ek/3The Gambler.jpg`, `4The Witch.jpg`) stays as reference material
+but no longer has a sidecar, because the cards it depicts are the *Expanded
+Kingdoms* originals, which this set does not carry.
 
 ## 2. Duplicate card names
 

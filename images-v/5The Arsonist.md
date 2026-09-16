@@ -8,7 +8,7 @@
 At most **one solo-win card per faction** may be dealt in a game. If a second would be dealt, shuffle it back and redraw.
 
 ## Victory
-All non-Bandits are eliminated.
+All non-teammates are eliminated.
 
 ## Defeat
 You or a teammate are eliminated.

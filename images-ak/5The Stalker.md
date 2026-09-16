@@ -5,7 +5,7 @@
 **Sigil:** ◉  
 
 ## Victory
-All non-Bandits are eliminated.
+All non-teammates are eliminated.
 
 ## Defeat
 You or a teammate are eliminated.
