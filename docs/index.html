@@ -73,7 +73,7 @@
 
     .card { position: relative !important; }
     .card::after {
-      content: "v0.5.73";
+      content: "v0.5.74";
       position: absolute;
       bottom: 2px;
       left: 5px;
@@ -368,7 +368,22 @@ a.link-card:hover{
 
   /* RULES */
   .rules-wrap{max-width:900px;margin:56px auto 0;padding-top:40px;border-top:1px solid rgba(255,255,255,0.05);}
-  .rules-head{font-family:var(--font-head);font-size:0.65rem;letter-spacing:0.38em;text-transform:uppercase;color:rgba(255,255,255,0.2);text-align:center;margin-bottom:24px;}
+  .links-sub{font-family:var(--font-head);font-size:0.6rem;letter-spacing:0.34em;text-transform:uppercase;color:rgba(255,255,255,0.3);text-align:left;margin:30px 0 14px;padding-bottom:7px;border-bottom:1px solid rgba(255,255,255,0.07);}
+.links-sub:first-of-type{margin-top:4px;}
+.rel-log{max-width:900px;margin:52px auto 0;padding:0 20px;}
+.rel-item{position:relative;padding:0 0 22px 26px;border-left:1px solid rgba(255,255,255,0.09);}
+.rel-item:last-child{border-left-color:transparent;padding-bottom:4px;}
+.rel-item::before{content:"";position:absolute;left:-4.5px;top:6px;width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.18);}
+.rel-item.rel-now::before{background:var(--king-acc2);box-shadow:0 0 8px var(--king-acc);}
+.rel-ver{font-family:var(--font-head);font-size:0.82rem;letter-spacing:0.12em;color:rgba(255,255,255,0.78);}
+.rel-item.rel-now .rel-ver{color:var(--king-acc2);}
+.rel-date{font-family:var(--font-body);font-size:0.68rem;color:rgba(255,255,255,0.26);margin-left:10px;letter-spacing:0.04em;}
+.rel-list{margin:7px 0 0;padding-left:16px;list-style:none;}
+.rel-list li{position:relative;font-family:var(--font-body);font-size:0.8rem;line-height:1.55;color:rgba(255,255,255,0.5);margin-bottom:3px;}
+.rel-list li::before{content:"\2013";position:absolute;left:-16px;color:rgba(255,255,255,0.2);}
+.rel-list li b{color:rgba(255,255,255,0.72);font-weight:600;}
+@media(max-width:600px){.rel-log{padding:0 14px;}}
+.rules-head{font-family:var(--font-head);font-size:0.65rem;letter-spacing:0.38em;text-transform:uppercase;color:rgba(255,255,255,0.2);text-align:center;margin-bottom:24px;}
   .rules-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;}
   .rule-tile{padding:14px 16px;border:1px solid rgba(255,255,255,0.06);border-radius:5px;background:rgba(255,255,255,0.02);}
   .rule-tile-label{font-family:var(--font-head);font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(212,160,23,0.45);margin-bottom:6px;}
@@ -486,7 +501,7 @@ a.link-card:hover{
 <button class="filter-btn" data-filter="ek">Expanded Kingdoms</button>
 <button class="filter-btn" data-filter="variant">Variants</button>
 <button class="filter-btn" data-filter="special" style="border-color:rgba(255,107,157,0.25);color:rgba(255,107,157,0.5);">Specials</button>
-<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.73</span></nav>
+<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.74</span></nav>
 <!-- ══ KING ══ -->
 <section class="role-section s-king" id="s-king">
 <div class="section-header">
@@ -2885,6 +2900,7 @@ a.link-card:hover{
 </div></div>
 </div><div class="links-wrap" id="links-wrap" style="display:none;">
 <p class="rules-head">Resources &amp; References</p>
+<p class="links-sub">Full Rules</p>
 <div class="links-grid">
 <a class="link-card" href="https://mtgcommander.net/index.php/rules/" rel="noopener" target="_blank">
 <div class="link-card-icon">⚔</div>
@@ -2910,6 +2926,9 @@ a.link-card:hover{
 <div class="link-card-desc">The Expanded Kingdoms thread — an extension of the base variant that introduced additional role cards (Executioner, Imposter, Jester, and more) for deeper gameplay and larger player counts.</div>
 </div>
 </a>
+</div>
+<p class="links-sub">PDFs</p>
+<div class="links-grid">
 <a class="link-card" href="./kingdoms-cards-fronts.pdf" rel="noopener" target="_blank">
 <div class="link-card-icon">&#128196;</div>
 <div class="link-card-body">
@@ -2926,6 +2945,9 @@ a.link-card:hover{
 <div class="link-card-desc">Fronts paired with matching backs — print duplex (flip on long edge), cut, and sleeve. Backs are identical so roles stay hidden until revealed.</div>
 </div>
 </a>
+</div>
+<p class="links-sub">This Viewer</p>
+<div class="links-grid">
 <a class="link-card" href="javascript:void(0)" onclick="event.preventDefault();document.querySelector('[data-filter=special]').click();" style="border-color:rgba(255,107,157,0.2);">
 <div class="link-card-icon" style="color:#ff6b9d;filter:drop-shadow(0 0 6px rgba(255,107,157,0.4));">★</div>
 <div class="link-card-body">
@@ -2942,6 +2964,55 @@ a.link-card:hover{
 <div class="link-card-desc">Source for this card viewer and the printable PDFs. Hosted via GitHub Pages at wernercd.github.io/kingdoms.</div>
 </div>
 </a>
+</div>
+<div class="rel-log">
+<p class="rules-head">Release Log</p>
+<div class="rel-item rel-now">
+<span class="rel-ver">v0.5.74</span><span class="rel-date">2026-09-16</span>
+<ul class="rel-list">
+<li>Added this <b>Release Log</b>, and split the Links panel into <b>Full Rules</b>, <b>PDFs</b> and <b>This Viewer</b>.</li>
+<li>Repository renamed to lowercase, so the live site is now <b>wernercd.github.io/kingdoms</b>.</li>
+</ul>
+</div>
+<div class="rel-item">
+<span class="rel-ver">v0.5.73</span><span class="rel-date">2026-09-16</span>
+<ul class="rel-list">
+<li><b>Balance pass.</b> The Cursed Crown now bleeds 1 life per surviving enemy instead of a flat 3, so the drain eases as the King makes progress. The Weakened King starts at 40 rather than 30.</li>
+<li><b>The Bloodthirsty King</b> can no longer dead-end — if allies clear the last enemy, a delayed end-step win replaces having no legal win at all.</li>
+<li><b>The Ancient King</b> excepts Knight role cards from its life-gain ban, which un-blanks The Paladin.</li>
+<li><b>The Fool</b> lets the King decline the forced attack for 3 life, fixing the unavoidable loss against The Warmonger King.</li>
+<li>Solo-win cards (The Blade, The Lone Wolf, The Last Bandit, The Arsonist) capped at one per faction. The Arsonist now needs 15+ permanents. The Pacifist is no longer voided by incidental or redirected damage.</li>
+</ul>
+</div>
+<div class="rel-item">
+<span class="rel-ver">v0.5.72</span><span class="rel-date">2026-09-16</span>
+<ul class="rel-list">
+<li><b>The High King</b> and <b>The Warden King</b> were missing "Assassins" from their Victory condition — at 5 players, where no Bandits are dealt, they won the moment the lone Renegade died.</li>
+<li><b>The Martyr King</b> and <b>The Avenger</b> assumed play continues past the King’s death, but Rule 3 eliminates every Knight instantly. Both now override that explicitly.</li>
+<li><b>The Usurper</b> claimed both a win and that the game continues; rewritten to mirror The Rightful Heir.</li>
+<li><b>Jack’s Guard</b> and <b>Kill Jack</b> gained a Jack designation rule, so they are no longer blank when nobody is called Jack.</li>
+<li><b>The Knight</b> → <b>The Shieldbearer</b> (its ability was copied verbatim from The Marksman) and the variant <b>The Champion</b> → <b>The Vanguard</b>, ending the clash with the Advanced Kingdoms Renegade.</li>
+</ul>
+</div>
+<div class="rel-item">
+<span class="rel-ver">v0.5.71</span><span class="rel-date">2026-09-16</span>
+<ul class="rel-list">
+<li>Added <b>The Gunslinger</b> and <b>The Gladiator</b>, two Expanded Kingdoms cards documented in the art sidecars but absent from this viewer.</li>
+<li>Full audit: every card now matches its source text — 21/21 Advanced Kingdoms, 18/18 Expanded Kingdoms, 37/37 Variants.</li>
+</ul>
+</div>
+<div class="rel-item">
+<span class="rel-ver">v0.5.70</span><span class="rel-date">2026-09-16</span>
+<ul class="rel-list">
+<li>Deploy pipeline moved to the NAS; the viewer publishes without the Windows script.</li>
+</ul>
+</div>
+<div class="rel-item">
+<span class="rel-ver">v0.5.69 and earlier</span><span class="rel-date">2026-09-15</span>
+<ul class="rel-list">
+<li>Card viewer, filter system, symbol chips, Quick Ref and printable PDFs.</li>
+</ul>
+</div>
 </div>
 </div>
 <script>

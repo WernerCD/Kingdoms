@@ -1,4 +1,4 @@
-# Card Set Audit — v0.5.72
+# Card Set Audit — v0.5.74
 
 Cross-check of `docs/index.html` (76 cards) against the Advanced Kingdoms
 v1.56 rules, the Expanded Kingdoms rules, and `Expanded Kingdoms Card
@@ -73,9 +73,9 @@ factions. Rename the variant Knight (suggestion: **The Vanguard**).
 - The same doc points at `C:\Users\Kriis\...` paths, an `images/` folder that
   no longer exists (now `images-ak/` and `images-ek/`), and a
   `claude.ai/artifact/...` viewer URL. All stale; the live viewer is
-  https://wernercd.github.io/Kingdoms/
-- `workflow.md` lists the live site as `.../kingdoms/` (lowercase), which
-  **404s**. The correct URL is `.../Kingdoms/`.
+  https://wernercd.github.io/kingdoms/
+- `workflow.md`’s lowercase `.../kingdoms/` link is now **correct again** — the
+  repository was renamed to lowercase `kingdoms`, so Pages serves that path.
 
 ## 4. Legacy card flagged for removal upstream
 

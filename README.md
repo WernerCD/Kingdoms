@@ -1,6 +1,6 @@
 # Kingdoms — a hidden-role Commander variant
 
-**Live card viewer:** https://wernercd.github.io/Kingdoms/ · **Card audit & variant review:** [`Documents/Card Set Audit.md`](Documents/Card%20Set%20Audit.md)
+**Live card viewer:** https://wernercd.github.io/kingdoms/ · **Card audit & variant review:** [`Documents/Card Set Audit.md`](Documents/Card%20Set%20Audit.md)
 
 Start here. This explains what this repo is, how the rule sets relate, and
 where everything lives.
@@ -83,9 +83,10 @@ the v1.56 rules text.
 | `images-v/` | House variant `.md` card text (35 files, no art yet) |
 | `deploy-kingdoms.ps1` | Windows deploy script |
 
-**Live site:** https://wernercd.github.io/Kingdoms/
-Note the capital **K** — GitHub Pages paths are case-sensitive and the
-lowercase form 404s.
+**Live site:** https://wernercd.github.io/kingdoms/
+
+GitHub Pages paths are case-sensitive and follow the repository name, which
+is lowercase `kingdoms`. The capital-K form does **not** resolve.
 
 ### About the art folders
 
