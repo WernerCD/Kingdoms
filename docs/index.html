@@ -73,7 +73,7 @@
 
     .card { position: relative !important; }
     .card::after {
-      content: "v0.5.71";
+      content: "v0.5.72";
       position: absolute;
       bottom: 2px;
       left: 5px;
@@ -486,7 +486,7 @@ a.link-card:hover{
 <button class="filter-btn" data-filter="ek">Expanded Kingdoms</button>
 <button class="filter-btn" data-filter="variant">Variants</button>
 <button class="filter-btn" data-filter="special" style="border-color:rgba(255,107,157,0.25);color:rgba(255,107,157,0.5);">Specials</button>
-<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.71</span></nav>
+<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.72</span></nav>
 <!-- ══ KING ══ -->
 <section class="role-section s-king" id="s-king">
 <div class="section-header">
@@ -590,7 +590,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
-<span class="card-sec-text">All Bandits and/or Renegades are eliminated.</span>
+<span class="card-sec-text">All Assassins, Bandits and/or Renegades are eliminated.</span>
 </div>
 <div class="card-div"></div>
 <div class="card-section">
@@ -622,7 +622,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
-<span class="card-sec-text">All Bandits and/or Renegades are eliminated.</span>
+<span class="card-sec-text">All Assassins, Bandits and/or Renegades are eliminated.</span>
 </div>
 <div class="card-div"></div>
 <div class="card-section">
@@ -751,7 +751,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Special</span>
-<span class="card-sec-text">If the King is eliminated, the game does not end. Knights retain their win condition. If all Knights subsequently win, the King wins posthumously alongside them. Assassins who killed the King may still lose.</span>
+<span class="card-sec-text">If the King is eliminated, the game does not end. <b>While this card is in play, each Knight's Defeat condition is replaced with "You are eliminated."</b> Knights retain their win condition; if all surviving Knights subsequently win, the King wins posthumously alongside them. <b>Assassin Victory additionally requires that all Knights be eliminated.</b></span>
 </div>
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
@@ -1122,7 +1122,7 @@ a.link-card:hover{
 <span class="card-badge badge-variant">Variant</span>
 </div>
 <div class="card-sigil"><div class="sigil-wrap"><div class="sigil-ring"></div><div class="sigil-ring2"></div><span class="sigil-sym">⚔</span></div></div>
-<div class="card-name">The Knight</div>
+<div class="card-name">The Shieldbearer</div>
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
@@ -1136,11 +1136,11 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Announce</span>
-<span class="card-sec-text">Creatures lose hexproof and shroud until end of turn. Deal damage to up to three targets equal to the highest mana value among permanents you control. <i>Activate only during your turn.</i></span>
+<span class="card-sec-text">Creatures you and the King control gain <b>+1/+1 and vigilance</b> until end of turn, and each creature the King controls untaps. <i>Activate only during your turn.</i></span>
 </div>
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
-<p class="card-flavor-text">"It shines so bright it blinds your enemies — then the killing begins."</p>
+<p class="card-flavor-text">"Raise the line. The crown does not stand alone."</p>
 </div>
 </div>
 </div>
@@ -1277,7 +1277,7 @@ a.link-card:hover{
 <span class="card-badge badge-variant">Variant</span>
 </div>
 <div class="card-sigil"><div class="sigil-wrap"><div class="sigil-ring"></div><div class="sigil-ring2"></div><span class="sigil-sym">⚔</span></div></div>
-<div class="card-name">The Champion</div>
+<div class="card-name">The Vanguard</div>
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
@@ -1317,7 +1317,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Announce</span>
-<span class="card-sec-text">When the King is eliminated, <b>Announce immediately</b> — the game does not end. You have until the end of your next turn to personally deal the killing blow to the player who eliminated the King. If you succeed, you win. If you fail or are eliminated first, you lose.</span>
+<span class="card-sec-text">When the King is eliminated, <b>Announce immediately</b> — the game does not end. <b>This replaces your standard Knight Defeat condition, and Assassin Victory does not resolve until the end of your next turn.</b> You have until the end of your next turn to personally deal the killing blow to the player who eliminated the King. If you succeed, you win. If you fail or are eliminated first, you lose.</span>
 </div>
 <div class="card-div"></div>
 <div class="card-section">
@@ -1370,6 +1370,10 @@ a.link-card:hover{
 <div class="card-sigil"><div class="sigil-wrap"><div class="sigil-ring"></div><div class="sigil-ring2"></div><span class="sigil-sym">🛡</span></div></div>
 <div class="card-name">Jack's Guard</div>
 <div class="card-div"></div>
+<div class="card-section">
+<span class="card-sec-label">Setup</span>
+<span class="card-sec-text">At game start the table designates one player as <b>Jack</b>. If no player is so named, Jack is the player to the King's left.</span>
+</div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
 <span class="card-sec-text">The player known at this table as <b>"Jack"</b> wins — regardless of Jack's actual role.</span>
@@ -1724,7 +1728,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Special</span>
-<span class="card-sec-text">Players <b>may not publicly name you as Assassin.</b> Only you may reveal your own role. Political accusations against you are void unless you have already revealed yourself.</span>
+<span class="card-sec-text">The first time each turn a player <b>publicly names you as an Assassin</b>, that player loses 2 life. Only you may reveal your own role.</span>
 </div>
 <div class="card-div"></div>
 <div class="card-section">
@@ -1807,7 +1811,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Special</span>
-<span class="card-sec-text"><b>Once per game:</b> Mark a target player as Poisoned. They lose 2 life at the start of each of their upkeeps. This effect cannot be removed — it ends only when you are eliminated.</span>
+<span class="card-sec-text"><b>Once per game:</b> Mark a target player as Poisoned. They lose 2 life at the start of each of their upkeeps. This is a role-card effect: per <b>Rule 5</b> it cannot be targeted, countered, or exiled. It ends only when you are eliminated.</span>
 </div>
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
@@ -1880,7 +1884,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Setup</span>
-<span class="card-sec-text">At game start, <b>secretly write down the name of one non-King player.</b> Fold it face-down beside your role card.</span>
+<span class="card-sec-text">At game start, <b>secretly write down the name of one non-King player.</b> Fold it face-down beside your role card. You may name a teammate — this is intentional.</span>
 </div>
 <div class="card-div"></div>
 <div class="card-section">
@@ -2686,7 +2690,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
-<span class="card-sec-text">Win if you personally deal the final damage to eliminate the King. Reveal yourself — your life becomes 50, you take the King's role, and the game continues.</span>
+<span class="card-sec-text">When you personally deal the final damage to eliminate the King, reveal this card. You <b>gain the King role card</b> and gain 10 life. The game continues under your reign, and you now win under the King's Victory condition.</span>
 </div>
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
@@ -2765,7 +2769,7 @@ a.link-card:hover{
 </div>
 <div class="card-sigil"><div class="sigil-wrap"><div class="sigil-ring"></div><div class="sigil-ring2"></div><span class="sigil-sym">⊕</span></div></div>
 <div class="card-name">The Gambler</div>
-<div class="card-section"><span class="card-sec-label">Victory</span><span class="card-sec-text">Before roles are distributed, secretly write down <b>Throne</b> (the King's side wins) or <b>Shadow</b> (the King is eliminated). You win if your written prediction matches the game's outcome.</span></div><div class="card-div"></div><div class="card-section"><span class="card-sec-label">Announce</span><span class="card-sec-text"><i>(Trigger)</i> At the beginning of any opponent's combat phase, you may turn The Gambler face up. If you do, flip a coin — <b>Heads:</b> all creatures attacking you get -2/-0 until end of turn. <b>Tails:</b> they get +2/+0 until end of turn.</span></div><div class="card-div"></div><div class="card-section"><span class="card-sec-label">Reveal</span><span class="card-sec-text">Show your written prediction when you are eliminated or when the game ends. If you cannot produce the original note, you lose.</span></div><div class="card-div"></div><div class="card-flavor">
+<div class="card-section"><span class="card-sec-label">Victory</span><span class="card-sec-text">Before roles are distributed, secretly write down <b>Throne</b> (the King is alive at game end) or <b>Shadow</b> (the King is eliminated). You win if your written prediction matches the game's outcome.</span></div><div class="card-div"></div><div class="card-section"><span class="card-sec-label">Announce</span><span class="card-sec-text"><i>(Trigger)</i> At the beginning of any opponent's combat phase, you may turn The Gambler face up. If you do, flip a coin — <b>Heads:</b> all creatures attacking you get -2/-0 until end of turn. <b>Tails:</b> they get +2/+0 until end of turn.</span></div><div class="card-div"></div><div class="card-section"><span class="card-sec-label">Reveal</span><span class="card-sec-text">Show your written prediction when you are eliminated or when the game ends. If you cannot produce the original note, you lose.</span></div><div class="card-div"></div><div class="card-flavor">
 <div class="card-flavor-div"></div>
 <p class="card-flavor-text">"Fate is the only honest dealer I've ever met."</p>
 </div>
@@ -2789,6 +2793,10 @@ a.link-card:hover{
 </div>
 <div class="card-name">Kill Jack</div>
 <div class="card-div"></div>
+<div class="card-section">
+<span class="card-sec-label">Setup</span>
+<span class="card-sec-text">At game start the table designates one player as <b>Jack</b>. If no player is so named, Jack is the player to the King's left.</span>
+</div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
 <span class="card-sec-text">The player known at this table as <b>"Jack"</b> is eliminated.</span>

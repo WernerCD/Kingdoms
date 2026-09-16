@@ -1,4 +1,4 @@
-# Card Set Audit — v0.5.71
+# Card Set Audit — v0.5.72
 
 Cross-check of `docs/index.html` (76 cards) against the Advanced Kingdoms
 v1.56 rules, the Expanded Kingdoms rules, and `Expanded Kingdoms Card
@@ -23,9 +23,9 @@ source. Earlier apparent diffs were artefacts of tag-stripping — the markup
 uses `<br/>` and `</ul>` where text appeared to run together, and it renders
 correctly.
 
-**The 37 house variants have no `.md` sources.** They exist only in the HTML,
-so they cannot be verified against anything and have no canonical text to fall
-back on. If they matter, give them sidecars like the others.
+**The 37 house variants now have sidecars too** (`images-v/`, plus The Gambler
+and The Witch in `images-ek/` beside their art). All 76 cards in the viewer now
+round-trip against a canonical source: AK 21/21, EK 18/18, Variant 37/37.
 
 ## 1. Fixed — two EK cards were missing from the viewer
 
@@ -88,7 +88,31 @@ puts it in a deck.
 
 # Variant card review (37 cards)
 
-## A. Rules-breaking — fix before these see play
+## ✓ Applied in v0.5.72
+
+These were fixed in the viewer and in the `images-v/` sidecars:
+
+| # | Card(s) | Change |
+|---|---|---|
+| A1 | The High King, The Warden King | Added "Assassins," to Victory |
+| A2 | The Martyr King | Overrides Knight Defeat; gates Assassin Victory |
+| A3 | The Avenger | Replaces Knight Defeat; delays Assassin Victory |
+| A4 | The Usurper | Rewritten to mirror The Rightful Heir |
+| A5 | Jack's Guard, Kill Jack | Added a Jack designation Setup rule |
+| A6 | The Knight → **The Shieldbearer** | Renamed; ability was copied verbatim from The Marksman, replaced with a rally effect |
+| §2 | The Champion (Knight) → **The Vanguard** | Resolves the name clash with the AK Renegade |
+| C1 | The Infiltrator | Table-talk rule → mechanical 2-life penalty |
+| C2 | The Gambler | Throne defined as "the King is alive at game end" |
+| C3 | The Poisoner | Restated in Rule 5 terms |
+| C4 | The Bounty Hunter | Teammate targets made explicitly legal |
+
+**Still open — balance tuning, needs a ruling** (B1 Cursed Crown maths, B2
+Weakened King starting life, B3 Bloodthirsty unwinnable case, B4 Ancient King
+blanking The Paladin, B5 Fool + Warmonger forced loss, B6 solo-win cards
+colliding, B7 Arsonist threshold, B8 Pacifist griefing). These change game
+balance rather than fix contradictions, so they are left as written below.
+
+## A. Rules-breaking — original findings
 
 ### A1. The High King and The Warden King omit Assassins from Victory
 Both read: *"All Bandits and/or Renegades are eliminated."*
