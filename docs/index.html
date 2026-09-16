@@ -73,7 +73,7 @@
 
     .card { position: relative !important; }
     .card::after {
-      content: "v0.5.74";
+      content: "v0.5.75";
       position: absolute;
       bottom: 2px;
       left: 5px;
@@ -385,7 +385,10 @@ a.link-card:hover{
 @media(max-width:600px){.rel-log{padding:0 14px;}}
 .rules-head{font-family:var(--font-head);font-size:0.65rem;letter-spacing:0.38em;text-transform:uppercase;color:rgba(255,255,255,0.2);text-align:center;margin-bottom:24px;}
   .rules-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;}
-  .rule-tile{padding:14px 16px;border:1px solid rgba(255,255,255,0.06);border-radius:5px;background:rgba(255,255,255,0.02);}
+  .rule-link{display:block;color:var(--king-acc);text-decoration:none;font-weight:600;font-size:0.85rem;letter-spacing:0.02em;padding:6px 12px;margin:3px 0;border:1px solid rgba(212,160,23,0.35);border-radius:4px;background:rgba(212,160,23,0.07);transition:background .2s,border-color .2s;box-sizing:border-box;}
+.rule-link:hover{background:rgba(212,160,23,0.16);border-color:rgba(212,160,23,0.6);}
+.rule-tile-blurb{font-family:var(--font-body);font-size:0.74rem;line-height:1.5;color:rgba(255,255,255,0.32);margin-bottom:8px;}
+.rule-tile{padding:14px 16px;border:1px solid rgba(255,255,255,0.06);border-radius:5px;background:rgba(255,255,255,0.02);}
   .rule-tile-label{font-family:var(--font-head);font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(212,160,23,0.45);margin-bottom:6px;}
   .rule-tile-text{font-family:var(--font-body);font-size:0.78rem;line-height:1.5;color:rgba(255,255,255,0.42);}
 
@@ -501,7 +504,7 @@ a.link-card:hover{
 <button class="filter-btn" data-filter="ek">Expanded Kingdoms</button>
 <button class="filter-btn" data-filter="variant">Variants</button>
 <button class="filter-btn" data-filter="special" style="border-color:rgba(255,107,157,0.25);color:rgba(255,107,157,0.5);">Specials</button>
-<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.74</span></nav>
+<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.75</span></nav>
 <!-- ══ KING ══ -->
 <section class="role-section s-king" id="s-king">
 <div class="section-header">
@@ -2893,10 +2896,16 @@ a.link-card:hover{
 </div>
 <div class="rule-tile">
 <p class="rule-tile-label">Full Rules</p>
-<p class="rule-tile-text" style="display:flex;flex-direction:column;gap:4px;">
-<br/>
-<br/>
-<a href="https://mtgcommander.net/index.php/rules/" style="display:inline-block;color:#D4A017;text-decoration:none;font-weight:600;font-size:0.85rem;letter-spacing:0.02em;padding:6px 12px;margin:3px 0;border:1px solid rgba(212,160,23,0.35);border-radius:4px;background:rgba(212,160,23,0.07);transition:background 0.2s, border-color 0.2s;width:100%;box-sizing:border-box;" target="_blank">&#8599; Commander Rules (mtgcommander.net)</a><a href="https://www.mtgsalvation.com/forums/the-game/commander-edh/818991-advanced-kingdoms-edh-variant-feedback-welcome" style="display:inline-block;color:#D4A017;text-decoration:none;font-weight:600;font-size:0.85rem;letter-spacing:0.02em;padding:6px 12px;margin:3px 0;border:1px solid rgba(212,160,23,0.35);border-radius:4px;background:rgba(212,160,23,0.07);transition:background 0.2s, border-color 0.2s;width:100%;box-sizing:border-box;" target="_blank">↗ Advanced Kingdoms (MTG Salvation)</a><a href="https://www.mtgsalvation.com/forums/the-game/commander-edh/667501-expanded-kingdoms-a-new-edh-variant" style="display:inline-block;color:#D4A017;text-decoration:none;font-weight:600;font-size:0.85rem;letter-spacing:0.02em;padding:6px 12px;margin:3px 0;border:1px solid rgba(212,160,23,0.35);border-radius:4px;background:rgba(212,160,23,0.07);transition:background 0.2s, border-color 0.2s;width:100%;box-sizing:border-box;" target="_blank">↗ Expanded Kingdoms (MTG Salvation)</a><a href="./kingdoms-cards-fronts.pdf" style="display:inline-block;color:#D4A017;text-decoration:none;font-weight:600;font-size:0.85rem;letter-spacing:0.02em;padding:6px 12px;margin:3px 0;border:1px solid rgba(212,160,23,0.35);border-radius:4px;background:rgba(212,160,23,0.07);transition:background 0.2s, border-color 0.2s;width:100%;box-sizing:border-box;" target="_blank">&#8595; Single-Sided PDF</a><a href="./kingdoms-cards-doublesided.pdf" style="display:inline-block;color:#D4A017;text-decoration:none;font-weight:600;font-size:0.85rem;letter-spacing:0.02em;padding:6px 12px;margin:3px 0;border:1px solid rgba(212,160,23,0.35);border-radius:4px;background:rgba(212,160,23,0.07);transition:background 0.2s, border-color 0.2s;width:100%;box-sizing:border-box;" target="_blank">&#8595; Double-Sided PDF</a></p>
+<p class="rule-tile-blurb">The source threads this card set is built from — the Commander base format, and both Kingdoms rulesets.</p>
+<a class="rule-link" href="https://mtgcommander.net/index.php/rules/" target="_blank" rel="noopener">&#8599; Commander Rules (mtgcommander.net)</a>
+<a class="rule-link" href="https://www.mtgsalvation.com/forums/the-game/commander-edh/818991-advanced-kingdoms-edh-variant-feedback-welcome" target="_blank" rel="noopener">↗ Advanced Kingdoms (MTG Salvation)</a>
+<a class="rule-link" href="https://www.mtgsalvation.com/forums/the-game/commander-edh/667501-expanded-kingdoms-a-new-edh-variant" target="_blank" rel="noopener">↗ Expanded Kingdoms (MTG Salvation)</a>
+</div>
+<div class="rule-tile">
+<p class="rule-tile-label">Printable PDFs</p>
+<p class="rule-tile-blurb">All role cards laid out for print. Cut and sleeve in identical sleeves so roles stay hidden. Duplex printing flips on the long edge.</p>
+<a class="rule-link" href="./kingdoms-cards-fronts.pdf" target="_blank" rel="noopener">&#8595; Single-Sided PDF</a>
+<a class="rule-link" href="./kingdoms-cards-doublesided.pdf" target="_blank" rel="noopener">&#8595; Double-Sided PDF</a>
 </div></div>
 </div><div class="links-wrap" id="links-wrap" style="display:none;">
 <p class="rules-head">Resources &amp; References</p>
@@ -2968,6 +2977,12 @@ a.link-card:hover{
 <div class="rel-log">
 <p class="rules-head">Release Log</p>
 <div class="rel-item rel-now">
+<span class="rel-ver">v0.5.75</span><span class="rel-date">2026-09-16</span>
+<ul class="rel-list">
+<li>Quick Ref: the <b>Printable PDFs</b> now have their own tile instead of sitting at the bottom of <b>Full Rules</b>, and both tiles gained a short blurb.</li>
+</ul>
+</div>
+<div class="rel-item">
 <span class="rel-ver">v0.5.74</span><span class="rel-date">2026-09-16</span>
 <ul class="rel-list">
 <li>Added this <b>Release Log</b>, and split the Links panel into <b>Full Rules</b>, <b>PDFs</b> and <b>This Viewer</b>.</li>
