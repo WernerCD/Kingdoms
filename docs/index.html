@@ -73,12 +73,12 @@
 
     .card { position: relative !important; }
     .card::after {
-      content: "v0.5.83";
+      content: "v0.5.84";
       position: absolute;
       bottom: 2px;
       left: 5px;
       font-size: 0.28rem;
-      color: rgba(255,255,255,0.22);
+      color: rgba(var(--ink),0.22);
       font-family: monospace;
       letter-spacing: 0.04em;
       line-height: 1;
@@ -100,7 +100,7 @@
   top:0;
   z-index:200;
   isolation:isolate;
-  background:rgba(8,6,4,0.93);
+  background:var(--nav-bg);
   backdrop-filter:blur(10px);
   -webkit-backdrop-filter:blur(10px);
   border-bottom:1px solid transparent;
@@ -113,8 +113,8 @@
 }
 
 .rule-tile a:hover {
-  background: rgba(212,160,23,0.14) !important;
-  border-color: rgba(212,160,23,0.6) !important;
+  background: rgba(var(--gold),0.14) !important;
+  border-color: rgba(var(--gold),0.6) !important;
 }
 
 .nav-wordmark{
@@ -123,28 +123,28 @@
   font-weight:700;
   letter-spacing:0.22em;
   text-transform:uppercase;
-  color:var(--nav-acc, #D4A017);
+  color:var(--nav-acc, var(--king-acc));
   white-space:nowrap;
   flex-shrink:0;
   transition:color 0.5s ease;
-  text-shadow:0 0 24px rgba(212,160,23,0.35);
+  text-shadow:0 0 24px rgba(var(--gold),0.35);
   line-height:1;
 }
 .filter-bar{display:flex;gap:6px;flex-wrap:wrap;padding:0;margin:0;justify-content:center;}
 .search-wrap{position:absolute;top:9px;right:16px;display:flex;align-items:center;width:206px;margin:0;z-index:2;}
-.search-input{width:100%;font-family:var(--font-body);font-size:0.76rem;color:rgba(255,255,255,0.8);
-  background:rgba(255,255,255,0.03);border:1px solid rgba(212,160,23,0.22);border-radius:3px;
+.search-input{width:100%;font-family:var(--font-body);font-size:0.76rem;color:rgba(var(--ink),0.8);
+  background:rgba(var(--ink),0.03);border:1px solid rgba(var(--gold),0.22);border-radius:3px;
   padding:5px 26px 5px 26px;outline:none;transition:border-color .2s,background .2s;box-sizing:border-box;}
-.search-input::placeholder{color:rgba(255,255,255,0.22);font-style:italic;}
-.search-input:focus{border-color:var(--king-acc);background:rgba(212,160,23,0.06);}
-.search-icon{position:absolute;left:9px;font-size:0.8rem;color:rgba(212,160,23,0.45);pointer-events:none;line-height:1;}
-.search-clear{position:absolute;right:6px;background:none;border:none;color:rgba(255,255,255,0.3);
+.search-input::placeholder{color:rgba(var(--ink),0.22);font-style:italic;}
+.search-input:focus{border-color:var(--king-acc);background:rgba(var(--gold),0.06);}
+.search-icon{position:absolute;left:9px;font-size:0.8rem;color:rgba(var(--gold),0.45);pointer-events:none;line-height:1;}
+.search-clear{position:absolute;right:6px;background:none;border:none;color:rgba(var(--ink),0.3);
   font-size:1rem;line-height:1;cursor:pointer;padding:2px 5px;display:none;}
 .search-clear:hover{color:var(--king-acc2);}
 .search-wrap.has-q .search-clear{display:block;}
 .search-count{position:absolute;top:100%;right:2px;margin-top:5px;white-space:nowrap;text-align:right;
   font-family:var(--font-head);font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;
-  color:rgba(212,160,23,0.5);pointer-events:none;}
+  color:rgba(var(--gold),0.5);pointer-events:none;}
 /* version drops to the bottom corner so the search can own the top one */
 .nav-version{top:auto !important;bottom:7px !important;transform:none !important;}
 /* narrow screens: no room to pin it, so let it be a row again */
@@ -154,7 +154,7 @@
   .nav-version{display:none !important;}
 }
 .search-empty{display:none;max-width:560px;margin:70px auto;text-align:center;font-family:var(--font-body);
-  color:rgba(255,255,255,0.35);font-size:0.95rem;line-height:1.7;}
+  color:rgba(var(--ink),0.35);font-size:0.95rem;line-height:1.7;}
 .search-empty b{color:var(--king-acc2);}
 @media print{.search-wrap,.search-count,.search-empty{display:none !important;}}
 
@@ -176,30 +176,30 @@ a.link-card{
   gap:16px;
   align-items:flex-start;
   padding:20px;
-  background:rgba(255,255,255,0.03);
-  border:1px solid rgba(255,255,255,0.08);
+  background:rgba(var(--ink),0.03);
+  border:1px solid rgba(var(--ink),0.08);
   border-radius:8px;
   text-decoration:none;
   color:inherit;
   transition:background 0.2s, border-color 0.2s;
 }
 a.link-card:hover{
-  background:rgba(212,160,23,0.06);
-  border-color:rgba(212,160,23,0.3);
+  background:rgba(var(--gold),0.06);
+  border-color:rgba(var(--gold),0.3);
 }
 .link-card-icon{
   font-size:1.6rem;
   line-height:1;
   flex-shrink:0;
   margin-top:2px;
-  color:#D4A017;
-  filter:drop-shadow(0 0 6px rgba(212,160,23,0.4));
+  color:var(--king-acc);
+  filter:drop-shadow(0 0 6px rgba(var(--gold),0.4));
 }
 .link-card-title{
   font-family:var(--font-display);
   font-size:0.95rem;
   font-weight:700;
-  color:#D4A017;
+  color:var(--king-acc);
   letter-spacing:0.03em;
   margin-bottom:2px;
 }
@@ -208,17 +208,46 @@ a.link-card:hover{
   font-size:0.62rem;
   letter-spacing:0.2em;
   text-transform:uppercase;
-  color:rgba(255,255,255,0.3);
+  color:rgba(var(--ink),0.3);
   margin-bottom:8px;
 }
 .link-card-desc{
   font-family:var(--font-body, Georgia, serif);
   font-size:0.8rem;
   line-height:1.55;
-  color:rgba(255,255,255,0.55);
+  color:rgba(var(--ink),0.55);
 }
 
-.sticky-nav.scrolled{border-bottom-color:rgba(212,160,23,0.12);}
+.sticky-nav.scrolled{border-bottom-color:rgba(var(--gold),0.12);}
+.theme-toggle{
+  position:absolute;
+  left:14px;
+  top:8px;
+  z-index:3;
+  display:flex;
+  align-items:center;
+  gap:7px;
+  font-family:var(--font-head);
+  font-size:0.52rem;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:rgba(var(--gold),0.6);
+  background:rgba(var(--gold),0.05);
+  border:1px solid rgba(var(--gold),0.22);
+  border-radius:3px;
+  padding:5px 10px;
+  line-height:1;
+  cursor:pointer;
+  transition:background .2s,border-color .2s,color .2s;
+}
+.theme-toggle:hover{color:rgb(var(--gold));background:rgba(var(--gold),0.12);border-color:rgba(var(--gold),0.5);}
+.theme-icon{font-size:0.82rem;line-height:1;}
+/* same breakpoint the search uses — below it the nav is too tight for the word */
+@media(max-width:880px){
+  .theme-toggle{left:10px;top:7px;padding:5px 8px;gap:0;}
+  .theme-label{display:none;}
+}
+@media print{.theme-toggle{display:none !important;}}
 .nav-version{
   position:absolute;
   right:18px;
@@ -228,15 +257,79 @@ a.link-card:hover{
   font-size:0.55rem;
   letter-spacing:0.2em;
   text-transform:uppercase;
-  color:rgba(212,160,23,0.45);
+  color:rgba(var(--gold),0.45);
   pointer-events:none;
   white-space:nowrap;
 }
-</style></head><body>
+</style>
+<script>
+/* Theme: preference is system | light | dark, and "system" is the default.
+   Runs in <head> so data-theme is set before the first paint. */
+(function(){
+  var KEY = 'kingdoms-theme';
+  var pref;
+  try { pref = localStorage.getItem(KEY); } catch(e) {}
+  if (pref !== 'light' && pref !== 'dark') pref = 'system';
+
+  var mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: light)') : null;
+  function resolved(){ return pref === 'system' ? (mq && mq.matches ? 'light' : 'dark') : pref; }
+
+  function apply(){
+    var t = resolved();
+    var root = document.documentElement;
+    root.setAttribute('data-theme', t);
+    root.setAttribute('data-theme-pref', pref);
+    try { document.dispatchEvent(new CustomEvent('themechange', {detail:{pref:pref, theme:t}})); }
+    catch(e) {
+      var ev = document.createEvent('CustomEvent');
+      ev.initCustomEvent('themechange', false, false, {pref:pref, theme:t});
+      document.dispatchEvent(ev);
+    }
+  }
+
+  window.Kingdoms = window.Kingdoms || {};
+  window.Kingdoms.theme = {
+    get pref(){ return pref; },
+    get resolved(){ return resolved(); },
+    set: function(p){
+      pref = (p === 'light' || p === 'dark') ? p : 'system';
+      try { localStorage.setItem(KEY, pref); } catch(e) {}
+      apply();
+    },
+    cycle: function(){ this.set({system:'light', light:'dark', dark:'system'}[pref]); }
+  };
+
+  apply();
+  if (mq) {
+    var onChange = function(){ if (pref === 'system') apply(); };
+    mq.addEventListener ? mq.addEventListener('change', onChange) : mq.addListener(onChange);
+  }
+})();
+</script>
+</head><body>
 <title>Kingdoms — Advanced, Extended &amp; Variants</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&amp;family=Cinzel+Decorative:wght@400;700&amp;family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap" rel="stylesheet"/>
 <style>
   :root {
+    color-scheme: dark;
+    --ink: 255,255,255;          /* body ink, over both the page and the cards */
+    --gold: 212,160,23;          /* the chrome accent: nav, filters, rule links */
+    --badge-alt: 210,185,130;    /* Variant / EK badge */
+    --joke: 255,107,157;         /* Jack + Specials pink */
+    --bevel: rgba(255,255,255,0.07);
+    --nav-bg: rgba(8,6,4,0.93);
+    --nav-bd: rgba(212,160,23,0.12);
+    --nav-bg-king:rgba(28,10,0,0.93);--nav-bd-king:rgba(212,160,23,0.30);
+    --nav-bg-knight:rgba(5,17,30,0.93);--nav-bd-knight:rgba(74,159,212,0.28);
+    --nav-bg-assassin:rgba(12,7,24,0.93);--nav-bd-assassin:rgba(155,114,245,0.28);
+    --nav-bg-bandit:rgba(26,8,0,0.93);--nav-bd-bandit:rgba(217,119,6,0.28);
+    --nav-bg-renegade:rgba(4,21,16,0.93);--nav-bd-renegade:rgba(16,185,129,0.28);
+    --card-shadow:0 0 0 3px rgba(0,0,0,0.55),0 10px 40px rgba(0,0,0,0.75),inset 0 0 0 1px rgba(255,255,255,0.04);
+    --tint-strong:rgba(0,0,0,0.28);   /* title bar */
+    --tint-soft:rgba(0,0,0,0.2);      /* type line */
+    --tint-badge:rgba(0,0,0,0.3);
+    --art-bg:linear-gradient(160deg,rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.18) 100%);
+    --art-shadow:inset 0 2px 16px rgba(0,0,0,0.45);
     --page-bg: #0C0B08;
     --page-text: #E8E0D0;
     --king-bg:#1C0A00;--king-bg2:#2A1300;--king-acc:#D4A017;--king-acc2:#F2C94C;--king-txt:#FFF8E7;--king-bdr:rgba(212,160,23,0.35);
@@ -248,12 +341,89 @@ a.link-card:hover{
     --font-head:'Cinzel','Times New Roman',serif;
     --font-body:'Crimson Text',Georgia,serif;
   }
+
+  /* ═══ LIGHT THEME ═══
+     Parchment, not white: the cards keep their role hues but invert to a light
+     ground with dark ink. data-theme is written by the head script, which
+     resolves "system" to light/dark before the first paint.
+
+     Scoped to @media screen on purpose — printing always uses the dark card
+     faces, because that is what the PDFs are. Outside screen media the :root
+     block above is the only palette, so print needs no override. */
+  @media screen {
+    :root[data-theme="light"] {
+      color-scheme: light;
+      --ink: 26,19,8;
+      --gold: 120,84,6;
+      --badge-alt: 122,96,42;
+      --joke: 192,45,104;
+      --bevel: rgba(0,0,0,0.07);
+      --page-bg: #F4EDDD;
+      --page-text: #2A2013;
+      --nav-bg: rgba(249,244,232,0.94);
+      --nav-bd: rgba(120,84,6,0.22);
+      --nav-bg-king:rgba(253,245,224,0.94);--nav-bd-king:rgba(120,84,6,0.34);
+      --nav-bg-knight:rgba(233,243,251,0.94);--nav-bd-knight:rgba(28,106,161,0.32);
+      --nav-bg-assassin:rgba(241,236,253,0.94);--nav-bd-assassin:rgba(101,58,204,0.32);
+      --nav-bg-bandit:rgba(252,239,222,0.94);--nav-bd-bandit:rgba(160,86,7,0.32);
+      --nav-bg-renegade:rgba(232,246,239,0.94);--nav-bd-renegade:rgba(9,116,82,0.32);
+      --card-shadow:0 0 0 1px rgba(0,0,0,0.04),0 6px 18px rgba(64,48,20,0.16),inset 0 0 0 1px rgba(255,255,255,0.7);
+      --tint-strong:rgba(0,0,0,0.055);
+      --tint-soft:rgba(0,0,0,0.035);
+      --tint-badge:rgba(255,255,255,0.6);
+      --art-bg:linear-gradient(160deg,rgba(0,0,0,0.055) 0%,rgba(0,0,0,0.02) 100%);
+      --art-shadow:inset 0 2px 12px rgba(64,48,20,0.1);
+      --king-bg:#FBF0D2;--king-bg2:#FFFAEC;--king-acc:#7E5A06;--king-acc2:#6B4A04;--king-txt:#2B1C00;--king-bdr:rgba(120,84,6,0.4);
+      --knight-bg:#E3EFFA;--knight-bg2:#F5FAFF;--knight-acc:#1C6AA1;--knight-acc2:#124B76;--knight-txt:#0A2233;--knight-bdr:rgba(28,106,161,0.36);
+      --assassin-bg:#EDE6FC;--assassin-bg2:#F9F6FF;--assassin-acc:#653ACC;--assassin-acc2:#472498;--assassin-txt:#1E1236;--assassin-bdr:rgba(101,58,204,0.36);
+      --bandit-bg:#FBEBD6;--bandit-bg2:#FFF8EF;--bandit-acc:#A05607;--bandit-acc2:#743D05;--bandit-txt:#331D00;--bandit-bdr:rgba(160,86,7,0.36);
+      --renegade-bg:#E2F3EB;--renegade-bg2:#F4FCF8;--renegade-acc:#097452;--renegade-acc2:#05553C;--renegade-txt:#062B1E;--renegade-bdr:rgba(9,116,82,0.34);
+    }
+
+    /* Contrast trim. The same alpha reads fainter as dark-on-light than it does
+       as light-on-dark, so each faded tier is re-solved to the contrast ratio
+       its dark counterpart already has. */
+    :root[data-theme="light"] .search-input{color:rgba(var(--ink),0.89);}
+    :root[data-theme="light"] .search-input::placeholder{color:rgba(var(--ink),0.28);}
+    :root[data-theme="light"] .search-clear{color:rgba(var(--ink),0.4);}
+    :root[data-theme="light"] .search-empty{color:rgba(var(--ink),0.48);}
+    :root[data-theme="light"] .card-sec-text{color:rgba(var(--ink),0.86);}
+    :root[data-theme="light"] .card-sec-text i{color:rgba(var(--ink),0.66);}
+    :root[data-theme="light"] .card-flavor-text{color:rgba(var(--ink),0.41);}
+    :root[data-theme="light"] .sub-div-label{color:rgba(var(--ink),0.19);}
+    :root[data-theme="light"] .back-title{color:rgba(var(--ink),0.26);}
+    :root[data-theme="light"] .links-sub{color:rgba(var(--ink),0.41);}
+    :root[data-theme="light"] .rel-ver{color:rgba(var(--ink),0.89);}
+    :root[data-theme="light"] .rel-date{color:rgba(var(--ink),0.35);}
+    :root[data-theme="light"] .rel-list li{color:rgba(var(--ink),0.65);}
+    :root[data-theme="light"] .rel-list li::before{color:rgba(var(--ink),0.26);}
+    :root[data-theme="light"] .rel-list li b{color:rgba(var(--ink),0.84);}
+    :root[data-theme="light"] .rules-head{color:rgba(var(--ink),0.26);}
+    :root[data-theme="light"] .rule-tile-blurb{color:rgba(var(--ink),0.44);}
+    :root[data-theme="light"] .rule-tile-text{color:rgba(var(--ink),0.56);}
+    :root[data-theme="light"] .link-card-site{color:rgba(var(--ink),0.41);}
+    :root[data-theme="light"] .link-card-desc{color:rgba(var(--ink),0.69);}
+    :root[data-theme="light"] #ref-toggle,
+    :root[data-theme="light"] #links-toggle{color:rgba(var(--ink),0.4);}
+
+    :root[data-theme="light"] .search-icon{color:rgba(var(--gold),0.56);}
+    :root[data-theme="light"] .search-count{color:rgba(var(--gold),0.62);}
+    :root[data-theme="light"] .nav-version{color:rgba(var(--gold),0.56);}
+    :root[data-theme="light"] .rel-more{color:rgba(var(--gold),0.71);}
+    :root[data-theme="light"] .rule-tile-label{color:rgba(var(--gold),0.58);}
+    :root[data-theme="light"] .filter-btn{color:rgba(var(--gold),0.49);}
+    :root[data-theme="light"] .filter-btn:hover{color:rgba(var(--gold),0.91);}
+    :root[data-theme="light"] .theme-toggle{color:rgba(var(--gold),0.75);}
+
+    :root[data-theme="light"] .cj{--c-bg:#FBE6EE;--c-bg2:#FFF6F9;--c-acc:#C02D68;--c-acc2:#8C1B49;--c-txt:#3A0A1D;--c-bdr:rgba(192,45,104,0.36);}
+  }
+
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
   body{background:var(--page-bg);color:var(--page-text);font-family:var(--font-body);padding:0 20px 48px;}
 
   /* PAGE HEADER */
   .page-header{text-align:center;padding:40px 20px 28px;margin-bottom:0;}
-  .page-title{font-family:var(--font-display);font-size:clamp(1.3rem,3.5vw,2.2rem);font-weight:700;letter-spacing:0.06em;color:var(--king-acc);text-shadow:0 0 60px rgba(212,160,23,0.2);line-height:1.1;}
+  .page-title{font-family:var(--font-display);font-size:clamp(1.3rem,3.5vw,2.2rem);font-weight:700;letter-spacing:0.06em;color:var(--king-acc);text-shadow:0 0 60px rgba(var(--gold),0.2);line-height:1.1;}
   .page-sub{font-family:var(--font-head);font-size:0.62rem;letter-spacing:0.35em;text-transform:uppercase;color:#6A4E1A;margin-top:6px;}
   .page-rule{width:200px;height:1px;background:linear-gradient(90deg,transparent,var(--king-acc),transparent);opacity:0.3;margin:20px auto 0;}
 
@@ -278,7 +448,7 @@ a.link-card:hover{
     width:228px;border-radius:9px;display:flex;flex-direction:column;
     position:relative;overflow:hidden;
     border:2px solid var(--c-acc);
-    box-shadow:0 0 0 3px rgba(0,0,0,0.55),0 10px 40px rgba(0,0,0,0.75),inset 0 0 0 1px rgba(255,255,255,0.04);
+    box-shadow:var(--card-shadow);
   }
   .card::after{display:none;}
   .s-king .card{width:272px;}
@@ -311,7 +481,7 @@ a.link-card:hover{
     font-family:var(--font-head);font-size:1.02rem;font-weight:700;
     color:var(--c-txt);text-align:left;
     padding:8px 13px 7px;letter-spacing:0.02em;line-height:1.15;
-    background:rgba(0,0,0,0.28);
+    background:var(--tint-strong);
     border-bottom:1px solid var(--c-bdr);
     flex-shrink:0;
   }
@@ -324,14 +494,14 @@ a.link-card:hover{
     margin:8px 10px 0;
     border:1.5px solid var(--c-bdr);
     border-radius:4px;
-    background:linear-gradient(160deg,rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.18) 100%);
-    box-shadow:inset 0 2px 16px rgba(0,0,0,0.45);
+    background:var(--art-bg);
+    box-shadow:var(--art-shadow);
     position:relative;flex-shrink:0;
   }
   /* Inner beveled border — classic MTG art frame detail */
   .card-sigil::before{
     content:'';position:absolute;inset:3px;
-    border:1px solid rgba(255,255,255,0.07);
+    border:1px solid var(--bevel);
     border-radius:2px;pointer-events:none;
   }
   .sigil-wrap{position:relative;width:58px;height:58px;display:flex;align-items:center;justify-content:center;}
@@ -346,7 +516,7 @@ a.link-card:hover{
     display:flex;justify-content:space-between;align-items:center;
     padding:5px 11px;
     margin:2px 10px 6px;
-    background:rgba(0,0,0,0.2);
+    background:var(--tint-soft);
     border:1px solid var(--c-bdr);
     border-radius:3px;gap:6px;
   }
@@ -358,35 +528,35 @@ a.link-card:hover{
 
   /* BADGES */
   .card-badge{font-family:var(--font-head);font-size:0.46rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;padding:2px 5px;border-radius:2px;white-space:nowrap;}
-  .badge-original{color:var(--c-acc);border:1px solid var(--c-acc);background:rgba(0,0,0,0.3);opacity:0.85;}
-  .badge-variant{color:rgba(210,185,130,0.85);border:1px solid rgba(210,185,130,0.35);background:rgba(210,185,130,0.06);}
-  .badge-joke{color:#ff6b9d;border:1px solid rgba(255,107,157,0.35);background:rgba(255,107,157,0.05);}
-  .badge-ek{color:rgba(210,185,130,0.85);border:1px solid rgba(210,185,130,0.35);background:rgba(210,185,130,0.06);}
+  .badge-original{color:var(--c-acc);border:1px solid var(--c-acc);background:var(--tint-badge);opacity:0.85;}
+  .badge-variant{color:rgba(var(--badge-alt),0.85);border:1px solid rgba(var(--badge-alt),0.35);background:rgba(var(--badge-alt),0.06);}
+  .badge-joke{color:rgb(var(--joke));border:1px solid rgba(var(--joke),0.35);background:rgba(var(--joke),0.05);}
+  .badge-ek{color:rgba(var(--badge-alt),0.85);border:1px solid rgba(var(--badge-alt),0.35);background:rgba(var(--badge-alt),0.06);}
 
   /* ── RULES TEXT ── */
   .card-div{height:1px;background:linear-gradient(90deg,transparent,var(--c-acc),transparent);opacity:0.12;margin:1px 12px;flex-shrink:0;}
   .card-section{padding:8px 13px 5px;display:flex;flex-direction:column;gap:3px;}
   .card-sec-label{font-family:var(--font-head);font-size:0.56rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--c-acc);font-weight:600;opacity:0.85;}
-  .card-sec-text{font-family:var(--font-body);font-size:0.79rem;line-height:1.52;color:rgba(255,255,255,0.76);}
+  .card-sec-text{font-family:var(--font-body);font-size:0.79rem;line-height:1.52;color:rgba(var(--ink),0.76);}
   .choose-options{list-style:none;margin:3px 0 2px 0;padding:0 0 0 1.1em;}
   .choose-options li{position:relative;margin-bottom:2px;}
   .choose-options li::before{content:"\2022";position:absolute;left:-0.9em;color:var(--c-acc);opacity:0.75;}
   .card-sec-text b{color:var(--c-acc2);font-weight:600;font-style:normal;}
-  .card-sec-text i{color:rgba(255,255,255,0.52);font-size:0.75rem;}
+  .card-sec-text i{color:rgba(var(--ink),0.52);font-size:0.75rem;}
 
   /* ── FLAVOR TEXT ── */
   .card-flavor{padding:8px 14px 12px;margin-top:auto;border-top:1px solid var(--c-bdr);}
   .card-flavor-div{display:none;}
-  .card-flavor-text{font-family:var(--font-body);font-size:0.69rem;line-height:1.42;color:rgba(255,255,255,0.3);font-style:italic;text-align:center;}
+  .card-flavor-text{font-family:var(--font-body);font-size:0.69rem;line-height:1.42;color:rgba(var(--ink),0.3);font-style:italic;text-align:center;}
 
   /* SECTION DIVIDER between Original and Variant groups */
   .subsection-divider{width:100%;display:flex;align-items:center;gap:12px;padding:8px 0 16px;justify-content:center;}
-  .sub-div-line{width:60px;height:1px;background:rgba(255,255,255,0.08);}
-  .sub-div-label{font-family:var(--font-head);font-size:0.55rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.15);}
+  .sub-div-line{width:60px;height:1px;background:rgba(var(--ink),0.08);}
+  .sub-div-label{font-family:var(--font-head);font-size:0.55rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(var(--ink),0.15);}
 
   /* CARD BACK */
-  .back-section{max-width:1340px;margin:0 auto;text-align:center;padding-top:40px;border-top:1px solid rgba(255,255,255,0.05);}
-  .back-title{font-family:var(--font-head);font-size:0.65rem;letter-spacing:0.38em;text-transform:uppercase;color:rgba(255,255,255,0.2);margin-bottom:20px;}
+  .back-section{max-width:1340px;margin:0 auto;text-align:center;padding-top:40px;border-top:1px solid rgba(var(--ink),0.05);}
+  .back-title{font-family:var(--font-head);font-size:0.65rem;letter-spacing:0.38em;text-transform:uppercase;color:rgba(var(--ink),0.2);margin-bottom:20px;}
   .card-back{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;width:210px;height:294px;border-radius:8px;background:linear-gradient(150deg,#0F0C1E 0%,#0A0818 50%,#0C0A1A 100%);box-shadow:0 6px 32px rgba(0,0,0,0.65),inset 0 1px 0 rgba(255,255,255,0.05);border:1px solid rgba(212,160,23,0.18);position:relative;overflow:hidden;}
   .card-back::before{content:'';position:absolute;inset:14px;border:1px solid rgba(212,160,23,0.12);border-radius:4px;}
   .card-back::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,rgba(212,160,23,0.08) 0%,transparent 70%);}
@@ -394,45 +564,46 @@ a.link-card:hover{
   .back-word{font-family:var(--font-head);font-size:0.62rem;letter-spacing:0.45em;text-transform:uppercase;color:rgba(212,160,23,0.3);position:relative;z-index:1;}
 
   /* RULES */
-  .rules-wrap{max-width:900px;margin:56px auto 0;padding-top:40px;border-top:1px solid rgba(255,255,255,0.05);}
-  .links-sub{font-family:var(--font-head);font-size:0.6rem;letter-spacing:0.34em;text-transform:uppercase;color:rgba(255,255,255,0.3);text-align:left;margin:30px 0 14px;padding-bottom:7px;border-bottom:1px solid rgba(255,255,255,0.07);}
+  .rules-wrap{max-width:900px;margin:56px auto 0;padding-top:40px;border-top:1px solid rgba(var(--ink),0.05);}
+  .links-sub{font-family:var(--font-head);font-size:0.6rem;letter-spacing:0.34em;text-transform:uppercase;color:rgba(var(--ink),0.3);text-align:left;margin:30px 0 14px;padding-bottom:7px;border-bottom:1px solid rgba(var(--ink),0.07);}
 .links-sub:first-of-type{margin-top:4px;}
 .rel-item.rel-collapsed{display:none;}
 .rel-item.rel-tail{border-left-color:transparent;padding-bottom:4px;}
-.rel-more{display:block;margin:2px auto 0;font-family:var(--font-head);font-size:0.55rem;letter-spacing:0.26em;text-transform:uppercase;color:rgba(212,160,23,0.55);background:none;border:1px solid rgba(212,160,23,0.22);border-radius:3px;padding:7px 20px;cursor:pointer;transition:background .2s,border-color .2s,color .2s;}
-.rel-more:hover{color:var(--king-acc2);border-color:rgba(212,160,23,0.5);background:rgba(212,160,23,0.06);}
+.rel-more{display:block;margin:2px auto 0;font-family:var(--font-head);font-size:0.55rem;letter-spacing:0.26em;text-transform:uppercase;color:rgba(var(--gold),0.55);background:none;border:1px solid rgba(var(--gold),0.22);border-radius:3px;padding:7px 20px;cursor:pointer;transition:background .2s,border-color .2s,color .2s;}
+.rel-more:hover{color:var(--king-acc2);border-color:rgba(var(--gold),0.5);background:rgba(var(--gold),0.06);}
 @media print{.rel-more{display:none;}.rel-item.rel-collapsed{display:block;}}
 .rel-log{max-width:900px;margin:52px auto 0;padding:0 20px;}
-.rel-item{position:relative;padding:0 0 22px 26px;border-left:1px solid rgba(255,255,255,0.09);}
+.rel-item{position:relative;padding:0 0 22px 26px;border-left:1px solid rgba(var(--ink),0.09);}
 .rel-item:last-child{border-left-color:transparent;padding-bottom:4px;}
-.rel-item::before{content:"";position:absolute;left:-4.5px;top:6px;width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.18);}
+.rel-item::before{content:"";position:absolute;left:-4.5px;top:6px;width:8px;height:8px;border-radius:50%;background:rgba(var(--ink),0.18);}
 .rel-item.rel-now::before{background:var(--king-acc2);box-shadow:0 0 8px var(--king-acc);}
-.rel-ver{font-family:var(--font-head);font-size:0.82rem;letter-spacing:0.12em;color:rgba(255,255,255,0.78);}
+.rel-ver{font-family:var(--font-head);font-size:0.82rem;letter-spacing:0.12em;color:rgba(var(--ink),0.78);}
 .rel-item.rel-now .rel-ver{color:var(--king-acc2);}
-.rel-date{font-family:var(--font-body);font-size:0.68rem;color:rgba(255,255,255,0.26);margin-left:10px;letter-spacing:0.04em;}
+.rel-date{font-family:var(--font-body);font-size:0.68rem;color:rgba(var(--ink),0.26);margin-left:10px;letter-spacing:0.04em;}
 .rel-list{margin:7px 0 0;padding-left:16px;list-style:none;}
-.rel-list li{position:relative;font-family:var(--font-body);font-size:0.8rem;line-height:1.55;color:rgba(255,255,255,0.5);margin-bottom:3px;}
-.rel-list li::before{content:"\2013";position:absolute;left:-16px;color:rgba(255,255,255,0.2);}
+.rel-list li{position:relative;font-family:var(--font-body);font-size:0.8rem;line-height:1.55;color:rgba(var(--ink),0.5);margin-bottom:3px;}
+.rel-list li::before{content:"\2013";position:absolute;left:-16px;color:rgba(var(--ink),0.2);}
 .rel-list a{color:var(--king-acc2);text-decoration:none;border-bottom:1px solid rgba(242,201,76,0.3);}
 .rel-list a:hover{border-bottom-color:var(--king-acc2);}
-.rel-list li b{color:rgba(255,255,255,0.72);font-weight:600;}
+.rel-list li b{color:rgba(var(--ink),0.72);font-weight:600;}
 @media(max-width:600px){.rel-log{padding:0 14px;}}
-.rules-head{font-family:var(--font-head);font-size:0.65rem;letter-spacing:0.38em;text-transform:uppercase;color:rgba(255,255,255,0.2);text-align:center;margin-bottom:24px;}
+.rules-head{font-family:var(--font-head);font-size:0.65rem;letter-spacing:0.38em;text-transform:uppercase;color:rgba(var(--ink),0.2);text-align:center;margin-bottom:24px;}
   .rules-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;}
-  .rule-link{display:block;color:var(--king-acc);text-decoration:none;font-weight:600;font-size:0.85rem;letter-spacing:0.02em;padding:6px 12px;margin:3px 0;border:1px solid rgba(212,160,23,0.35);border-radius:4px;background:rgba(212,160,23,0.07);transition:background .2s,border-color .2s;box-sizing:border-box;}
-.rule-link:hover{background:rgba(212,160,23,0.16);border-color:rgba(212,160,23,0.6);}
-.rule-tile-blurb{font-family:var(--font-body);font-size:0.74rem;line-height:1.5;color:rgba(255,255,255,0.32);margin-bottom:8px;}
-.rule-tile{padding:14px 16px;border:1px solid rgba(255,255,255,0.06);border-radius:5px;background:rgba(255,255,255,0.02);}
-  .rule-tile-label{font-family:var(--font-head);font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(212,160,23,0.45);margin-bottom:6px;}
-  .rule-tile-text{font-family:var(--font-body);font-size:0.78rem;line-height:1.5;color:rgba(255,255,255,0.42);}
+  .rule-link{display:block;color:var(--king-acc);text-decoration:none;font-weight:600;font-size:0.85rem;letter-spacing:0.02em;padding:6px 12px;margin:3px 0;border:1px solid rgba(var(--gold),0.35);border-radius:4px;background:rgba(var(--gold),0.07);transition:background .2s,border-color .2s;box-sizing:border-box;}
+.rule-link:hover{background:rgba(var(--gold),0.16);border-color:rgba(var(--gold),0.6);}
+.rule-tile-blurb{font-family:var(--font-body);font-size:0.74rem;line-height:1.5;color:rgba(var(--ink),0.32);margin-bottom:8px;}
+.rule-tile{padding:14px 16px;border:1px solid rgba(var(--ink),0.06);border-radius:5px;background:rgba(var(--ink),0.02);}
+  .rule-tile-label{font-family:var(--font-head);font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(var(--gold),0.45);margin-bottom:6px;}
+  .rule-tile-text{font-family:var(--font-body);font-size:0.78rem;line-height:1.5;color:rgba(var(--ink),0.42);}
 
   /* FILTER BAR */
   .filter-bar{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;padding:0;margin:0;}
-  .filter-btn{font-family:var(--font-head);font-size:0.56rem;letter-spacing:0.28em;text-transform:uppercase;padding:6px 18px;border-radius:3px;border:1px solid rgba(212,160,23,0.2);background:transparent;color:rgba(212,160,23,0.4);cursor:pointer;transition:all 0.2s;}
-  .filter-btn:hover{border-color:rgba(212,160,23,0.5);color:rgba(212,160,23,0.75);}
-  .filter-btn.active{border-color:var(--king-acc);color:var(--king-acc);background:rgba(212,160,23,0.08);}
+  .filter-btn{font-family:var(--font-head);font-size:0.56rem;letter-spacing:0.28em;text-transform:uppercase;padding:6px 18px;border-radius:3px;border:1px solid rgba(var(--gold),0.2);background:transparent;color:rgba(var(--gold),0.4);cursor:pointer;transition:all 0.2s;}
+  .filter-btn:hover{border-color:rgba(var(--gold),0.5);color:rgba(var(--gold),0.75);}
+  #ref-toggle,#links-toggle{border-color:rgba(var(--ink),0.12);color:rgba(var(--ink),0.3);}
+  .filter-btn.active{border-color:var(--king-acc);color:var(--king-acc);background:rgba(var(--gold),0.08);}
   .jump-links{display:flex;gap:0;align-items:center;}
-  .jump-link{font-family:var(--font-head);font-size:0.5rem;letter-spacing:0.22em;text-transform:uppercase;text-decoration:none;padding:3px 10px;opacity:0.45;transition:opacity 0.2s;border-left:1px solid rgba(255,255,255,0.1);}
+  .jump-link{font-family:var(--font-head);font-size:0.5rem;letter-spacing:0.22em;text-transform:uppercase;text-decoration:none;padding:3px 10px;opacity:0.45;transition:opacity 0.2s;border-left:1px solid rgba(var(--ink),0.1);}
   .jump-link:first-child{border-left:none;}
   .jump-link:hover{opacity:1;}
   .jl-king{color:var(--king-acc);}
@@ -532,13 +703,13 @@ a.link-card:hover{
   }
 </style>
 <!-- ══════════════════════════════════════════ -->
-<nav class="sticky-nav"><span class="nav-wordmark">Kingdoms</span><div class="filter-bar">
+<nav class="sticky-nav"><button class="theme-toggle" id="theme-toggle" type="button"><span class="theme-icon" aria-hidden="true">◐</span><span class="theme-label">System</span></button><span class="nav-wordmark">Kingdoms</span><div class="filter-bar">
 <button class="filter-btn active" data-filter="all">All Cards</button>
 <button class="filter-btn" data-filter="original">Advanced Kingdoms</button>
 <button class="filter-btn" data-filter="ek">Expanded Kingdoms</button>
 <button class="filter-btn" data-filter="variant">Variants</button>
-<button class="filter-btn" data-filter="special" style="border-color:rgba(255,107,157,0.25);color:rgba(255,107,157,0.5);">Specials</button>
-<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><div class="search-wrap" id="search-wrap"><span class="search-icon">⌕</span><input class="search-input" id="card-search" type="search" autocomplete="off" spellcheck="false" placeholder="Search cards…" title="Search name, role, set, rules text and flavour" aria-label="Search cards"><button class="search-clear" id="search-clear" aria-label="Clear search">×</button><div class="search-count" id="search-count"></div></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.83</span></nav>
+<button class="filter-btn" data-filter="special" style="border-color:rgba(var(--joke),0.25);color:rgba(var(--joke),0.5);">Specials</button>
+<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle">Links</button></div><div class="search-wrap" id="search-wrap"><span class="search-icon">⌕</span><input class="search-input" id="card-search" type="search" autocomplete="off" spellcheck="false" placeholder="Search cards…" title="Search name, role, set, rules text and flavour" aria-label="Search cards"><button class="search-clear" id="search-clear" aria-label="Clear search">×</button><div class="search-count" id="search-count"></div></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.84</span></nav>
 <!-- ══ KING ══ -->
 <section class="role-section s-king" id="s-king">
 <div class="section-header">
@@ -997,7 +1168,7 @@ a.link-card:hover{
 <!-- ─── EXPANDED KINGDOMS ─── -->
 <div class="subsection-divider">
 <div class="sub-div-line"></div>
-<span class="sub-div-label" style="color:rgba(210,185,130,0.45);">Expanded Kingdoms</span>
+<span class="sub-div-label" style="color:rgba(var(--badge-alt),0.45);">Expanded Kingdoms</span>
 <div class="sub-div-line"></div>
 </div>
 <div class="card cn card-ek">
@@ -1365,11 +1536,11 @@ a.link-card:hover{
 </div><div class="card cn card-variant card-special">
 <div class="card-bg"></div>
 <style>
-        .jacks-guard .card-bg { background: linear-gradient(160deg, #0d1520 0%, #081018 65%); }
-        .jacks-guard .card-stripe { background: linear-gradient(90deg, transparent, #ff6b9d, var(--knight-acc), transparent); }
+        .jacks-guard .card-bg { background: linear-gradient(160deg, var(--knight-bg2) 0%, var(--knight-bg) 65%); }
+        .jacks-guard .card-stripe { background: linear-gradient(90deg, transparent, rgb(var(--joke)), var(--knight-acc), transparent); }
       </style>
 <div class="card-content">
-<div class="card-stripe" style="background:linear-gradient(90deg,transparent,#ff6b9d,var(--knight-acc),transparent);opacity:0.7;"></div>
+<div class="card-stripe" style="background:linear-gradient(90deg,transparent,rgb(var(--joke)),var(--knight-acc),transparent);opacity:0.7;"></div>
 <div class="card-meta">
 <span class="card-role-tag">Knight</span>
 <span class="card-badge badge-variant badge-joke">Variant</span>
@@ -1394,7 +1565,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Special</span>
-<span class="card-sec-text"><b style="color:#ff6b9d;">If You're Jack:</b> Your Victory would be circular, so it changes: <b>survive to the end of the game.</b> Your Reveal cannot intercept on your own behalf — instead you may reveal at any time to gain <b>10 life</b> and draw a card.<br/><br/><b style="color:#ff6b9d;">If No Jack:</b> Before the game begins, secretly write down any player — they are your <b>"Jack"</b> for all purposes of this card, and only you know it. You may reveal this card at any time to <b>name them aloud</b>: they gain <b>10 life</b>, draw a card, and until the start of your next turn all damage that would be dealt to them is dealt to its <b>source's controller</b> instead. If you cannot produce your note, you lose.</span>
+<span class="card-sec-text"><b style="color:rgb(var(--joke));">If You're Jack:</b> Your Victory would be circular, so it changes: <b>survive to the end of the game.</b> Your Reveal cannot intercept on your own behalf — instead you may reveal at any time to gain <b>10 life</b> and draw a card.<br/><br/><b style="color:rgb(var(--joke));">If No Jack:</b> Before the game begins, secretly write down any player — they are your <b>"Jack"</b> for all purposes of this card, and only you know it. You may reveal this card at any time to <b>name them aloud</b>: they gain <b>10 life</b>, draw a card, and until the start of your next turn all damage that would be dealt to them is dealt to its <b>source's controller</b> instead. If you cannot produce your note, you lose.</span>
 </div>
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
@@ -1579,7 +1750,7 @@ a.link-card:hover{
 <!-- ─── EXPANDED KINGDOMS ─── -->
 <div class="subsection-divider">
 <div class="sub-div-line"></div>
-<span class="sub-div-label" style="color:rgba(210,185,130,0.45);">Expanded Kingdoms</span>
+<span class="sub-div-label" style="color:rgba(var(--badge-alt),0.45);">Expanded Kingdoms</span>
 <div class="sub-div-line"></div>
 </div>
 <div class="card ca card-ek">
@@ -2128,7 +2299,7 @@ a.link-card:hover{
 <!-- ─── EXPANDED KINGDOMS ─── -->
 <div class="subsection-divider">
 <div class="sub-div-line"></div>
-<span class="sub-div-label" style="color:rgba(210,185,130,0.45);">Expanded Kingdoms</span>
+<span class="sub-div-label" style="color:rgba(var(--badge-alt),0.45);">Expanded Kingdoms</span>
 <div class="sub-div-line"></div>
 </div>
 <div class="card cb card-ek">
@@ -2659,7 +2830,7 @@ a.link-card:hover{
 <!-- ─── EXPANDED KINGDOMS ─── -->
 <div class="subsection-divider">
 <div class="sub-div-line"></div>
-<span class="sub-div-label" style="color:rgba(210,185,130,0.45);">Expanded Kingdoms</span>
+<span class="sub-div-label" style="color:rgba(var(--badge-alt),0.45);">Expanded Kingdoms</span>
 <div class="sub-div-line"></div>
 </div>
 <div class="card cr card-ek">
@@ -2885,7 +3056,7 @@ a.link-card:hover{
 <div class="card cr card-variant card-special kill-jack">
 <div class="card-bg"></div>
 <div class="card-content">
-<div class="card-stripe" style="background:linear-gradient(90deg,transparent,#ff6b9d,var(--renegade-acc),transparent);opacity:0.7;"></div>
+<div class="card-stripe" style="background:linear-gradient(90deg,transparent,rgb(var(--joke)),var(--renegade-acc),transparent);opacity:0.7;"></div>
 <div class="card-meta">
 <span class="card-role-tag">Renegade</span>
 <span class="card-badge badge-variant badge-joke">Variant</span>
@@ -2916,7 +3087,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Special</span>
-<span class="card-sec-text"><b style="color:#ff6b9d;">If You're Jack:</b> Your win condition changes: <b>Survive to the end of the game.</b> You may reveal this card at game start. If you do, all other players must verbally acknowledge, in turn order, that Jack deserved this.<br/><br/><b style="color:#ff6b9d;">If No Jack:</b> Before the game begins, secretly choose any player at the table. That player is your <b>"Jack"</b> for all purposes of this card.</span>
+<span class="card-sec-text"><b style="color:rgb(var(--joke));">If You're Jack:</b> Your win condition changes: <b>Survive to the end of the game.</b> You may reveal this card at game start. If you do, all other players must verbally acknowledge, in turn order, that Jack deserved this.<br/><br/><b style="color:rgb(var(--joke));">If No Jack:</b> Before the game begins, secretly choose any player at the table. That player is your <b>"Jack"</b> for all purposes of this card.</span>
 </div>
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
@@ -3062,10 +3233,10 @@ a.link-card:hover{
 </div>
 <p class="links-sub">This Viewer</p>
 <div class="links-grid">
-<a class="link-card" href="javascript:void(0)" onclick="event.preventDefault();document.querySelector('[data-filter=special]').click();" style="border-color:rgba(255,107,157,0.2);">
-<div class="link-card-icon" style="color:#ff6b9d;filter:drop-shadow(0 0 6px rgba(255,107,157,0.4));">★</div>
+<a class="link-card" href="javascript:void(0)" onclick="event.preventDefault();document.querySelector('[data-filter=special]').click();" style="border-color:rgba(var(--joke),0.2);">
+<div class="link-card-icon" style="color:rgb(var(--joke));filter:drop-shadow(0 0 6px rgba(var(--joke),0.4));">★</div>
 <div class="link-card-body">
-<div class="link-card-title" style="color:#ff6b9d;">Special Cards</div>
+<div class="link-card-title" style="color:rgb(var(--joke));">Special Cards</div>
 <div class="link-card-site">This viewer</div>
 <div class="link-card-desc">Cards with unique table rules that override normal role behavior — Jack's Guard and Kill Jack. Click to filter to Specials only.</div>
 </div>
@@ -3082,6 +3253,14 @@ a.link-card:hover{
 <div class="rel-log">
 <p class="rules-head">Release Log</p>
 <div class="rel-item rel-now">
+<span class="rel-ver">v0.5.84</span><span class="rel-date">2026-09-17</span>
+<ul class="rel-list">
+<li><b>Light and dark themes,</b> on a <b>System · Light · Dark</b> toggle in the top-left of the nav. It starts on <b>System</b>, so the page follows whatever your OS is set to and switches with it — dark, for most people. The choice is remembered per browser.</li>
+<li>The light theme is parchment rather than white: every card keeps its role hue but inverts to a light ground with dark ink, and each faded tier of text was re-tuned so it reads exactly as strongly as it does in the dark theme.</li>
+<li><b>Printing is unchanged.</b> The PDFs and the print stylesheet always use the dark card faces, whichever theme is on screen.</li>
+</ul>
+</div>
+<div class="rel-item">
 <span class="rel-ver">v0.5.83</span><span class="rel-date">2026-09-17</span>
 <ul class="rel-list">
 <li><b>Every card now uses the same layout:</b> Victory · Defeat · Announce · Special, always in that order. The set previously had <b>27 different section orders</b> across 80 cards.</li>
@@ -3332,13 +3511,19 @@ a.link-card:hover{
 <script>
 (function(){
   var ROLE_COLORS = {
-    's-king':     { acc: '#D4A017', bg: 'rgba(28,10,0,0.93)',  border: 'rgba(212,160,23,0.30)' },
-    's-knight':   { acc: '#4A9FD4', bg: 'rgba(5,17,30,0.93)',  border: 'rgba(74,159,212,0.28)' },
-    's-assassin': { acc: '#9B72F5', bg: 'rgba(12,7,24,0.93)',  border: 'rgba(155,114,245,0.28)' },
-    's-renegade': { acc: '#10B981', bg: 'rgba(4,21,16,0.93)',  border: 'rgba(16,185,129,0.28)' },
-    's-bandit':   { acc: '#D97706', bg: 'rgba(26,8,0,0.93)',   border: 'rgba(217,119,6,0.28)'  },
+    's-king': 'king', 's-knight': 'knight', 's-assassin': 'assassin',
+    's-renegade': 'renegade', 's-bandit': 'bandit',
   };
-  var DEFAULT = { acc: 'rgba(212,160,23,0.12)', bg: 'rgba(8,6,4,0.93)', border: 'rgba(212,160,23,0.12)' };
+  // Pull the swatches from the stylesheet rather than hard-coding them, so the
+  // light theme's nav tints come along for free.
+  function cssVar(name){
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+  function swatch(role){
+    if (!role) return { acc: cssVar('--nav-bd'), bg: cssVar('--nav-bg'), border: cssVar('--nav-bd') };
+    var k = ROLE_COLORS[role];
+    return { acc: cssVar('--' + k + '-acc'), bg: cssVar('--nav-bg-' + k), border: cssVar('--nav-bd-' + k) };
+  }
 
   var stickyNav = document.querySelector('.sticky-nav');
   if (!stickyNav) return;
@@ -3376,8 +3561,10 @@ a.link-card:hover{
     return best || null;
   }
 
+  var currentRole = null;
   function applyColor(role) {
-    var c = role ? ROLE_COLORS[role] : DEFAULT;
+    currentRole = role;
+    var c = swatch(role);
     stickyNav.style.background = c.bg;
     stickyNav.style.borderBottomColor = c.border;
     // Update active button accent glow
@@ -3398,6 +3585,7 @@ a.link-card:hover{
   }, { passive: true });
 
   applyColor(null);
+  document.addEventListener('themechange', function(){ applyColor(currentRole); });
 })();
 </script>
 <script>
@@ -3628,6 +3816,32 @@ a.link-card:hover{
     render();
     if(!open) log.scrollIntoView({behavior:'smooth', block:'nearest'});
   });
+  render();
+})();
+</script>
+<script>
+/* Theme toggle: System → Light → Dark → System. */
+(function(){
+  var btn = document.getElementById('theme-toggle');
+  var theme = window.Kingdoms && window.Kingdoms.theme;
+  if (!btn || !theme) return;
+
+  var ICONS  = { system:'\u25d0', light:'\u2600', dark:'\u263e' };
+  var LABELS = { system:'System', light:'Light',  dark:'Dark'  };
+  var icon  = btn.querySelector('.theme-icon');
+  var label = btn.querySelector('.theme-label');
+
+  function render(){
+    var pref = theme.pref;
+    if (icon)  icon.textContent  = ICONS[pref];
+    if (label) label.textContent = LABELS[pref];
+    var desc = pref === 'system' ? 'System (' + LABELS[theme.resolved] + ')' : LABELS[pref];
+    btn.title = 'Theme: ' + desc + ' \u2014 click to change';
+    btn.setAttribute('aria-label', 'Theme: ' + desc + '. Click to change.');
+  }
+
+  btn.addEventListener('click', function(){ theme.cycle(); });
+  document.addEventListener('themechange', render);
   render();
 })();
 </script>
