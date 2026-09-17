@@ -73,7 +73,7 @@
 
     .card { position: relative !important; }
     .card::after {
-      content: "v0.5.77";
+      content: "v0.5.78";
       position: absolute;
       bottom: 2px;
       left: 5px;
@@ -131,6 +131,24 @@
   line-height:1;
 }
 .filter-bar{display:flex;gap:6px;flex-wrap:wrap;padding:0;margin:0;justify-content:center;}
+.search-wrap{position:relative;display:flex;align-items:center;margin:10px auto 0;width:min(340px,80vw);}
+.search-input{width:100%;font-family:var(--font-body);font-size:0.82rem;color:rgba(255,255,255,0.8);
+  background:rgba(255,255,255,0.03);border:1px solid rgba(212,160,23,0.22);border-radius:3px;
+  padding:6px 30px 6px 30px;outline:none;transition:border-color .2s,background .2s;box-sizing:border-box;}
+.search-input::placeholder{color:rgba(255,255,255,0.22);font-style:italic;}
+.search-input:focus{border-color:var(--king-acc);background:rgba(212,160,23,0.06);}
+.search-icon{position:absolute;left:9px;font-size:0.8rem;color:rgba(212,160,23,0.45);pointer-events:none;line-height:1;}
+.search-clear{position:absolute;right:6px;background:none;border:none;color:rgba(255,255,255,0.3);
+  font-size:1rem;line-height:1;cursor:pointer;padding:2px 5px;display:none;}
+.search-clear:hover{color:var(--king-acc2);}
+.search-wrap.has-q .search-clear{display:block;}
+.search-count{font-family:var(--font-head);font-size:0.52rem;letter-spacing:0.2em;text-transform:uppercase;
+  color:rgba(212,160,23,0.5);text-align:center;margin-top:6px;min-height:11px;}
+.search-empty{display:none;max-width:560px;margin:70px auto;text-align:center;font-family:var(--font-body);
+  color:rgba(255,255,255,0.35);font-size:0.95rem;line-height:1.7;}
+.search-empty b{color:var(--king-acc2);}
+@media print{.search-wrap,.search-count,.search-empty{display:none !important;}}
+
 
 
 .links-wrap{
@@ -506,7 +524,7 @@ a.link-card:hover{
 <button class="filter-btn" data-filter="ek">Expanded Kingdoms</button>
 <button class="filter-btn" data-filter="variant">Variants</button>
 <button class="filter-btn" data-filter="special" style="border-color:rgba(255,107,157,0.25);color:rgba(255,107,157,0.5);">Specials</button>
-<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.77</span></nav>
+<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><div class="search-wrap" id="search-wrap"><span class="search-icon">⌕</span><input class="search-input" id="card-search" type="search" autocomplete="off" spellcheck="false" placeholder="Search cards… name, rules text, role" aria-label="Search cards"><button class="search-clear" id="search-clear" aria-label="Clear search">×</button></div><div class="search-count" id="search-count"></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.78</span></nav>
 <!-- ══ KING ══ -->
 <section class="role-section s-king" id="s-king">
 <div class="section-header">
@@ -2992,6 +3010,7 @@ a.link-card:hover{
 </div>
 </div>
 <!-- ══ QUICK REFERENCE ══ -->
+<div class="search-empty" id="search-empty">No cards match <b id="search-empty-q"></b>.<br>Try a role (<i>assassin</i>), a set (<i>variant</i>), or rules text (<i>commander damage</i>).</div>
 <div class="rules-wrap" id="rules-wrap" style="display:none;">
 <p class="rules-head">Quick Reference · Advanced Kingdoms</p>
 <div class="rules-grid">
@@ -3106,6 +3125,13 @@ a.link-card:hover{
 <div class="rel-log">
 <p class="rules-head">Release Log</p>
 <div class="rel-item rel-now">
+<span class="rel-ver">v0.5.78</span><span class="rel-date">2026-09-17</span>
+<ul class="rel-list">
+<li><b>Live card search.</b> Type in the box under the filters to match on card name, role, set badge, rules text or flavour — results narrow as you type, with a running count. Press <b>/</b> to jump to the box from anywhere, <b>Esc</b> to clear.</li>
+<li>Search <b>composes with the filters</b> rather than overriding them: pick Variants and search within just those.</li>
+</ul>
+</div>
+<div class="rel-item">
 <span class="rel-ver">v0.5.77</span><span class="rel-date">2026-09-17</span>
 <ul class="rel-list">
 <li><b>Four new house variants:</b> <b>The Turncoat</b> (Knight, may defect to the Assassins), <b>The Inquisitor</b> (Assassin, interrogates for role information), <b>The Quartermaster</b> (Bandit, the one Bandit a teammate's death does not defeat) and <b>The Broker</b> (Renegade, attaches to a faction mid-game).</li>
@@ -3460,4 +3486,127 @@ a.link-card:hover{
   }
 })();
 </script>
-</body></html>
+<script>
+/* Live card search. Composes with the badge filters rather than replacing them:
+   a card shows only if it passes BOTH the active filter and the query. */
+(function(){
+  var input = document.getElementById('card-search');
+  var wrap  = document.getElementById('search-wrap');
+  var clear = document.getElementById('search-clear');
+  var count = document.getElementById('search-count');
+  var empty = document.getElementById('search-empty');
+  var emptyQ= document.getElementById('search-empty-q');
+  if(!input) return;
+
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+
+  // Index each card once: name, role, badge and every line of rules text.
+  cards.forEach(function(c){
+    var bits = [];
+    var push = function(sel){
+      c.querySelectorAll(sel).forEach(function(n){ bits.push(n.textContent); });
+    };
+    push('.card-name'); push('.card-role-tag'); push('.card-badge');
+    push('.card-sec-label'); push('.card-sec-text'); push('.card-flavor-text');
+    c.__search = bits.join(' ').replace(/\s+/g,' ').toLowerCase();
+  });
+
+  function activeFilter(){
+    var a = document.querySelector('.filter-btn.active');
+    return a ? a.getAttribute('data-filter') : 'all';
+  }
+  function passesFilter(card, f){
+    if(f === 'original') return card.classList.contains('card-original');
+    if(f === 'ek')       return card.classList.contains('card-ek');
+    if(f === 'variant')  return card.classList.contains('card-variant');
+    if(f === 'special')  return card.classList.contains('card-special');
+    return true; // all, ref, links
+  }
+
+  function closePanels(){
+    ['rules-wrap','links-wrap'].forEach(function(id){
+      var el = document.getElementById(id);
+      if(el) el.style.display = 'none';
+    });
+    ['ref-toggle','links-toggle'].forEach(function(id){
+      var el = document.getElementById(id);
+      if(el) el.classList.remove('active');
+    });
+  }
+
+  function apply(){
+    var q = input.value.trim().toLowerCase();
+    wrap.classList.toggle('has-q', q.length > 0);
+    var f = activeFilter();
+
+    // Specials rehomes cards into its own grid; let that mode own the DOM.
+    if(f === 'special' && !q){ count.textContent = ''; empty.style.display='none'; return; }
+
+    if(q){
+      closePanels();
+      // Searching from Specials would fight its relocated layout - go to All first.
+      if(f === 'special'){
+        var allBtn = document.querySelector('[data-filter="all"]');
+        if(allBtn){ allBtn.click(); f = 'all'; }
+      }
+    }
+
+    var shown = 0;
+    cards.forEach(function(c){
+      var vis = passesFilter(c, f) && (!q || c.__search.indexOf(q) !== -1);
+      c.style.display = vis ? '' : 'none';
+      if(vis) shown++;
+    });
+
+    document.querySelectorAll('.subsection-divider').forEach(function(d){
+      if(q){ d.style.display = 'none'; return; }
+      var label = d.querySelector('.sub-div-label');
+      if(f === 'all')      d.style.display = '';
+      else if(f === 'ek')  d.style.display = (label && label.textContent.trim() === 'Expanded Kingdoms') ? '' : 'none';
+      else                 d.style.display = 'none';
+    });
+
+    document.querySelectorAll('.role-section').forEach(function(sec){
+      var any = Array.prototype.slice.call(sec.querySelectorAll('.card'))
+                  .some(function(c){ return c.style.display !== 'none'; });
+      sec.style.display = any ? '' : 'none';
+    });
+
+    if(q){
+      count.textContent = shown + ' of ' + cards.length + ' cards';
+      empty.style.display = shown ? 'none' : '';
+      if(emptyQ) emptyQ.textContent = '\u201c' + input.value.trim() + '\u201d';
+    } else {
+      count.textContent = '';
+      empty.style.display = 'none';
+    }
+  }
+
+  input.addEventListener('input', apply);
+  input.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ input.value = ''; apply(); input.blur(); }
+  });
+  clear.addEventListener('click', function(){ input.value=''; apply(); input.focus(); });
+
+  // Registered after the filter handlers, so this re-applies the query on top of them.
+  document.querySelectorAll('.filter-btn').forEach(function(b){
+    b.addEventListener('click', function(){
+      if(this.id === 'ref-toggle' || this.id === 'links-toggle'){
+        input.value=''; wrap.classList.remove('has-q'); count.textContent=''; empty.style.display='none';
+        return;
+      }
+      if(input.value.trim()) setTimeout(apply, 0);
+    });
+  });
+
+  // "/" focuses search from anywhere on the page.
+  document.addEventListener('keydown', function(e){
+    if(e.key === '/' && document.activeElement !== input){
+      e.preventDefault(); input.focus(); input.select();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -55,7 +55,10 @@ Assassin red.
 
 ## Card sets in the viewer
 
-80 cards total, filterable by the buttons in the nav:
+80 cards total, filterable by the buttons in the nav and searchable with the box
+beneath them (matches name, role, set, rules text and flavour; `/` focuses it,
+`Esc` clears). Search narrows *within* the active filter rather than replacing it.
+
 
 | Filter | CSS class | Count | What it is |
 |---|---|---|---|
