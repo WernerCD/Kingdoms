@@ -73,7 +73,7 @@
 
     .card { position: relative !important; }
     .card::after {
-      content: "v0.5.84";
+      content: "2026.09.17-09";
       position: absolute;
       bottom: 2px;
       left: 5px;
@@ -709,7 +709,7 @@ a.link-card:hover{
 <button class="filter-btn" data-filter="ek">Expanded Kingdoms</button>
 <button class="filter-btn" data-filter="variant">Variants</button>
 <button class="filter-btn" data-filter="special" style="border-color:rgba(var(--joke),0.25);color:rgba(var(--joke),0.5);">Specials</button>
-<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle">Links</button></div><div class="search-wrap" id="search-wrap"><span class="search-icon">⌕</span><input class="search-input" id="card-search" type="search" autocomplete="off" spellcheck="false" placeholder="Search cards…" title="Search name, role, set, rules text and flavour" aria-label="Search cards"><button class="search-clear" id="search-clear" aria-label="Clear search">×</button><div class="search-count" id="search-count"></div></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.84</span></nav>
+<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle">Links</button></div><div class="search-wrap" id="search-wrap"><span class="search-icon">⌕</span><input class="search-input" id="card-search" type="search" autocomplete="off" spellcheck="false" placeholder="Search cards…" title="Search name, role, set, rules text and flavour" aria-label="Search cards"><button class="search-clear" id="search-clear" aria-label="Clear search">×</button><div class="search-count" id="search-count"></div></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">2026.09.17-09</span></nav>
 <!-- ══ KING ══ -->
 <section class="role-section s-king" id="s-king">
 <div class="section-header">
@@ -3253,7 +3253,14 @@ a.link-card:hover{
 <div class="rel-log">
 <p class="rules-head">Release Log</p>
 <div class="rel-item rel-now">
-<span class="rel-ver">v0.5.84</span><span class="rel-date">2026-09-17</span>
+<span class="rel-ver">2026.09.17-09</span>
+<ul class="rel-list">
+<li><b>Version numbers are now dates:</b> <b>YYYY.MM.DD-NN</b>, where NN counts the releases within that day. The old <b>v0.MAJOR.PATCH</b> counter said nothing except how many times the page had changed — a date says when you are looking at, which is the only thing this log was ever asked.</li>
+<li>The whole history above was renumbered to match, and each entry's separate date has been dropped now that the version carries it. Anything before <b>2026.09.16-01</b> predates the log and is still grouped under its old number.</li>
+</ul>
+</div>
+<div class="rel-item">
+<span class="rel-ver">2026.09.17-08</span>
 <ul class="rel-list">
 <li><b>Light and dark themes,</b> on a <b>System · Light · Dark</b> toggle in the top-left of the nav. It starts on <b>System</b>, so the page follows whatever your OS is set to and switches with it — dark, for most people. The choice is remembered per browser.</li>
 <li>The light theme is parchment rather than white: every card keeps its role hue but inverts to a light ground with dark ink, and each faded tier of text was re-tuned so it reads exactly as strongly as it does in the dark theme.</li>
@@ -3261,46 +3268,46 @@ a.link-card:hover{
 </ul>
 </div>
 <div class="rel-item">
-<span class="rel-ver">v0.5.83</span><span class="rel-date">2026-09-17</span>
+<span class="rel-ver">2026.09.17-07</span>
 <ul class="rel-list">
 <li><b>Every card now uses the same layout:</b> Victory · Defeat · Announce · Special, always in that order. The set previously had <b>27 different section orders</b> across 80 cards.</li>
 <li>One-off headings — Setup, Warning, Curse, Passive, Restriction, Aggression, Royal Decree, Accuse and the rest — are kept as bold lead-ins inside their slot, so no wording was lost. <b>Announce</b> is retained as the ability heading because Rule 4 defines it.</li>
 </ul>
 </div>
 <div class="rel-item">
-<span class="rel-ver">v0.5.82</span><span class="rel-date">2026-09-17</span>
+<span class="rel-ver">2026.09.17-06</span>
 <ul class="rel-list">
 <li>Release log now shows only the latest two entries, with a <b>Show all</b> toggle for the rest — the full history was crowding out the links above it. Print always expands it.</li>
 </ul>
 </div>
 <div class="rel-item">
-<span class="rel-ver">v0.5.81</span><span class="rel-date">2026-09-17</span>
+<span class="rel-ver">2026.09.17-05</span>
 <ul class="rel-list">
 <li>Both Jack cards now share one shape: <b>Victory · Defeat · Reveal · If You’re Jack · If No Jack</b>. <b>Jack’s Guard</b> gains the missing <b>If You’re Jack</b> — its Victory ("Jack wins") was circular when the Guard was Jack — and <b>Kill Jack</b> gains the <b>Defeat</b> it never had.</li>
 </ul>
 </div>
 <div class="rel-item">
-<span class="rel-ver">v0.5.80</span><span class="rel-date">2026-09-17</span>
+<span class="rel-ver">2026.09.17-04</span>
 <ul class="rel-list">
 <li><b>Jack's Guard</b> no longer collapses into a plain Knight when nobody at the table is called Jack. You now swear a <b>secret patron</b> before the game and may reveal to name them aloud — they gain 10 life, draw, and damage aimed at them rebounds on its source's controller until your next turn. Mirrors how <b>Kill Jack</b> already handled it.</li>
-<li>Removed a Setup line added in v0.5.72 that duplicated and contradicted both cards’ own <b>No Jack Present</b> rules.</li>
+<li>Removed a Setup line added in 2026.09.16-03 that duplicated and contradicted both cards’ own <b>No Jack Present</b> rules.</li>
 </ul>
 </div>
 <div class="rel-item">
-<span class="rel-ver">v0.5.79</span><span class="rel-date">2026-09-17</span>
+<span class="rel-ver">2026.09.17-03</span>
 <ul class="rel-list">
 <li>Search moved to the <b>top-right of the nav</b> instead of sitting on its own row — the nav is no taller than it was before search existed. The result count tucks under the box, and the version label drops to the bottom corner. Below 880px it returns to a full-width row.</li>
 </ul>
 </div>
 <div class="rel-item">
-<span class="rel-ver">v0.5.78</span><span class="rel-date">2026-09-17</span>
+<span class="rel-ver">2026.09.17-02</span>
 <ul class="rel-list">
 <li><b>Live card search.</b> Type in the box under the filters to match on card name, role, set badge, rules text or flavour — results narrow as you type, with a running count. Press <b>/</b> to jump to the box from anywhere, <b>Esc</b> to clear.</li>
 <li>Search <b>composes with the filters</b> rather than overriding them: pick Variants and search within just those.</li>
 </ul>
 </div>
 <div class="rel-item">
-<span class="rel-ver">v0.5.77</span><span class="rel-date">2026-09-17</span>
+<span class="rel-ver">2026.09.17-01</span>
 <ul class="rel-list">
 <li><b>Four new house variants:</b> <b>The Turncoat</b> (Knight, may defect to the Assassins), <b>The Inquisitor</b> (Assassin, interrogates for role information), <b>The Quartermaster</b> (Bandit, the one Bandit a teammate's death does not defeat) and <b>The Broker</b> (Renegade, attaches to a faction mid-game).</li>
 <li><b>Quick Ref player counts</b> now cover 8 and 9 players from the official v1.56 table, plus an unofficial 4-player line.</li>
@@ -3309,7 +3316,7 @@ a.link-card:hover{
 </ul>
 </div>
 <div class="rel-item">
-<span class="rel-ver">v0.5.76</span><span class="rel-date">2026-09-16</span>
+<span class="rel-ver">2026.09.16-07</span>
 <ul class="rel-list">
 <li><b>Official errata applied.</b> All 12 Bandit cards now read <b>"All non-teammates are eliminated"</b> instead of "All non-Bandits". A Bandit who hired the Sellsword previously had to eliminate their own teammate to win — which is their Defeat condition. <a href="https://www.mtgsalvation.com/forums/the-game/commander-edh/818991-advanced-kingdoms-edh-variant-feedback-welcome?comment=3" target="_blank" rel="noopener">Errata by WaRgUnNeR, 26 Jan 2021 ↗</a></li>
 <li><b>The Last Bandit</b> reworded so its "only surviving Bandit" clause still works under the new wording.</li>
@@ -3317,20 +3324,20 @@ a.link-card:hover{
 </ul>
 </div>
 <div class="rel-item">
-<span class="rel-ver">v0.5.75</span><span class="rel-date">2026-09-16</span>
+<span class="rel-ver">2026.09.16-06</span>
 <ul class="rel-list">
 <li>Quick Ref: the <b>Printable PDFs</b> now have their own tile instead of sitting at the bottom of <b>Full Rules</b>, and both tiles gained a short blurb.</li>
 </ul>
 </div>
 <div class="rel-item">
-<span class="rel-ver">v0.5.74</span><span class="rel-date">2026-09-16</span>
+<span class="rel-ver">2026.09.16-05</span>
 <ul class="rel-list">
 <li>Added this <b>Release Log</b>, and split the Links panel into <b>Full Rules</b>, <b>PDFs</b> and <b>This Viewer</b>.</li>
 <li>Repository renamed to lowercase, so the live site is now <b>wernercd.github.io/kingdoms</b>.</li>
 </ul>
 </div>
 <div class="rel-item">
-<span class="rel-ver">v0.5.73</span><span class="rel-date">2026-09-16</span>
+<span class="rel-ver">2026.09.16-04</span>
 <ul class="rel-list">
 <li><b>Balance pass.</b> The Cursed Crown now bleeds 1 life per surviving enemy instead of a flat 3, so the drain eases as the King makes progress. The Weakened King starts at 40 rather than 30.</li>
 <li><b>The Bloodthirsty King</b> can no longer dead-end — if allies clear the last enemy, a delayed end-step win replaces having no legal win at all.</li>
@@ -3340,7 +3347,7 @@ a.link-card:hover{
 </ul>
 </div>
 <div class="rel-item">
-<span class="rel-ver">v0.5.72</span><span class="rel-date">2026-09-16</span>
+<span class="rel-ver">2026.09.16-03</span>
 <ul class="rel-list">
 <li><b>The High King</b> and <b>The Warden King</b> were missing "Assassins" from their Victory condition — at 5 players, where no Bandits are dealt, they won the moment the lone Renegade died.</li>
 <li><b>The Martyr King</b> and <b>The Avenger</b> assumed play continues past the King’s death, but Rule 3 eliminates every Knight instantly. Both now override that explicitly.</li>
@@ -3350,14 +3357,14 @@ a.link-card:hover{
 </ul>
 </div>
 <div class="rel-item">
-<span class="rel-ver">v0.5.71</span><span class="rel-date">2026-09-16</span>
+<span class="rel-ver">2026.09.16-02</span>
 <ul class="rel-list">
 <li>Added <b>The Gunslinger</b> and <b>The Gladiator</b>, two Expanded Kingdoms cards documented in the art sidecars but absent from this viewer.</li>
 <li>Full audit: every card now matches its source text — 21/21 Advanced Kingdoms, 18/18 Expanded Kingdoms, 37/37 Variants.</li>
 </ul>
 </div>
 <div class="rel-item">
-<span class="rel-ver">v0.5.70</span><span class="rel-date">2026-09-16</span>
+<span class="rel-ver">2026.09.16-01</span>
 <ul class="rel-list">
 <li>Deploy pipeline moved to the NAS; the viewer publishes without the Windows script.</li>
 </ul>

@@ -125,5 +125,9 @@ sigils and gradients instead. The art is reference material only.
 Version lives in two places in `docs/index.html` and both must move together:
 the `.nav-version` badge and the `.card::after` print watermark.
 
-Bump the patch digit on every published change (`v0.MAJOR.PATCH`); bump major
-for a structural redesign. See `Documents/workflow.md` for the full deploy procedure.
+Format is `YYYY.MM.DD-NN`, where `NN` counts that day's releases from `01`.
+Bump it on every published change: same day, next `NN`; new day, back to `01`.
+
+Releases up to `2026.09.15` used the older `v0.MAJOR.PATCH` counter and are
+grouped in the log as "v0.5.69 and earlier". See `Documents/workflow.md` for the
+full deploy procedure.

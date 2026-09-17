@@ -13,7 +13,7 @@
 ## Claude's Edit Workflow
 
 1. **Scratchpad** — Claude edits in its cloud session scratchpad (`advanced-kingdoms-v54.html`). All changes happen here first.
-2. **Bump version** — Increment the patch digit in `<span class="nav-version">v0.X.XX</span>` on **every** published change. Format: `v0.major.patch`.
+2. **Bump version** — Update `<span class="nav-version">YYYY.MM.DD-NN</span>` on **every** published change. Format: date plus that day's release number.
 3. **Copy to outputs** — `cp scratchpad/... /mnt/user-data/outputs/advanced-kingdoms-card-viewer.html`
 4. **SendUserFile** — delivers the file to the chat; returns a `file_uuid`.
 5. **device_commit_files** — use the `file_uuid` (NOT `stagedPath`) to write to Dropbox:
@@ -49,9 +49,12 @@ The processor runs on every `.card-sec-text` element on DOMContentLoaded.
 
 ## Versioning Convention
 
-- Format: `v0.MAJOR.PATCH`
-- Increment **patch** for every change pushed to Dropbox
-- Increment **major** for structural redesigns
+- Format: `YYYY.MM.DD-NN` — e.g. `2026.09.17-01`
+- `NN` counts the releases within that date, starting at `01`
+- Same day, next number; new day, back to `01`
+- Lives in two places in `docs/index.html`, which must move together: the
+  `.nav-version` badge and the `.card::after` print watermark
+- Superseded `v0.MAJOR.PATCH`, which ran to v0.5.84 on 2026-09-17
 
 ## PDF Generation
 
