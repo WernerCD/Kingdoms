@@ -1,4 +1,4 @@
-# Card Set Audit — v0.5.80
+# Card Set Audit — v0.5.83
 
 Cross-check of `docs/index.html` (80 cards) against the Advanced Kingdoms
 v1.56 rules, the Expanded Kingdoms rules, and `Expanded Kingdoms Card
@@ -104,6 +104,38 @@ whole faction, closing it.
 to be unresponddable — the only card in the set contradicting Rule 5, which
 says role abilities *do* use the stack. Errata’d to use the stack; it keeps the
 Rule 5 protection against being targeted, countered or exiled.
+
+## 1e. Layout normalised (v0.5.83)
+
+The 80 cards used **27 different section orders**. Every card now uses the
+same four slots, always in this order:
+
+| Slot | Absorbs |
+|---|---|
+| **Victory** | Victory, Bonus Victory |
+| **Defeat** | Defeat |
+| **Announce** | Announce, Reveal, Royal Decree, Warden’s Judgment, Accuse |
+| **Special** | Special, Setup, Passive, Curse, Restriction, Aggression, Warning, Next Upkeep, Flip Reference, If You’re Jack, If No Jack |
+
+Absorbed headings survive as bold lead-ins inside their slot, so no wording
+was lost — a King now reads `Special: **Setup:** Keep this card face up…`.
+
+**"Announce" was kept rather than renamed to "Reveal".** Rule 4 defines it
+(*"To Announce, turn your face-down role card face up…"*), 32 official AK/EK
+cards use it, and the rules docs and Quick Ref both depend on it. The 12 house
+cards that said "Reveal" were renamed to Announce instead.
+
+> **Consequence to watch:** with Setup folded into Special, a King’s starting
+> life now appears in the last section rather than the first. Promoting Setup
+> back to its own leading slot is a one-line change to the slot map.
+
+### Two pre-existing gaps this surfaced
+
+- **The Imposter** (EK) has **no Victory condition at all** — its sections were
+  `Accuse > Special` before and `Announce > Special` now. A role card with no
+  win condition cannot be played as written.
+- **The Usurper** (variant) has only a Victory section, because the v0.5.72
+  rewrite folded everything into it.
 
 ## 2. Duplicate card names
 

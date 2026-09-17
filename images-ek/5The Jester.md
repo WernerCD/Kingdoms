@@ -2,7 +2,7 @@
 
 **Role:** Renegade  
 **Badge:** EK  
-**Sigil:** 🃏  
+**Sigil:** 🃏
 
 ## Victory
 Win if you are eliminated by the King — through combat damage or a spell they control — while the King is still alive.

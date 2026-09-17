@@ -2,7 +2,7 @@
 
 **Role:** Knight  
 **Badge:** EK  
-**Sigil:** ⚖  
+**Sigil:** ⚖
 
 ## Victory
 The King wins the game. When there is no King, you lose the game if face down.

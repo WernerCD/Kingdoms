@@ -2,7 +2,7 @@
 
 **Role:** Bandit  
 **Badge:** EK  
-**Sigil:** ⛓  
+**Sigil:** ⛓
 
 ## Victory
 When no player is King, reveal The Slaver — all Bandits and Slaves win the game.

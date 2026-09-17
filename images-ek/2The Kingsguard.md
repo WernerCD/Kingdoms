@@ -2,7 +2,7 @@
 
 **Role:** Knight  
 **Badge:** EK  
-**Sigil:** 🛡  
+**Sigil:** 🛡
 
 ## Victory
 When the only other players are the King, their teammates and your teammates, reveal The Kingsguard — you all win the game. When there is no King, you lose the game.

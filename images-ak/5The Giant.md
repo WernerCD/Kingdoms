@@ -2,7 +2,7 @@
 
 **Role:** Bandit  
 **Badge:** AK  
-**Sigil:** 👊  
+**Sigil:** 👊
 
 ## Victory
 All non-teammates are eliminated.

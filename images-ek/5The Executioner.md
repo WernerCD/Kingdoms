@@ -2,7 +2,7 @@
 
 **Role:** Renegade  
 **Badge:** EK  
-**Sigil:** ⚔  
+**Sigil:** ⚔
 
 ## Victory
 When you cause the chosen player to lose the game, reveal The Executioner — you win. If another player causes the chosen player to lose, reveal The Executioner — you lose.

@@ -2,7 +2,7 @@
 
 **Role:** Bandit  
 **Badge:** EK  
-**Sigil:** ⚓  
+**Sigil:** ⚓
 
 ## Victory
 When no player is King, reveal The Pirate — all Bandits win the game.

@@ -2,7 +2,7 @@
 
 **Role:** Knight  
 **Badge:** AK  
-**Sigil:** ⚑  
+**Sigil:** ⚑
 
 ## Victory
 The King wins.

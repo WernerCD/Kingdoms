@@ -2,7 +2,7 @@
 
 **Role:** Renegade  
 **Badge:** EK  
-**Sigil:** ⚔  
+**Sigil:** ⚔
 
 ## Victory
 You personally eliminate 3 or more opponents during the game. Reveal The Gladiator — you win regardless of any other win condition.

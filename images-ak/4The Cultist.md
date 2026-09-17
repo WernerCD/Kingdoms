@@ -2,7 +2,7 @@
 
 **Role:** Renegade  
 **Badge:** AK  
-**Sigil:** ✶  
+**Sigil:** ✶
 
 ## Victory
 More than half of the players in the game are Cultists.

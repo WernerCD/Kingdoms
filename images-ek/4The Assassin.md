@@ -2,7 +2,7 @@
 
 **Role:** Noble  
 **Badge:** EK  
-**Sigil:** †  
+**Sigil:** †
 
 ## Victory
 When all players are Nobles or their teammates, you all win the game.

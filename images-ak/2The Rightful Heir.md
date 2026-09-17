@@ -2,7 +2,7 @@
 
 **Role:** Knight  
 **Badge:** AK  
-**Sigil:** ♔  
+**Sigil:** ♔
 
 ## Victory
 The King wins. If you have ascended to the throne, you win under the King's victory condition.

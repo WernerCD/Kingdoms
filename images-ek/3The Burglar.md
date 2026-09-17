@@ -2,7 +2,7 @@
 
 **Role:** Bandit  
 **Badge:** EK  
-**Sigil:** ⚿  
+**Sigil:** ⚿
 
 ## Victory
 When no player is King, reveal The Burglar — all Bandits win the game.

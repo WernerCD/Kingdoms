@@ -2,7 +2,7 @@
 
 **Role:** Knight  
 **Badge:** EK  
-**Sigil:** ◇  
+**Sigil:** ◇
 
 ## Victory
 When the only other players are the King, their teammates and your teammates, reveal The Bastard — you all win the game together. When there is no King, you lose the game if face down.

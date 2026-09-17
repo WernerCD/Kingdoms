@@ -2,7 +2,7 @@
 
 **Role:** Renegade  
 **Badge:** AK  
-**Sigil:** ⚔  
+**Sigil:** ⚔
 
 ## Victory
 Your teammate wins.

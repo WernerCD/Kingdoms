@@ -2,7 +2,7 @@
 
 **Role:** Assassin  
 **Badge:** AK  
-**Sigil:** 🐻  
+**Sigil:** 🐻
 
 ## Victory
 The King is eliminated.
