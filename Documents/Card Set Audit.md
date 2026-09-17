@@ -1,6 +1,6 @@
-# Card Set Audit — v0.5.76
+# Card Set Audit — v0.5.77
 
-Cross-check of `docs/index.html` (76 cards) against the Advanced Kingdoms
+Cross-check of `docs/index.html` (80 cards) against the Advanced Kingdoms
 v1.56 rules, the Expanded Kingdoms rules, and `Expanded Kingdoms Card
 Reference.md`. Rule numbers below refer to the AK official rules doc.
 
@@ -23,9 +23,9 @@ source. Earlier apparent diffs were artefacts of tag-stripping — the markup
 uses `<br/>` and `</ul>` where text appeared to run together, and it renders
 correctly.
 
-**The 37 house variants now have sidecars too** (`images-v/`, plus The Gambler
+**The 41 house variants now have sidecars too** (`images-v/`, plus The Gambler
 and The Witch in `images-ek/` beside their art). All 76 cards in the viewer now
-round-trip against a canonical source: AK 21/21, EK 18/18, Variant 37/37.
+round-trip against a canonical source: AK 21/21, EK 18/18, Variant 41/41.
 
 ## 1. Fixed — two EK cards were missing from the viewer
 
@@ -70,6 +70,33 @@ Their sidecars moved to `images-v/`. The EK art they had been reusing
 (`images-ek/3The Gambler.jpg`, `4The Witch.jpg`) stays as reference material
 but no longer has a sidecar, because the cards it depicts are the *Expanded
 Kingdoms* originals, which this set does not carry.
+
+## 1d. Additions and rules alignment (v0.5.77)
+
+**Four new house variants**, chosen to fill gaps the forum reading exposed:
+
+| Card | Role | Fills |
+|---|---|---|
+| **The Turncoat** | Knight | No defection card existed, despite EK’s Queen (7p, could join either team) and AK’s Sellsword establishing the archetype |
+| **The Inquisitor** | Assassin | Role-information play |
+| **The Quartermaster** | Bandit | The only Bandit a teammate’s death does **not** defeat — answers the faction fragility the errata highlights |
+| **The Broker** | Renegade | Renegade was the thinnest variant pool; engages "teammate", which the errata made load-bearing |
+
+**Quick Ref player counts** now carry 8p and 9p from the official v1.56 table
+(the tile previously stopped at 7p, omitting the two largest counts), plus an
+unofficial 4-player line drawn from the community proposal and EK’s own 4p rules.
+
+**A residual hole in the official errata.** The Sellsword reads *"That player
+becomes your teammate"* — singular — while Rule 2 defines teammates by role
+type. If Bandit A hires him, Bandit B could still be required to eliminate him
+to satisfy "all non-teammates are eliminated", which trips A’s Defeat, which
+then trips B’s. A new **Teammates** tile states that a hired player joins the
+whole faction, closing it.
+
+**EK’s The Assassin vs Rule 5.** Its ability claimed to not use the stack and
+to be unresponddable — the only card in the set contradicting Rule 5, which
+says role abilities *do* use the stack. Errata’d to use the stack; it keeps the
+Rule 5 protection against being targeted, countered or exiled.
 
 ## 2. Duplicate card names
 

@@ -73,7 +73,7 @@
 
     .card { position: relative !important; }
     .card::after {
-      content: "v0.5.76";
+      content: "v0.5.77";
       position: absolute;
       bottom: 2px;
       left: 5px;
@@ -506,7 +506,7 @@ a.link-card:hover{
 <button class="filter-btn" data-filter="ek">Expanded Kingdoms</button>
 <button class="filter-btn" data-filter="variant">Variants</button>
 <button class="filter-btn" data-filter="special" style="border-color:rgba(255,107,157,0.25);color:rgba(255,107,157,0.5);">Specials</button>
-<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.76</span></nav>
+<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.77</span></nav>
 <!-- ══ KING ══ -->
 <section class="role-section s-king" id="s-king">
 <div class="section-header">
@@ -1420,6 +1420,38 @@ a.link-card:hover{
 </div>
 </div>
 <!-- ─── JACK'S GUARD ─── -->
+<!-- ─── VARIANT KNIGHT: THE TURNCOAT ─── -->
+<div class="card cn card-variant">
+<div class="card-bg"></div>
+<div class="card-content">
+<div class="card-stripe"></div>
+<div class="card-meta">
+<span class="card-role-tag">Knight</span>
+<span class="card-badge badge-variant">Variant</span>
+</div>
+<div class="card-sigil"><div class="sigil-wrap"><div class="sigil-ring"></div><div class="sigil-ring2"></div><span class="sigil-sym">⇄</span></div></div>
+<div class="card-name">The Turncoat</div>
+<div class="card-div"></div>
+<div class="card-section">
+<span class="card-sec-label">Victory</span>
+<span class="card-sec-text">The King wins. <b>OR:</b> if you have defected, the King is eliminated and you are alive at game end.</span>
+</div>
+<div class="card-div"></div>
+<div class="card-section">
+<span class="card-sec-label">Announce</span>
+<span class="card-sec-text">Once, at the beginning of any upkeep, reveal this card to <b>defect</b>. You cease to be a teammate of the King and Knights, and become a teammate of the Assassins for the rest of the game.</span>
+</div>
+<div class="card-div"></div>
+<div class="card-section">
+<span class="card-sec-label">Defeat</span>
+<span class="card-sec-text">The King is eliminated while this card is still face down.</span>
+</div>
+<div class="card-flavor">
+<div class="card-flavor-div"></div>
+<p class="card-flavor-text">"Loyalty is a date, not a promise."</p>
+</div>
+</div>
+</div>
 </div>
 </section>
 <!-- ══ ASSASSINS ══ -->
@@ -1925,6 +1957,33 @@ a.link-card:hover{
 </div>
 </div>
 </div>
+<!-- ─── VARIANT ASSASSIN: THE INQUISITOR ─── -->
+<div class="card ca card-variant">
+<div class="card-bg"></div>
+<div class="card-content">
+<div class="card-stripe"></div>
+<div class="card-meta">
+<span class="card-role-tag">Assassin</span>
+<span class="card-badge badge-variant">Variant</span>
+</div>
+<div class="card-sigil"><div class="sigil-wrap"><div class="sigil-ring"></div><div class="sigil-ring2"></div><span class="sigil-sym">👁</span></div></div>
+<div class="card-name">The Inquisitor</div>
+<div class="card-div"></div>
+<div class="card-section">
+<span class="card-sec-label">Victory</span>
+<span class="card-sec-text">The King is eliminated and at least one Assassin survives to the end.</span>
+</div>
+<div class="card-div"></div>
+<div class="card-section">
+<span class="card-sec-label">Announce</span>
+<span class="card-sec-text">Name a player <b>and</b> a role type. That player privately tells you whether they match. If you named correctly, <b>draw two cards</b>. <i>Activate only during your turn.</i></span>
+</div>
+<div class="card-flavor">
+<div class="card-flavor-div"></div>
+<p class="card-flavor-text">"Everyone confesses. Most just do it with their eyes."</p>
+</div>
+</div>
+</div>
 </div>
 </section>
 <!-- ══ BANDITS ══ -->
@@ -2115,7 +2174,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label">Announce</span>
-<span class="card-sec-text">You may turn The Assassin face up at any time and exile a permanent of your choice. <i>(This ability doesn't use the stack, and can't be responded to.)</i></span>
+<span class="card-sec-text">You may turn The Assassin face up at any time and exile a permanent of your choice. <i>(Errata: uses the stack per <b>Rule 5</b> and may be responded to. Like all role abilities it cannot be targeted, countered, or exiled.)</i></span>
 </div>
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
@@ -2429,6 +2488,38 @@ a.link-card:hover{
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
 <p class="card-flavor-text">"Everything burns eventually. I just help it along."</p>
+</div>
+</div>
+</div>
+<!-- ─── VARIANT BANDIT: THE QUARTERMASTER ─── -->
+<div class="card cb card-variant">
+<div class="card-bg"></div>
+<div class="card-content">
+<div class="card-stripe"></div>
+<div class="card-meta">
+<span class="card-role-tag">Bandit</span>
+<span class="card-badge badge-variant">Variant</span>
+</div>
+<div class="card-sigil"><div class="sigil-wrap"><div class="sigil-ring"></div><div class="sigil-ring2"></div><span class="sigil-sym">⚙</span></div></div>
+<div class="card-name">The Quartermaster</div>
+<div class="card-div"></div>
+<div class="card-section">
+<span class="card-sec-label">Victory</span>
+<span class="card-sec-text">All non-teammates are eliminated.</span>
+</div>
+<div class="card-div"></div>
+<div class="card-section">
+<span class="card-sec-label">Defeat</span>
+<span class="card-sec-text"><b>You</b> are eliminated. <i>(Unlike other Bandits, a teammate's elimination does not defeat you.)</i></span>
+</div>
+<div class="card-div"></div>
+<div class="card-section">
+<span class="card-sec-label">Special</span>
+<span class="card-sec-text"><b>Once per game:</b> When a teammate would be eliminated, they instead survive at <b>1 life</b>.</span>
+</div>
+<div class="card-flavor">
+<div class="card-flavor-div"></div>
+<p class="card-flavor-text">"I count the bodies. I don't add to them."</p>
 </div>
 </div>
 </div>
@@ -2858,6 +2949,38 @@ a.link-card:hover{
 </div>
 </div>
 </div>
+<!-- ─── VARIANT RENEGADE: THE BROKER ─── -->
+<div class="card cr card-variant">
+<div class="card-bg"></div>
+<div class="card-content">
+<div class="card-stripe"></div>
+<div class="card-meta">
+<span class="card-role-tag">Renegade</span>
+<span class="card-badge badge-variant">Variant</span>
+</div>
+<div class="card-sigil"><div class="sigil-wrap"><div class="sigil-ring"></div><div class="sigil-ring2"></div><span class="sigil-sym">✒</span></div></div>
+<div class="card-name">The Broker</div>
+<div class="card-div"></div>
+<div class="card-section">
+<span class="card-sec-label">Victory</span>
+<span class="card-sec-text">At game end you are a <b>teammate of a winning player</b>.</span>
+</div>
+<div class="card-div"></div>
+<div class="card-section">
+<span class="card-sec-label">Announce</span>
+<span class="card-sec-text"><b>Once per game,</b> at instant speed: choose a player who has no teammates. You become their teammate.</span>
+</div>
+<div class="card-div"></div>
+<div class="card-section">
+<span class="card-sec-label">Defeat</span>
+<span class="card-sec-text">You are eliminated, or the game ends with you having no teammate.</span>
+</div>
+<div class="card-flavor">
+<div class="card-flavor-div"></div>
+<p class="card-flavor-text">"Everyone's on somebody's payroll. I just write the cheques."</p>
+</div>
+</div>
+</div>
 </div>
 </section>
 <!-- ══ CARD BACK ══ -->
@@ -2874,7 +2997,7 @@ a.link-card:hover{
 <div class="rules-grid">
 <div class="rule-tile">
 <p class="rule-tile-label">Player Count</p>
-<p class="rule-tile-text">5p: 1 King · 1 Knight · 2 Assassins · 1 Renegade<br/>6p: 1 King · 1 Knight · 2 Bandits · 2 Assassins<br/>7p: 1 King · 1 Knight · 2 Bandits · 2 Assassins · 1 Renegade</p>
+<p class="rule-tile-text">5p: 1 King · 1 Knight · 2 Assassins · 1 Renegade<br/>6p: 1 King · 1 Knight · 2 Bandits · 2 Assassins<br/>7p: 1 King · 1 Knight · 2 Bandits · 2 Assassins · 1 Renegade<br/>8p: 1 King · 1 Knight · 2 Bandits · 3 Assassins · 1 Renegade<br/>9p: 1 King · 2 Knights · 3 Bandits · 3 Assassins<br/><i style="opacity:0.7">4p (community, unofficial): 1 King · 1 Knight · 2 Assassins</i></p>
 </div>
 <div class="rule-tile">
 <p class="rule-tile-label">Announce</p>
@@ -2895,6 +3018,10 @@ a.link-card:hover{
 <div class="rule-tile">
 <p class="rule-tile-label">King Setup</p>
 <p class="rule-tile-text">The King reveals their card immediately, takes the first turn, and begins with +10 life. Only the King role is public at game start. Bandits (if used) identify each other with eyes-closed reveal before play begins.</p>
+</div>
+<div class="rule-tile">
+<p class="rule-tile-label">Teammates</p>
+<p class="rule-tile-text">Face-up Knights, Assassins, Bandits and Renegades are teammates with others of their own role type; face-up Knights are also teammates with the King. A player hired by <b>the Sellsword</b> becomes a teammate of their hirer <b>and of everyone sharing that hirer's role type</b> — so no member of that faction is ever required to eliminate them. Bandit Victory reads <b>"All non-teammates are eliminated"</b> per the 2021 errata.</p>
 </div>
 <div class="rule-tile">
 <p class="rule-tile-label">Full Rules</p>
@@ -2979,6 +3106,15 @@ a.link-card:hover{
 <div class="rel-log">
 <p class="rules-head">Release Log</p>
 <div class="rel-item rel-now">
+<span class="rel-ver">v0.5.77</span><span class="rel-date">2026-09-17</span>
+<ul class="rel-list">
+<li><b>Four new house variants:</b> <b>The Turncoat</b> (Knight, may defect to the Assassins), <b>The Inquisitor</b> (Assassin, interrogates for role information), <b>The Quartermaster</b> (Bandit, the one Bandit a teammate's death does not defeat) and <b>The Broker</b> (Renegade, attaches to a faction mid-game).</li>
+<li><b>Quick Ref player counts</b> now cover 8 and 9 players from the official v1.56 table, plus an unofficial 4-player line.</li>
+<li>New <b>Teammates</b> tile. The 2021 errata left a gap: the Sellsword joins one player, so other members of that faction could still be required to eliminate him. A hired player is now a teammate of the whole faction.</li>
+<li>EK's <b>The Assassin</b> said its ability "doesn't use the stack" — the one card in the set contradicting <b>Rule 5</b>. Errata'd to use the stack.</li>
+</ul>
+</div>
+<div class="rel-item">
 <span class="rel-ver">v0.5.76</span><span class="rel-date">2026-09-16</span>
 <ul class="rel-list">
 <li><b>Official errata applied.</b> All 12 Bandit cards now read <b>"All non-teammates are eliminated"</b> instead of "All non-Bandits". A Bandit who hired the Sellsword previously had to eliminate their own teammate to win — which is their Defeat condition. <a href="https://www.mtgsalvation.com/forums/the-game/commander-edh/818991-advanced-kingdoms-edh-variant-feedback-welcome?comment=3" target="_blank" rel="noopener">Errata by WaRgUnNeR, 26 Jan 2021 ↗</a></li>

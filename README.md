@@ -55,13 +55,13 @@ Assassin red.
 
 ## Card sets in the viewer
 
-76 cards total, filterable by the buttons in the nav:
+80 cards total, filterable by the buttons in the nav:
 
 | Filter | CSS class | Count | What it is |
 |---|---|---|---|
 | Advanced Kingdoms | `card-original` | 21 | Canonical v1.56 cards |
 | Expanded Kingdoms | `card-ek` | 18 | Legacy EK-only roles |
-| Variants | `card-variant` | 37 | House-rule cards (not official) |
+| Variants | `card-variant` | 41 | House-rule cards (not official) |
 | Specials | `card-special` | 2 | Cross-table cards (Jack's Guard, Kill Jack) |
 
 `card-special` is additive — those cards also carry `card-variant` and their
@@ -80,7 +80,7 @@ the v1.56 rules text.
 | `Documents/` | This documentation and the rules references |
 | `images-ak/` | Advanced Kingdoms card art + `.md` card text (25 files) |
 | `images-ek/` | Expanded Kingdoms Cockatrice art + `.md` card text (45 files) |
-| `images-v/` | House variant `.md` card text + generated `.svg` card faces (37 each) |
+| `images-v/` | House variant `.md` card text + generated `.svg` card faces (41 each) |
 | `deploy-kingdoms.ps1` | Windows deploy script |
 
 **Live site:** https://wernercd.github.io/kingdoms/
@@ -104,7 +104,7 @@ folder.
 - `images-ak/` — 21 AK role cards + 3 War Bear tokens + 1 Game Setup card
 - `images-ek/` — EK role cards, 4 tokens, 4 EK rules/intro cards, and 9
   duplicate 960px renders (`960*`)
-- `images-v/` — sidecars for all 37 house variants, each with a generated
+- `images-v/` — sidecars for all 41 house variants, each with a generated
   `.svg` card face. The SVGs are drawn from this repo’s own palette and font
   stacks; they exist because no machine here can rasterise text, and SVG needs
   no rasteriser.
