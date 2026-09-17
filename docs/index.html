@@ -73,7 +73,7 @@
 
     .card { position: relative !important; }
     .card::after {
-      content: "v0.5.81";
+      content: "v0.5.82";
       position: absolute;
       bottom: 2px;
       left: 5px;
@@ -397,6 +397,11 @@ a.link-card:hover{
   .rules-wrap{max-width:900px;margin:56px auto 0;padding-top:40px;border-top:1px solid rgba(255,255,255,0.05);}
   .links-sub{font-family:var(--font-head);font-size:0.6rem;letter-spacing:0.34em;text-transform:uppercase;color:rgba(255,255,255,0.3);text-align:left;margin:30px 0 14px;padding-bottom:7px;border-bottom:1px solid rgba(255,255,255,0.07);}
 .links-sub:first-of-type{margin-top:4px;}
+.rel-item.rel-collapsed{display:none;}
+.rel-item.rel-tail{border-left-color:transparent;padding-bottom:4px;}
+.rel-more{display:block;margin:2px auto 0;font-family:var(--font-head);font-size:0.55rem;letter-spacing:0.26em;text-transform:uppercase;color:rgba(212,160,23,0.55);background:none;border:1px solid rgba(212,160,23,0.22);border-radius:3px;padding:7px 20px;cursor:pointer;transition:background .2s,border-color .2s,color .2s;}
+.rel-more:hover{color:var(--king-acc2);border-color:rgba(212,160,23,0.5);background:rgba(212,160,23,0.06);}
+@media print{.rel-more{display:none;}.rel-item.rel-collapsed{display:block;}}
 .rel-log{max-width:900px;margin:52px auto 0;padding:0 20px;}
 .rel-item{position:relative;padding:0 0 22px 26px;border-left:1px solid rgba(255,255,255,0.09);}
 .rel-item:last-child{border-left-color:transparent;padding-bottom:4px;}
@@ -533,7 +538,7 @@ a.link-card:hover{
 <button class="filter-btn" data-filter="ek">Expanded Kingdoms</button>
 <button class="filter-btn" data-filter="variant">Variants</button>
 <button class="filter-btn" data-filter="special" style="border-color:rgba(255,107,157,0.25);color:rgba(255,107,157,0.5);">Specials</button>
-<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><div class="search-wrap" id="search-wrap"><span class="search-icon">⌕</span><input class="search-input" id="card-search" type="search" autocomplete="off" spellcheck="false" placeholder="Search cards…" title="Search name, role, set, rules text and flavour" aria-label="Search cards"><button class="search-clear" id="search-clear" aria-label="Clear search">×</button><div class="search-count" id="search-count"></div></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.81</span></nav>
+<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><div class="search-wrap" id="search-wrap"><span class="search-icon">⌕</span><input class="search-input" id="card-search" type="search" autocomplete="off" spellcheck="false" placeholder="Search cards…" title="Search name, role, set, rules text and flavour" aria-label="Search cards"><button class="search-clear" id="search-clear" aria-label="Clear search">×</button><div class="search-count" id="search-count"></div></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.82</span></nav>
 <!-- ══ KING ══ -->
 <section class="role-section s-king" id="s-king">
 <div class="section-header">
@@ -3136,6 +3141,12 @@ a.link-card:hover{
 <div class="rel-log">
 <p class="rules-head">Release Log</p>
 <div class="rel-item rel-now">
+<span class="rel-ver">v0.5.82</span><span class="rel-date">2026-09-17</span>
+<ul class="rel-list">
+<li>Release log now shows only the latest two entries, with a <b>Show all</b> toggle for the rest — the full history was crowding out the links above it. Print always expands it.</li>
+</ul>
+</div>
+<div class="rel-item">
 <span class="rel-ver">v0.5.81</span><span class="rel-date">2026-09-17</span>
 <ul class="rel-list">
 <li>Both Jack cards now share one shape: <b>Victory · Defeat · Reveal · If You’re Jack · If No Jack</b>. <b>Jack’s Guard</b> gains the missing <b>If You’re Jack</b> — its Victory ("Jack wins") was circular when the Guard was Jack — and <b>Kill Jack</b> gains the <b>Defeat</b> it never had.</li>
@@ -3635,6 +3646,41 @@ a.link-card:hover{
       e.preventDefault(); input.focus(); input.select();
     }
   });
+})();
+</script>
+
+<script>
+/* Release log: show the latest few, tuck the rest behind a toggle. */
+(function(){
+  var KEEP = 2;
+  var log = document.querySelector('.rel-log');
+  if(!log) return;
+  var items = Array.prototype.slice.call(log.querySelectorAll('.rel-item'));
+  if(items.length <= KEEP) return;
+
+  var btn = document.createElement('button');
+  btn.className = 'rel-more';
+  log.appendChild(btn);
+
+  var open = false;
+  function render(){
+    items.forEach(function(it, i){
+      it.classList.toggle('rel-collapsed', !open && i >= KEEP);
+    });
+    var vis = items.filter(function(it){ return !it.classList.contains('rel-collapsed'); });
+    items.forEach(function(it){ it.classList.remove('rel-tail'); });
+    if(vis.length) vis[vis.length-1].classList.add('rel-tail');
+    btn.textContent = open
+      ? 'Show fewer'
+      : 'Show all ' + items.length + ' releases';
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  btn.addEventListener('click', function(){
+    open = !open;
+    render();
+    if(!open) log.scrollIntoView({behavior:'smooth', block:'nearest'});
+  });
+  render();
 })();
 </script>
 
