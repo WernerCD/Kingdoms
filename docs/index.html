@@ -73,7 +73,7 @@
 
     .card { position: relative !important; }
     .card::after {
-      content: "v0.5.79";
+      content: "v0.5.80";
       position: absolute;
       bottom: 2px;
       left: 5px;
@@ -533,7 +533,7 @@ a.link-card:hover{
 <button class="filter-btn" data-filter="ek">Expanded Kingdoms</button>
 <button class="filter-btn" data-filter="variant">Variants</button>
 <button class="filter-btn" data-filter="special" style="border-color:rgba(255,107,157,0.25);color:rgba(255,107,157,0.5);">Specials</button>
-<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><div class="search-wrap" id="search-wrap"><span class="search-icon">⌕</span><input class="search-input" id="card-search" type="search" autocomplete="off" spellcheck="false" placeholder="Search cards…" title="Search name, role, set, rules text and flavour" aria-label="Search cards"><button class="search-clear" id="search-clear" aria-label="Clear search">×</button><div class="search-count" id="search-count"></div></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.79</span></nav>
+<button class="filter-btn" data-filter="ref" id="ref-toggle" style="margin-left:12px;border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Quick Ref</button><button class="filter-btn" data-filter="links" id="links-toggle" style="border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.3);">Links</button></div><div class="search-wrap" id="search-wrap"><span class="search-icon">⌕</span><input class="search-input" id="card-search" type="search" autocomplete="off" spellcheck="false" placeholder="Search cards…" title="Search name, role, set, rules text and flavour" aria-label="Search cards"><button class="search-clear" id="search-clear" aria-label="Clear search">×</button><div class="search-count" id="search-count"></div></div><div class="jump-links"><a href="#s-king" class="jump-link jl-king" data-section="s-king">King</a><a href="#s-knight" class="jump-link jl-knight" data-section="s-knight">Knights</a><a href="#s-assassin" class="jump-link jl-assassin" data-section="s-assassin">Assassins</a><a href="#s-bandit" class="jump-link jl-bandit" data-section="s-bandit">Bandits</a><a href="#s-renegade" class="jump-link jl-renegade" data-section="s-renegade">Renegades</a></div><span class="nav-version">v0.5.80</span></nav>
 <!-- ══ KING ══ -->
 <section class="role-section s-king" id="s-king">
 <div class="section-header">
@@ -1416,11 +1416,6 @@ a.link-card:hover{
 </div>
 <div class="card-sigil"><div class="sigil-wrap"><div class="sigil-ring"></div><div class="sigil-ring2"></div><span class="sigil-sym">🛡</span></div></div>
 <div class="card-name">Jack's Guard</div>
-<div class="card-div"></div>
-<div class="card-section">
-<span class="card-sec-label">Setup</span>
-<span class="card-sec-text">At game start the table designates one player as <b>Jack</b>. If no player is so named, Jack is the player to the King's left.</span>
-</div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
 <span class="card-sec-text">The player known at this table as <b>"Jack"</b> wins — regardless of Jack's actual role.</span>
@@ -1438,7 +1433,7 @@ a.link-card:hover{
 <div class="card-div"></div>
 <div class="card-section">
 <span class="card-sec-label" style="color:#ff6b9d;">No Jack Present</span>
-<span class="card-sec-text">If no player at this table goes by <b>"Jack"</b>, you are a standard Knight — win when the King wins, lose when the King is eliminated.</span>
+<span class="card-sec-text">Before the game begins, secretly write down any player — they are your <b>"Jack"</b> for all purposes of this card, and only you know it. You may reveal this card at any time to <b>name them aloud</b>: they gain <b>10 life</b>, draw a card, and until the start of your next turn all damage that would be dealt to them is dealt to its <b>source's controller</b> instead. If you cannot produce your note, you lose.</span>
 </div>
 <div class="card-flavor">
 <div class="card-flavor-div"></div>
@@ -2946,11 +2941,6 @@ a.link-card:hover{
 </div>
 </div>
 <div class="card-name">Kill Jack</div>
-<div class="card-div"></div>
-<div class="card-section">
-<span class="card-sec-label">Setup</span>
-<span class="card-sec-text">At game start the table designates one player as <b>Jack</b>. If no player is so named, Jack is the player to the King's left.</span>
-</div>
 <div class="card-section">
 <span class="card-sec-label">Victory</span>
 <span class="card-sec-text">The player known at this table as <b>"Jack"</b> is eliminated.</span>
@@ -3134,6 +3124,13 @@ a.link-card:hover{
 <div class="rel-log">
 <p class="rules-head">Release Log</p>
 <div class="rel-item rel-now">
+<span class="rel-ver">v0.5.80</span><span class="rel-date">2026-09-17</span>
+<ul class="rel-list">
+<li><b>Jack's Guard</b> no longer collapses into a plain Knight when nobody at the table is called Jack. You now swear a <b>secret patron</b> before the game and may reveal to name them aloud — they gain 10 life, draw, and damage aimed at them rebounds on its source's controller until your next turn. Mirrors how <b>Kill Jack</b> already handled it.</li>
+<li>Removed a Setup line added in v0.5.72 that duplicated and contradicted both cards’ own <b>No Jack Present</b> rules.</li>
+</ul>
+</div>
+<div class="rel-item">
 <span class="rel-ver">v0.5.79</span><span class="rel-date">2026-09-17</span>
 <ul class="rel-list">
 <li>Search moved to the <b>top-right of the nav</b> instead of sitting on its own row — the nav is no taller than it was before search existed. The result count tucks under the box, and the version label drops to the bottom corner. Below 880px it returns to a full-width row.</li>

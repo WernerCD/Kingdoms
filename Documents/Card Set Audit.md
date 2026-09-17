@@ -1,4 +1,4 @@
-# Card Set Audit — v0.5.77
+# Card Set Audit — v0.5.80
 
 Cross-check of `docs/index.html` (80 cards) against the Advanced Kingdoms
 v1.56 rules, the Expanded Kingdoms rules, and `Expanded Kingdoms Card
@@ -7,9 +7,16 @@ Reference.md`. Rule numbers below refer to the AK official rules doc.
 ## Method
 
 Every card in `docs/index.html` was diffed field-by-field against the `.md`
-sidecars in `images-ak/` and `images-ek/`, matching on card name **and**
-`**Badge:**`, comparing role tag, every section label and body, and flavour
-text under whitespace/punctuation normalisation.
+sidecars in `images-ak/`, `images-ek/` and `images-v/`, matching on card name
+**and** `**Badge:**`, comparing role tag, every section label and body, and
+flavour text under whitespace/punctuation normalisation.
+
+> **Tooling note.** Until v0.5.80 the extractor matched `card-sec-label">` and
+> so silently skipped any section whose label carried a `style` attribute. Only
+> three sections in the whole set are styled — `No Jack Present` on both Jack
+> cards and `If You Are Jack` on Kill Jack — all on house variants, so no AK or
+> EK result was affected. Fixed to `card-sec-label[^>]*>`; those sections are
+> now generated and verified like any other.
 
 ## Result: the viewer is a faithful translation
 
@@ -141,7 +148,7 @@ These were fixed in the viewer and in the `images-v/` sidecars:
 | A2 | The Martyr King | Overrides Knight Defeat; gates Assassin Victory |
 | A3 | The Avenger | Replaces Knight Defeat; delays Assassin Victory |
 | A4 | The Usurper | Rewritten to mirror The Rightful Heir |
-| A5 | Jack's Guard, Kill Jack | Added a Jack designation Setup rule |
+| A5 | Jack's Guard, Kill Jack | ~~Added a Jack designation Setup rule~~ — **reverted in v0.5.80**: both cards already carried a `No Jack Present` section, so the added Setup line duplicated and contradicted it. Jack's Guard's fallback ("you are a standard Knight") was replaced with a secret sworn patron instead. |
 | A6 | The Knight → **The Shieldbearer** | Renamed; ability was copied verbatim from The Marksman, replaced with a rally effect |
 | §2 | The Champion (Knight) → **The Vanguard** | Resolves the name clash with the AK Renegade |
 | C1 | The Infiltrator | Table-talk rule → mechanical 2-life penalty |
